@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TeachersRouteImport } from './routes/teachers'
+import { Route as SadaqahRouteImport } from './routes/sadaqah'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as CoursesRouteImport } from './routes/courses'
@@ -20,6 +21,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const TeachersRoute = TeachersRouteImport.update({
   id: '/teachers',
   path: '/teachers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SadaqahRoute = SadaqahRouteImport.update({
+  id: '/sadaqah',
+  path: '/sadaqah',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PricingRoute = PricingRouteImport.update({
@@ -60,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/courses': typeof CoursesRoute
   '/faq': typeof FaqRoute
   '/pricing': typeof PricingRoute
+  '/sadaqah': typeof SadaqahRoute
   '/teachers': typeof TeachersRoute
 }
 export interface FileRoutesByTo {
@@ -69,6 +76,7 @@ export interface FileRoutesByTo {
   '/courses': typeof CoursesRoute
   '/faq': typeof FaqRoute
   '/pricing': typeof PricingRoute
+  '/sadaqah': typeof SadaqahRoute
   '/teachers': typeof TeachersRoute
 }
 export interface FileRoutesById {
@@ -79,6 +87,7 @@ export interface FileRoutesById {
   '/courses': typeof CoursesRoute
   '/faq': typeof FaqRoute
   '/pricing': typeof PricingRoute
+  '/sadaqah': typeof SadaqahRoute
   '/teachers': typeof TeachersRoute
 }
 export interface FileRouteTypes {
@@ -90,6 +99,7 @@ export interface FileRouteTypes {
     | '/courses'
     | '/faq'
     | '/pricing'
+    | '/sadaqah'
     | '/teachers'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -99,6 +109,7 @@ export interface FileRouteTypes {
     | '/courses'
     | '/faq'
     | '/pricing'
+    | '/sadaqah'
     | '/teachers'
   id:
     | '__root__'
@@ -108,6 +119,7 @@ export interface FileRouteTypes {
     | '/courses'
     | '/faq'
     | '/pricing'
+    | '/sadaqah'
     | '/teachers'
   fileRoutesById: FileRoutesById
 }
@@ -118,6 +130,7 @@ export interface RootRouteChildren {
   CoursesRoute: typeof CoursesRoute
   FaqRoute: typeof FaqRoute
   PricingRoute: typeof PricingRoute
+  SadaqahRoute: typeof SadaqahRoute
   TeachersRoute: typeof TeachersRoute
 }
 
@@ -128,6 +141,13 @@ declare module '@tanstack/react-router' {
       path: '/teachers'
       fullPath: '/teachers'
       preLoaderRoute: typeof TeachersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sadaqah': {
+      id: '/sadaqah'
+      path: '/sadaqah'
+      fullPath: '/sadaqah'
+      preLoaderRoute: typeof SadaqahRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pricing': {
@@ -182,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   CoursesRoute: CoursesRoute,
   FaqRoute: FaqRoute,
   PricingRoute: PricingRoute,
+  SadaqahRoute: SadaqahRoute,
   TeachersRoute: TeachersRoute,
 }
 export const routeTree = rootRouteImport
