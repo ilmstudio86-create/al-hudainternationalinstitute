@@ -201,9 +201,9 @@ function Home() {
               <img src={sisterImg} alt="Female hijabi Quran teacher teaching online" width={1280} height={960} loading="lazy" className="aspect-[4/3] w-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-7 text-primary-foreground">
-                <p className="text-xs uppercase tracking-[0.3em] text-gold mb-2">For Sisters &amp; Girls</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-gold mb-2">Qualified Female Scholars</p>
                 <h3 className="font-display text-2xl font-bold text-gold mb-2">Female Hafiza &amp; Ustadha Teachers</h3>
-                <p className="text-sm text-primary-foreground/85">Comfortable, halal learning environment for sisters of every age.</p>
+                <p className="text-sm text-primary-foreground/85">Highly qualified female teachers providing a comfortable, professional and halal learning environment for students of every age.</p>
               </div>
             </div>
           </div>
