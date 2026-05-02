@@ -23,7 +23,7 @@ const plans = [
 function Pricing() {
   return (
     <Layout>
-      <PageHero arabic="الأَسْعَارُ" title="Simple, Honest Pricing" subtitle="Affordable monthly plans — cancel anytime. 1 week free trial included." />
+      <PageHero arabic="الأَسْعَارُ" title="Simple, Honest Pricing" subtitle="Affordable monthly plans — cancel anytime. Free 3-day trial included." />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
         <div className="grid gap-7 md:grid-cols-3">
