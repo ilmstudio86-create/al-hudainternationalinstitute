@@ -118,7 +118,7 @@ function Sadaqah() {
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-xs uppercase tracking-[0.3em] text-gold font-semibold mb-2">Our Services</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary">Three ways to earn endless reward</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary">Ways to earn endless reward</h2>
           </div>
           <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
