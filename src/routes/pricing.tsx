@@ -51,9 +51,9 @@ function Pricing() {
                   </li>
                 ))}
               </ul>
-              <Link to="/contact" className={`mt-7 inline-flex w-full items-center justify-center rounded-md px-5 py-3 font-semibold transition-all ${p.popular ? "bg-gradient-gold text-primary shadow-gold hover:scale-[1.02]" : "bg-primary text-primary-foreground hover:bg-primary-glow"}`}>
+              <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className={`mt-7 inline-flex w-full items-center justify-center rounded-md px-5 py-3 font-semibold transition-all ${p.popular ? "bg-gradient-gold text-primary shadow-gold hover:scale-[1.02]" : "bg-primary text-primary-foreground hover:bg-primary-glow"}`}>
                 Start Free Trial
-              </Link>
+              </a>
             </div>
           ))}
         </div>
