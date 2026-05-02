@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Moon, Menu, X, Phone, Mail, Globe2 } from "lucide-react";
 import { useState } from "react";
+import { TRIAL_WA_URL } from "@/lib/trial";
 
 const nav = [
   { to: "/", label: "Home" },
