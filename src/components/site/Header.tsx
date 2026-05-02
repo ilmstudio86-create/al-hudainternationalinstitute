@@ -56,9 +56,9 @@ export function Header() {
           </nav>
 
           <div className="hidden md:block">
-            <Link to="/contact" className="inline-flex items-center rounded-md bg-gradient-gold px-5 py-2.5 text-sm font-semibold text-primary shadow-gold hover:opacity-95 transition-opacity">
+            <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-md bg-gradient-gold px-5 py-2.5 text-sm font-semibold text-primary shadow-gold hover:opacity-95 transition-opacity">
               Free Trial
-            </Link>
+            </a>
           </div>
 
           <button aria-label="Toggle menu" className="lg:hidden p-2 text-primary" onClick={() => setOpen((v) => !v)}>
