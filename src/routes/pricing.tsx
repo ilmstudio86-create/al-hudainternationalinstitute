@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout, PageHero } from "@/components/site/Layout";
 import { Check, Star } from "lucide-react";
+import { TRIAL_WA_URL } from "@/lib/trial";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
