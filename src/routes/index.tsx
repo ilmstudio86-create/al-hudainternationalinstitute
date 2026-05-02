@@ -125,7 +125,7 @@ function Home() {
               Al-Iqra Global Quran &amp; Islamic Institute is dedicated to providing authentic, structured online Quran education. Our certified male and female teachers — including Hafiz al-Quran with mastery in Arabic, Tajweed, Tafseer and Islamic Studies — guide students of every age toward a deep, lifelong relationship with the Book of Allah.
             </p>
             <ul className="space-y-2.5 mb-7">
-              {["One-on-one live classes with certified scholars", "Structured curriculum from Qaida to Hifz & Tafseer", "Dedicated female teachers for sisters and girls", "Monthly progress reports for parents"].map((p) => (
+              {["One-on-one live classes with certified scholars", "Teachers available in English, Urdu, Arabic & more languages", "Structured curriculum from Qaida to Hifz & Tafseer", "Dedicated female teachers for sisters and girls", "Monthly progress reports for parents"].map((p) => (
                 <li key={p} className="flex items-start gap-2.5 text-sm text-foreground/85">
                   <CheckCircle2 className="h-5 w-5 text-gold shrink-0 mt-0.5" /> {p}
                 </li>
