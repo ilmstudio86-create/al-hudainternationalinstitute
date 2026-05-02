@@ -76,9 +76,9 @@ function Home() {
             World-class online Quran &amp; Islamic education for every age — taught by certified Hafiz and Qari scholars to families in 30+ countries.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-up">
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
+            <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
               Start Free Trial <ArrowRight className="h-4 w-4" />
-            </Link>
+            </a>
             <Link to="/courses" className="inline-flex items-center gap-2 rounded-md border-2 border-gold/70 bg-primary/30 backdrop-blur-sm px-7 py-3.5 font-semibold text-gold hover:bg-gold hover:text-primary transition-colors">
               <PlayCircle className="h-5 w-5" /> Explore Courses
             </Link>
