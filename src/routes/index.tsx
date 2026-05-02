@@ -7,6 +7,7 @@ import quranImg from "@/assets/quran.jpg";
 import kidsImg from "@/assets/kids-learning.jpg";
 import sisterImg from "@/assets/sister-teacher.jpg";
 import brotherImg from "@/assets/brother-teacher.jpg";
+import { TRIAL_WA_URL } from "@/lib/trial";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,7 +38,7 @@ const programs = [
   { title: "Arabic Language", desc: "Conversational and Quranic Arabic taught by language specialists.", icon: Languages, level: "All levels" },
   { title: "Islamic Studies", desc: "Aqeedah, Fiqh, Seerah, Hadith and Akhlaq — a complete grounding in Deen.", icon: Library, level: "All levels" },
   { title: "Kids Quran Program", desc: "Engaging, age-appropriate Quran learning designed for children 4–12.", icon: Baby, level: "Kids" },
-  { title: "Sisters' Classes", desc: "Female-only classes with qualified Hafiza and Ustadha teachers.", icon: Heart, level: "Sisters" },
+  { title: "Male & Female Teachers", desc: "Highly qualified male and female scholars available — providing the best learning experience for your children in a comfortable, professional environment.", icon: Heart, level: "All students" },
 ];
 
 const steps = [
@@ -75,15 +76,15 @@ function Home() {
             World-class online Quran &amp; Islamic education for every age — taught by certified Hafiz and Qari scholars to families in 30+ countries.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-up">
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
+            <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
               Start Free Trial <ArrowRight className="h-4 w-4" />
-            </Link>
+            </a>
             <Link to="/courses" className="inline-flex items-center gap-2 rounded-md border-2 border-gold/70 bg-primary/30 backdrop-blur-sm px-7 py-3.5 font-semibold text-gold hover:bg-gold hover:text-primary transition-colors">
               <PlayCircle className="h-5 w-5" /> Explore Courses
             </Link>
           </div>
           <div className="mt-12 flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-xs sm:text-sm text-primary-foreground/80 animate-fade-up">
-            <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-gold" /> Free 1-week trial</span>
+            <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-gold" /> Free 3-day trial</span>
             <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-gold" /> No credit card required</span>
             <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-gold" /> Certified teachers only</span>
           </div>
@@ -201,9 +202,9 @@ function Home() {
               <img src={sisterImg} alt="Female hijabi Quran teacher teaching online" width={1280} height={960} loading="lazy" className="aspect-[4/3] w-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-7 text-primary-foreground">
-                <p className="text-xs uppercase tracking-[0.3em] text-gold mb-2">For Sisters &amp; Girls</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-gold mb-2">Qualified Female Scholars</p>
                 <h3 className="font-display text-2xl font-bold text-gold mb-2">Female Hafiza &amp; Ustadha Teachers</h3>
-                <p className="text-sm text-primary-foreground/85">Comfortable, halal learning environment for sisters of every age.</p>
+                <p className="text-sm text-primary-foreground/85">Highly qualified female teachers providing a comfortable, professional and halal learning environment for students of every age.</p>
               </div>
             </div>
           </div>
@@ -306,9 +307,9 @@ function Home() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-gold mb-4">Begin Your Quran Journey Today</h2>
             <p className="text-primary-foreground/85 max-w-2xl mx-auto mb-8">Book a free trial class with one of our certified teachers — no credit card required, In sha Allah.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
+              <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
                 Book Free Trial <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
               <a href="https://wa.me/923141766950" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-[#25D366] px-7 py-3.5 font-semibold text-white hover:opacity-95 transition-opacity">
                 <MessageCircle className="h-5 w-5" /> Chat on WhatsApp
               </a>

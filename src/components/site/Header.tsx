@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Moon, Menu, X, Phone, Mail, Globe2 } from "lucide-react";
 import { useState } from "react";
+import { TRIAL_WA_URL } from "@/lib/trial";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -55,9 +56,9 @@ export function Header() {
           </nav>
 
           <div className="hidden md:block">
-            <Link to="/contact" className="inline-flex items-center rounded-md bg-gradient-gold px-5 py-2.5 text-sm font-semibold text-primary shadow-gold hover:opacity-95 transition-opacity">
+            <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-md bg-gradient-gold px-5 py-2.5 text-sm font-semibold text-primary shadow-gold hover:opacity-95 transition-opacity">
               Free Trial
-            </Link>
+            </a>
           </div>
 
           <button aria-label="Toggle menu" className="lg:hidden p-2 text-primary" onClick={() => setOpen((v) => !v)}>
@@ -74,9 +75,9 @@ export function Header() {
                 {n.label}
               </Link>
             ))}
-            <Link to="/contact" onClick={() => setOpen(false)} className="mt-2 inline-flex items-center justify-center rounded-md bg-gradient-gold px-4 py-2.5 text-sm font-semibold text-primary">
+            <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="mt-2 inline-flex items-center justify-center rounded-md bg-gradient-gold px-4 py-2.5 text-sm font-semibold text-primary">
               Book Free Trial
-            </Link>
+            </a>
           </div>
         </div>
       )}

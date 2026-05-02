@@ -1,12 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout, PageHero } from "@/components/site/Layout";
 import { Check, Star } from "lucide-react";
+import { TRIAL_WA_URL } from "@/lib/trial";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
       { title: "Pricing & Plans — Al-Iqra Global" },
-      { name: "description", content: "Affordable monthly Quran class plans — 2, 3 or 5 days a week. Free trial, no credit card required." },
+      { name: "description", content: "Affordable monthly Quran class plans — 2, 3 or 5 days a week. Free 3-day trial, no credit card required." },
       { property: "og:title", content: "Pricing — Al-Iqra Global" },
       { property: "og:description", content: "Transparent monthly pricing for one-on-one Quran classes." },
     ],
@@ -16,14 +17,14 @@ export const Route = createFileRoute("/pricing")({
 
 const plans = [
   { name: "Starter", days: "2 days / week", classes: "8 classes / month", price: "$40", popular: false, perks: ["30-min one-on-one classes", "Certified teacher", "Progress reports", "Flexible timing"] },
-  { name: "Standard", days: "3 days / week", classes: "12 classes / month", price: "$55", popular: true, perks: ["30-min one-on-one classes", "Certified Hafiz / Qari", "Monthly assessment", "Sibling discount", "Free trial week"] },
+  { name: "Standard", days: "3 days / week", classes: "12 classes / month", price: "$55", popular: true, perks: ["30-min one-on-one classes", "Certified Hafiz / Qari", "Monthly assessment", "Sibling discount", "Free 3-day trial"] },
   { name: "Intensive", days: "5 days / week", classes: "20 classes / month", price: "$80", popular: false, perks: ["45-min one-on-one classes", "Hifz / Tajweed track", "Weekly Sabqi & Manzil", "Parent access portal", "Priority support"] },
 ];
 
 function Pricing() {
   return (
     <Layout>
-      <PageHero arabic="الأَسْعَارُ" title="Simple, Honest Pricing" subtitle="Affordable monthly plans — cancel anytime. 1 week free trial included." />
+      <PageHero arabic="الأَسْعَارُ" title="Simple, Honest Pricing" subtitle="Affordable monthly plans — cancel anytime. Free 3-day trial included." />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
         <div className="grid gap-7 md:grid-cols-3">
@@ -50,9 +51,9 @@ function Pricing() {
                   </li>
                 ))}
               </ul>
-              <Link to="/contact" className={`mt-7 inline-flex w-full items-center justify-center rounded-md px-5 py-3 font-semibold transition-all ${p.popular ? "bg-gradient-gold text-primary shadow-gold hover:scale-[1.02]" : "bg-primary text-primary-foreground hover:bg-primary-glow"}`}>
+              <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className={`mt-7 inline-flex w-full items-center justify-center rounded-md px-5 py-3 font-semibold transition-all ${p.popular ? "bg-gradient-gold text-primary shadow-gold hover:scale-[1.02]" : "bg-primary text-primary-foreground hover:bg-primary-glow"}`}>
                 Start Free Trial
-              </Link>
+              </a>
             </div>
           ))}
         </div>
