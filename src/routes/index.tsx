@@ -307,9 +307,9 @@ function Home() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-gold mb-4">Begin Your Quran Journey Today</h2>
             <p className="text-primary-foreground/85 max-w-2xl mx-auto mb-8">Book a free trial class with one of our certified teachers — no credit card required, In sha Allah.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
+              <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
                 Book Free Trial <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
               <a href="https://wa.me/923141766950" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-[#25D366] px-7 py-3.5 font-semibold text-white hover:opacity-95 transition-opacity">
                 <MessageCircle className="h-5 w-5" /> Chat on WhatsApp
               </a>
