@@ -16,7 +16,7 @@ export const Route = createFileRoute("/pricing")({
 
 const plans = [
   { name: "Starter", days: "2 days / week", classes: "8 classes / month", price: "$40", popular: false, perks: ["30-min one-on-one classes", "Certified teacher", "Progress reports", "Flexible timing"] },
-  { name: "Standard", days: "3 days / week", classes: "12 classes / month", price: "$55", popular: true, perks: ["30-min one-on-one classes", "Certified Hafiz / Qari", "Monthly assessment", "Sibling discount", "Free trial week"] },
+  { name: "Standard", days: "3 days / week", classes: "12 classes / month", price: "$55", popular: true, perks: ["30-min one-on-one classes", "Certified Hafiz / Qari", "Monthly assessment", "Sibling discount", "Free 3-day trial"] },
   { name: "Intensive", days: "5 days / week", classes: "20 classes / month", price: "$80", popular: false, perks: ["45-min one-on-one classes", "Hifz / Tajweed track", "Weekly Sabqi & Manzil", "Parent access portal", "Priority support"] },
 ];
 
