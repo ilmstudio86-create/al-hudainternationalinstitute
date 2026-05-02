@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout, PageHero } from "@/components/site/Layout";
-import { Heart, Gift, Plane, HandHeart, MessageCircle, CheckCircle2, Building2, Sparkles } from "lucide-react";
+import { Heart, Gift, Plane, HandHeart, MessageCircle, CheckCircle2, Building2, Sparkles, Utensils } from "lucide-react";
 import sadaqahImg from "@/assets/sadaqah.jpg";
 
 export const Route = createFileRoute("/sadaqah")({
@@ -40,6 +40,17 @@ const services = [
     title: "Masjid Construction & Contribution",
     desc: "Want to build a Masjid or contribute your share to one being built? Through Al-Iqra Global you can participate in this Sadaqah Jariyah — every brick a reward that continues for you, In sha Allah.",
     bullets: ["Build a new Masjid in your name", "Contribute a share to ongoing projects", "Wudu khana, prayer mats & Qurans", "Photo & progress updates shared with you"],
+  },
+  {
+    icon: Utensils,
+    title: "Feed the Hungry & Oppressed Muslims",
+    desc: "Give your Sadaqah to feed the poor, orphans, widows and oppressed Muslims around the world — including Gaza, Syria, Yemen, Kashmir, Rohingya and other afflicted regions. Your contribution provides hot meals, ration packs, clean water and basic living essentials for families struggling to survive.",
+    bullets: [
+      "Hot meals & ration packs for the needy",
+      "Emergency food aid for oppressed Muslims",
+      "Clean water & basic living essentials",
+      "Special focus on Gaza, Syria, Yemen, Kashmir & more",
+    ],
   },
   {
     icon: Sparkles,
