@@ -15,14 +15,30 @@ export const Route = createFileRoute("/teachers")({
 });
 
 const teachers = [
-  { name: "Qari Muhammad Javed", qual: "Hifz Master, Ijazah in Qirat", spec: "Hifz, Tajweed & Qirat", gender: "M" },
-  { name: "Ustadh Ashrafi", qual: "Master in Arabic & Islamic Studies", spec: "Tarjuma, Tafseer & Arabic", gender: "M" },
-  { name: "Sheikh Abdullah Rahman", qual: "Hafiz, MA Islamic Studies", spec: "Tafseer ul Quran", gender: "M" },
-  { name: "Ustadha Maryam Siddiqui", qual: "Hafiza, Diploma in Tajweed", spec: "Kids Quran & Nazra", gender: "F" },
-  { name: "Ustadha Ayesha Noor", qual: "MA Islamic Studies", spec: "Islamic Studies for Sisters", gender: "F" },
-  { name: "Qari Bilal Ahmad", qual: "Ijazah with Sanad", spec: "Hifz & Sabqi", gender: "M" },
-  { name: "Ustadha Khadija Imran", qual: "Hafiza, Arabic Specialist", spec: "Arabic Language", gender: "F" },
-  { name: "Sheikh Yusuf Anwar", qual: "Alim Course Graduate", spec: "Fiqh & Aqeedah", gender: "M" },
+  {
+    name: "Sheikh Maulana Nisaar Ahmad",
+    qual: "Master in Islamic & Arabic Studies",
+    spec: "Tajweed, Qirat, Tafseer & Translation in English, Arabic and Urdu",
+    gender: "M",
+  },
+  {
+    name: "Maulana Rashid",
+    qual: "Specialist in Basic Islamic Studies",
+    spec: "Tarjuma, Tafseer & Basic Islamic Studies in Urdu",
+    gender: "M",
+  },
+  {
+    name: "Maulana Riyaz Ahmed",
+    qual: "Quran Foundation Instructor",
+    spec: "Qaida, Tajweed & Tafseer",
+    gender: "M",
+  },
+  {
+    name: "Hafizah Ustadah Rehana Siddiqui",
+    qual: "Nazra & Qaida Teacher",
+    spec: "Qaida, Tajweed Rules & Nazra Quran",
+    gender: "F",
+  },
 ];
 
 function Avatar({ name, gender }: { name: string; gender: "M" | "F" }) {
