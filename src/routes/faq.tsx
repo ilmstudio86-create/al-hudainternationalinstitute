@@ -15,7 +15,7 @@ export const Route = createFileRoute("/faq")({
 });
 
 const faqs = [
-  { q: "How does the free trial work?", a: "Book your trial through our contact form or WhatsApp. You'll get a 30-minute one-on-one live class with a certified teacher — no credit card or commitment required." },
+  { q: "How does the free trial work?", a: "Book your trial through our contact form or WhatsApp. You'll get 3 free days of 30-minute one-on-one live classes with a certified teacher — no credit card or commitment required." },
   { q: "What software do I need for online classes?", a: "Just a phone, tablet or computer with internet. We use Zoom, Google Meet or Skype — whichever you prefer. Our team will guide you through the setup." },
   { q: "Are female teachers available for sisters and girls?", a: "Yes. We have qualified female (Hafiza) teachers dedicated to sisters and young girls, ensuring a comfortable and halal learning environment." },
   { q: "What ages do you teach?", a: "We teach students of all ages — from kids as young as 4 years old to adults and seniors. Curriculum is fully adapted to each student's age and level." },
