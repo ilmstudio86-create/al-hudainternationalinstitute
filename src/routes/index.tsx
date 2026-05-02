@@ -7,6 +7,7 @@ import quranImg from "@/assets/quran.jpg";
 import kidsImg from "@/assets/kids-learning.jpg";
 import sisterImg from "@/assets/sister-teacher.jpg";
 import brotherImg from "@/assets/brother-teacher.jpg";
+import { TRIAL_WA_URL } from "@/lib/trial";
 
 export const Route = createFileRoute("/")({
   head: () => ({
