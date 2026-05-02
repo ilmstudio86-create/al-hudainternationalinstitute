@@ -83,7 +83,7 @@ function Home() {
             </Link>
           </div>
           <div className="mt-12 flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-xs sm:text-sm text-primary-foreground/80 animate-fade-up">
-            <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-gold" /> Free 1-week trial</span>
+            <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-gold" /> Free 3-day trial</span>
             <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-gold" /> No credit card required</span>
             <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-gold" /> Certified teachers only</span>
           </div>
