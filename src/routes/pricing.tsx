@@ -6,7 +6,7 @@ export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
       { title: "Pricing & Plans — Al-Iqra Global" },
-      { name: "description", content: "Affordable monthly Quran class plans — 2, 3 or 5 days a week. Free trial, no credit card required." },
+      { name: "description", content: "Affordable monthly Quran class plans — 2, 3 or 5 days a week. Free 3-day trial, no credit card required." },
       { property: "og:title", content: "Pricing — Al-Iqra Global" },
       { property: "og:description", content: "Transparent monthly pricing for one-on-one Quran classes." },
     ],
