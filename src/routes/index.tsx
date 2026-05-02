@@ -37,7 +37,7 @@ const programs = [
   { title: "Arabic Language", desc: "Conversational and Quranic Arabic taught by language specialists.", icon: Languages, level: "All levels" },
   { title: "Islamic Studies", desc: "Aqeedah, Fiqh, Seerah, Hadith and Akhlaq — a complete grounding in Deen.", icon: Library, level: "All levels" },
   { title: "Kids Quran Program", desc: "Engaging, age-appropriate Quran learning designed for children 4–12.", icon: Baby, level: "Kids" },
-  { title: "Sisters' Classes", desc: "Female-only classes with qualified Hafiza and Ustadha teachers.", icon: Heart, level: "Sisters" },
+  { title: "Male & Female Teachers", desc: "Highly qualified male and female scholars available — providing the best learning experience for your children in a comfortable, professional environment.", icon: Heart, level: "All students" },
 ];
 
 const steps = [
