@@ -16,32 +16,52 @@ export const Route = createFileRoute("/pricing")({
   component: Pricing,
 });
 
+type PlanKey = "Weekend" | "TwoDays" | "ThreeDays" | "FiveDays30" | "FiveDays45";
+
 type Region = {
   code: string;
   label: string;
   flag: string;
   currency: string;
-  prices: { Starter: string; Standard: string; Intensive: string };
+  symbol: string;
+  rate: number; // multiplier vs USD base
+  rounding: number; // round to nearest
 };
 
 const regions: Region[] = [
-  { code: "US", label: "United States", flag: "🇺🇸", currency: "USD", prices: { Starter: "$40", Standard: "$55", Intensive: "$80" } },
-  { code: "CA", label: "Canada", flag: "🇨🇦", currency: "CAD", prices: { Starter: "C$50", Standard: "C$70", Intensive: "C$100" } },
-  { code: "UK", label: "United Kingdom", flag: "🇬🇧", currency: "GBP", prices: { Starter: "£30", Standard: "£45", Intensive: "£65" } },
-  { code: "IE", label: "Ireland", flag: "🇮🇪", currency: "EUR", prices: { Starter: "€35", Standard: "€50", Intensive: "€75" } },
-  { code: "AU", label: "Australia", flag: "🇦🇺", currency: "AUD", prices: { Starter: "A$55", Standard: "A$75", Intensive: "A$110" } },
-  { code: "NZ", label: "New Zealand", flag: "🇳🇿", currency: "NZD", prices: { Starter: "NZ$60", Standard: "NZ$80", Intensive: "NZ$115" } },
-  { code: "SA", label: "Saudi Arabia", flag: "🇸🇦", currency: "SAR", prices: { Starter: "SAR 150", Standard: "SAR 200", Intensive: "SAR 300" } },
-  { code: "QA", label: "Qatar", flag: "🇶🇦", currency: "QAR", prices: { Starter: "QAR 150", Standard: "QAR 200", Intensive: "QAR 300" } },
-  { code: "AE", label: "UAE", flag: "🇦🇪", currency: "AED", prices: { Starter: "AED 150", Standard: "AED 200", Intensive: "AED 300" } },
-  { code: "MY", label: "Malaysia", flag: "🇲🇾", currency: "MYR", prices: { Starter: "RM 170", Standard: "RM 230", Intensive: "RM 340" } },
-  { code: "PK", label: "Pakistan", flag: "🇵🇰", currency: "PKR", prices: { Starter: "Rs 4,000", Standard: "Rs 5,500", Intensive: "Rs 8,000" } },
+  { code: "US", label: "United States", flag: "🇺🇸", currency: "USD", symbol: "$", rate: 1, rounding: 1 },
+  { code: "CA", label: "Canada", flag: "🇨🇦", currency: "CAD", symbol: "C$", rate: 1.35, rounding: 1 },
+  { code: "UK", label: "United Kingdom", flag: "🇬🇧", currency: "GBP", symbol: "£", rate: 0.8, rounding: 1 },
+  { code: "IE", label: "Ireland", flag: "🇮🇪", currency: "EUR", symbol: "€", rate: 0.92, rounding: 1 },
+  { code: "AU", label: "Australia", flag: "🇦🇺", currency: "AUD", symbol: "A$", rate: 1.5, rounding: 1 },
+  { code: "NZ", label: "New Zealand", flag: "🇳🇿", currency: "NZD", symbol: "NZ$", rate: 1.65, rounding: 1 },
+  { code: "SA", label: "Saudi Arabia", flag: "🇸🇦", currency: "SAR", symbol: "SAR ", rate: 3.75, rounding: 5 },
+  { code: "QA", label: "Qatar", flag: "🇶🇦", currency: "QAR", symbol: "QAR ", rate: 3.65, rounding: 5 },
+  { code: "AE", label: "UAE", flag: "🇦🇪", currency: "AED", symbol: "AED ", rate: 3.67, rounding: 5 },
+  { code: "MY", label: "Malaysia", flag: "🇲🇾", currency: "MYR", symbol: "RM ", rate: 4.7, rounding: 5 },
+  { code: "PK", label: "Pakistan", flag: "🇵🇰", currency: "PKR", symbol: "Rs ", rate: 280, rounding: 100 },
 ];
 
-const planMeta = [
-  { name: "Starter" as const, days: "2 days / week", classes: "8 classes / month", popular: false, perks: ["30-min one-on-one classes", "Certified teacher", "Progress reports", "Flexible timing"] },
-  { name: "Standard" as const, days: "3 days / week", classes: "12 classes / month", popular: true, perks: ["30-min one-on-one classes", "Certified Hafiz / Qari", "Monthly assessment", "Sibling discount", "Free 3-day trial"] },
-  { name: "Intensive" as const, days: "5 days / week", classes: "20 classes / month", popular: false, perks: ["45-min one-on-one classes", "Hifz / Tajweed track", "Weekly Sabqi & Manzil", "Parent access portal", "Priority support"] },
+const basePrices: Record<PlanKey, number> = {
+  Weekend: 35,
+  TwoDays: 35,
+  ThreeDays: 40,
+  FiveDays30: 50,
+  FiveDays45: 80,
+};
+
+function formatPrice(region: Region, usd: number) {
+  const raw = usd * region.rate;
+  const rounded = Math.round(raw / region.rounding) * region.rounding;
+  return `${region.symbol}${rounded.toLocaleString()}`;
+}
+
+const planMeta: { key: PlanKey; name: string; days: string; classes: string; popular: boolean; perks: string[] }[] = [
+  { key: "Weekend", name: "Weekend", days: "Sat & Sun", classes: "8 classes / month · 30 min", popular: false, perks: ["One-on-one with certified teacher", "Perfect for working parents & kids", "Flexible weekend timing", "Free 3-day trial"] },
+  { key: "TwoDays", name: "2 Days / Week", days: "2 days / week", classes: "8 classes / month · 30 min", popular: false, perks: ["30-min one-on-one classes", "Certified Hafiz / Qari", "Progress reports", "Sibling discount"] },
+  { key: "ThreeDays", name: "3 Days / Week", days: "3 days / week", classes: "12 classes / month · 30 min", popular: true, perks: ["30-min one-on-one classes", "Certified Hafiz / Qari", "Monthly assessments", "Sibling discount", "Free 3-day trial"] },
+  { key: "FiveDays30", name: "5 Days / Week", days: "5 days / week", classes: "20 classes / month · 30 min", popular: false, perks: ["Daily consistency for fast progress", "Tajweed & Nazra focus", "Weekly Sabqi & Manzil", "Parent access portal"] },
+  { key: "FiveDays45", name: "Intensive Hifz", days: "5 days / week", classes: "20 classes / month · 45 min", popular: false, perks: ["45-min one-on-one classes", "Hifz / advanced Tajweed track", "Daily Sabaq, Sabqi & Manzil", "Priority support"] },
 ];
 
 function Pricing() {
@@ -82,9 +102,9 @@ function Pricing() {
           </div>
         </div>
 
-        <div className="grid gap-7 md:grid-cols-3">
+        <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {planMeta.map((p) => (
-            <div key={p.name} className={`relative rounded-2xl border bg-card p-8 transition-all ${p.popular ? "border-gold shadow-gold scale-[1.02]" : "border-border/70 hover:shadow-elegant hover:border-gold/40"}`}>
+            <div key={p.key} className={`relative rounded-2xl border bg-card p-8 transition-all ${p.popular ? "border-gold shadow-gold scale-[1.02]" : "border-border/70 hover:shadow-elegant hover:border-gold/40"}`}>
               {p.popular && (
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1 rounded-full bg-gradient-gold px-4 py-1 text-xs font-semibold text-primary shadow-gold">
                   <Star className="h-3 w-3 fill-primary" /> Most Popular
@@ -93,7 +113,7 @@ function Pricing() {
               <h3 className="font-display text-2xl font-bold text-primary">{p.name}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{p.days} · {p.classes}</p>
               <div className="mt-6 flex items-end gap-1">
-                <span className="font-display text-5xl font-bold text-primary">{region.prices[p.name]}</span>
+                <span className="font-display text-5xl font-bold text-primary">{formatPrice(region, basePrices[p.key])}</span>
                 <span className="text-sm text-muted-foreground mb-2">/ month</span>
               </div>
               <p className="mt-1 text-xs text-muted-foreground">{region.flag} {region.label} · {region.currency}</p>
@@ -114,8 +134,15 @@ function Pricing() {
           ))}
         </div>
 
-        <p className="mt-10 text-center text-sm text-muted-foreground">
-          Pricing varies by country to remain fair and accessible. Discounts available for siblings, families and Hifz students. Need a custom plan? <Link to="/contact" className="text-gold font-semibold hover:underline">Contact us</Link>.
+        <div className="mt-10 rounded-2xl border border-gold/40 bg-gold/5 p-6 text-center">
+          <p className="font-semibold text-primary mb-1">👨‍👩‍👧‍👦 Family / Sibling Discount</p>
+          <p className="text-sm text-foreground/80">
+            Have more than one child? We offer a special concession when multiple siblings join — simply mention it on WhatsApp and we'll arrange a discounted family plan for you, In sha Allah.
+          </p>
+        </div>
+
+        <p className="mt-6 text-center text-sm text-muted-foreground">
+          Pricing varies by country to remain fair and accessible. Need a custom plan? <Link to="/contact" className="text-gold font-semibold hover:underline">Contact us</Link>.
         </p>
       </section>
     </Layout>
