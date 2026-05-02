@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { SectionDivider } from "@/components/site/SectionDivider";
-import { Globe2, GraduationCap, Clock, Users, Star, BookOpen, Sparkles, ShieldCheck, ArrowRight, Quote, PlayCircle, MessageCircle, CheckCircle2, Award, Heart, Baby, Mic2, Library, Languages, ScrollText } from "lucide-react";
+import { Globe2, GraduationCap, Clock, Users, Star, BookOpen, Sparkles, ShieldCheck, ArrowRight, Quote, PlayCircle, MessageCircle, CheckCircle2, Heart, Baby, Mic2, Library, Languages, ScrollText } from "lucide-react";
 import heroImg from "@/assets/hero-mosque.jpg";
 import quranImg from "@/assets/quran.jpg";
 import kidsImg from "@/assets/kids-learning.jpg";
@@ -317,8 +317,6 @@ function Home() {
         </div>
       </section>
 
-      {/* HIDDEN ICONS REFS to prevent unused warnings */}
-      <span className="hidden"><Award /><GraduationCap /></span>
     </Layout>
   );
 }
