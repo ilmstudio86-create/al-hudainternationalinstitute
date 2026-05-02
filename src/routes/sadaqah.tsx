@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout, PageHero } from "@/components/site/Layout";
-import { Heart, Gift, Plane, HandHeart, MessageCircle, CheckCircle2 } from "lucide-react";
+import { Heart, Gift, Plane, HandHeart, MessageCircle, CheckCircle2, Building2, Sparkles } from "lucide-react";
 import sadaqahImg from "@/assets/sadaqah.jpg";
 
 export const Route = createFileRoute("/sadaqah")({
@@ -34,6 +34,18 @@ const services = [
     title: "Sponsor an Umrah",
     desc: "Send a deserving Muslim brother or sister for Umrah on your behalf — or sponsor your parents, relatives, or anyone you wish to honour with this ibadah.",
     bullets: ["Full Umrah package sponsorship", "Visa, flights & accommodation", "Trusted travel partners", "Updates & duas from the pilgrim"],
+  },
+  {
+    icon: Building2,
+    title: "Masjid Construction & Contribution",
+    desc: "Want to build a Masjid or contribute your share to one being built? Through Al-Iqra Global you can participate in this Sadaqah Jariyah — every brick a reward that continues for you, In sha Allah.",
+    bullets: ["Build a new Masjid in your name", "Contribute a share to ongoing projects", "Wudu khana, prayer mats & Qurans", "Photo & progress updates shared with you"],
+  },
+  {
+    icon: Sparkles,
+    title: "New Muslims (Reverts) Support",
+    desc: "Help our brothers and sisters who have newly embraced Islam. Your contribution supports their Deen learning, basic needs, Quran lessons and a warm welcome into the Ummah.",
+    bullets: ["Free Quran & Islamic books", "One-on-one Deen mentorship", "Basic living & ration support", "Community connection & guidance"],
   },
 ];
 
@@ -97,7 +109,7 @@ function Sadaqah() {
             <p className="text-xs uppercase tracking-[0.3em] text-gold font-semibold mb-2">Our Services</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-primary">Three ways to earn endless reward</h2>
           </div>
-          <div className="grid gap-7 md:grid-cols-3">
+          <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
               <article
                 key={s.title}

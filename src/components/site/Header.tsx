@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Moon, Menu, X, Phone, Mail, Globe2 } from "lucide-react";
-import { useState } from "react";
+import { Moon, Phone, Mail, Globe2 } from "lucide-react";
 import { TRIAL_WA_URL } from "@/lib/trial";
 
 const nav = [
@@ -15,7 +14,6 @@ const nav = [
 ] as const;
 
 export function Header() {
-  const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 w-full">
       {/* Top utility bar */}
@@ -26,62 +24,46 @@ export function Header() {
             <a href="mailto:info@aliqraglobal.com" className="flex items-center gap-1.5 hover:text-gold transition-colors"><Mail className="h-3.5 w-3.5 text-gold" /> info@aliqraglobal.com</a>
           </div>
           <div className="flex items-center gap-1.5 text-primary-foreground/80">
-            <Globe2 className="h-3.5 w-3.5 text-gold" /> Serving 30+ countries · 24/7 support
+            <Globe2 className="h-3.5 w-3.5 text-gold" /> Auckland, New Zealand · Serving 30+ countries · 24/7 support
           </div>
         </div>
       </div>
 
       <div className="border-b border-border/60 bg-background/90 backdrop-blur-md">
-        <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-          <Link to="/" className="flex items-center gap-2.5 group">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
+          <Link to="/" className="flex items-center gap-2.5 group shrink-0">
             <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-primary shadow-gold ring-1 ring-gold/40">
               <Moon className="h-5 w-5 text-gold" strokeWidth={2.2} />
             </span>
             <span className="flex flex-col leading-tight">
-              <span className="font-display text-lg font-bold tracking-wide text-primary">AL-IQRA GLOBAL</span>
-              <span className="text-[10px] uppercase tracking-[0.22em] text-gold font-semibold">Quran &amp; Islamic Institute</span>
+              <span className="font-display text-base sm:text-lg font-bold tracking-wide text-primary">AL-IQRA GLOBAL</span>
+              <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-gold font-semibold">Quran &amp; Islamic Institute</span>
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-0.5">
-            {nav.map((n) => (
-              <Link
-                key={n.to}
-                to={n.to}
-                className="px-3.5 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors rounded-md"
-                activeProps={{ className: "px-3.5 py-2 text-sm font-semibold text-primary rounded-md bg-accent" }}
-              >
-                {n.label}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="hidden md:block">
-            <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-md bg-gradient-gold px-5 py-2.5 text-sm font-semibold text-primary shadow-gold hover:opacity-95 transition-opacity">
-              Free Trial
-            </a>
-          </div>
-
-          <button aria-label="Toggle menu" className="lg:hidden p-2 text-primary" onClick={() => setOpen((v) => !v)}>
-            {open ? <X /> : <Menu />}
-          </button>
+          <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className="shrink-0 inline-flex items-center rounded-md bg-gradient-gold px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-primary shadow-gold hover:opacity-95 transition-opacity">
+            Free Trial
+          </a>
         </div>
+
+        {/* Always-visible nav (horizontally scrollable on mobile, no hamburger) */}
+        <nav className="border-t border-border/50 bg-background/95">
+          <div className="mx-auto max-w-7xl px-2 sm:px-4">
+            <div className="flex items-center gap-1 overflow-x-auto no-scrollbar py-1.5">
+              {nav.map((n) => (
+                <Link
+                  key={n.to}
+                  to={n.to}
+                  className="shrink-0 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors rounded-md whitespace-nowrap"
+                  activeProps={{ className: "shrink-0 px-3 py-2 text-sm font-semibold text-primary rounded-md bg-accent whitespace-nowrap" }}
+                >
+                  {n.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </nav>
       </div>
-
-      {open && (
-        <div className="lg:hidden border-t border-border bg-background animate-fade-in">
-          <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3">
-            {nav.map((n) => (
-              <Link key={n.to} to={n.to} onClick={() => setOpen(false)} className="rounded-md px-3 py-2 text-sm font-medium text-foreground/80 hover:bg-accent" activeProps={{ className: "rounded-md px-3 py-2 text-sm font-semibold text-primary bg-accent" }}>
-                {n.label}
-              </Link>
-            ))}
-            <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="mt-2 inline-flex items-center justify-center rounded-md bg-gradient-gold px-4 py-2.5 text-sm font-semibold text-primary">
-              Book Free Trial
-            </a>
-          </div>
-        </div>
-      )}
     </header>
   );
 }

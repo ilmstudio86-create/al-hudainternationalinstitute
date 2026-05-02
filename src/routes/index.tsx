@@ -122,10 +122,10 @@ function Home() {
             <p className="text-xs uppercase tracking-[0.3em] text-gold font-semibold mb-3">Welcome to Al-Iqra</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-5 leading-tight">A Spiritual Journey Through the Holy Quran</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Al-Iqra Global Quran &amp; Islamic Institute is dedicated to providing authentic, structured online Quran education. Our certified male and female teachers — including Hafiz al-Quran with mastery in Arabic, Tajweed, Tafseer and Islamic Studies — guide students of every age toward a deep, lifelong relationship with the Book of Allah.
+              Al-Iqra Global Quran &amp; Islamic Institute is an Auckland, New Zealand based online academy delivering authentic, structured Quran &amp; Islamic education to students worldwide. Our certified male and female teachers — including Hafiz al-Quran with mastery in Arabic, Tajweed, Tafseer and Islamic Studies — teach in English, Urdu, Arabic and more, guiding students of every age toward a deep, lifelong relationship with the Book of Allah.
             </p>
             <ul className="space-y-2.5 mb-7">
-              {["One-on-one live classes with certified scholars", "Structured curriculum from Qaida to Hifz & Tafseer", "Dedicated female teachers for sisters and girls", "Monthly progress reports for parents"].map((p) => (
+              {["One-on-one live classes with certified scholars", "Teachers available in English, Urdu, Arabic & more languages", "Structured curriculum from Qaida to Hifz & Tafseer", "Dedicated female teachers for sisters and girls", "Monthly progress reports for parents"].map((p) => (
                 <li key={p} className="flex items-start gap-2.5 text-sm text-foreground/85">
                   <CheckCircle2 className="h-5 w-5 text-gold shrink-0 mt-0.5" /> {p}
                 </li>
