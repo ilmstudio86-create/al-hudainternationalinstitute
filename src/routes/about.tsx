@@ -6,9 +6,9 @@ import { Target, Eye, Award, Heart, BookOpen, Globe2 } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Al-Iqra Global Quran Institute" },
-      { name: "description", content: "Learn about Al-Iqra Global — our mission, vision and team of certified Hafiz, Qari and Islamic scholars serving 30+ countries." },
-      { property: "og:title", content: "About Al-Iqra Global" },
+      { title: "About — Al Huda International Islamic Institute" },
+      { name: "description", content: "Learn about Al Huda International Islamic Institute — our mission, vision and team of certified Hafiz, Qari and Islamic scholars serving 30+ countries." },
+      { property: "og:title", content: "About Al Huda International Islamic Institute" },
       { property: "og:description", content: "Authentic Quran education rooted in tradition, delivered with modern technology." },
     ],
   }),
@@ -18,13 +18,13 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <Layout>
-      <PageHero arabic="عَنَّا" title="About Al-Iqra Global" subtitle="A trusted name in online Quran and Islamic education since 2018." />
+      <PageHero arabic="عَنَّا" title="About Al Huda International Islamic Institute" subtitle="A trusted name in online Quran and Islamic education since 2018." />
 
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 text-center">
         <SectionDivider />
         <h2 className="mt-4 text-3xl font-bold text-primary">Who We Are</h2>
         <p className="mt-5 text-muted-foreground leading-relaxed">
-          Al-Iqra Global Quran &amp; Islamic Institute is an online academy founded with a single mission — to make authentic Quranic and Islamic education accessible to every Muslim, anywhere in the world. Our team of qualified male and female teachers — including Hafiz, Qaris, and Masters in Arabic and Islamic Studies — deliver structured, one-on-one live classes through a secure online platform. Whether your child is starting their first lesson or you wish to deepen your understanding of Tafseer, we walk with you on a journey of faith and knowledge.
+          Al Huda International Islamic Institute is an online academy founded with a single mission — to make authentic Quranic and Islamic education accessible to every Muslim, anywhere in the world. Our team of qualified male and female teachers — including Hafiz, Qaris, and Masters in Arabic and Islamic Studies — deliver structured, one-on-one live classes through a secure online platform. Whether your child is starting their first lesson or you wish to deepen your understanding of Tafseer, we walk with you on a journey of faith and knowledge.
         </p>
       </section>
 

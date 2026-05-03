@@ -7,14 +7,14 @@ import quranImg from "@/assets/quran.jpg";
 import kidsImg from "@/assets/kids-learning.jpg";
 import sisterImg from "@/assets/sister-teacher.jpg";
 import brotherImg from "@/assets/brother-teacher.jpg";
-import { TRIAL_WA_URL } from "@/lib/trial";
+import { CONTACT_WA_URL, TRIAL_WA_URL } from "@/lib/trial";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Al-Iqra Global — Online Quran & Islamic Institute" },
+      { title: "Al Huda International Islamic Institute — Online Quran Classes" },
       { name: "description", content: "Learn Quran online with certified Hafiz & Qari teachers. Nazra, Hifz, Tajweed, Tafseer, Arabic & Islamic Studies for kids and adults across 30+ countries." },
-      { property: "og:title", content: "Al-Iqra Global — Online Quran & Islamic Institute" },
+      { property: "og:title", content: "Al Huda International Islamic Institute — Online Quran Classes" },
       { property: "og:description", content: "Read. Learn. Grow in Faith. Book your free trial class today." },
       { property: "og:image", content: "/src/assets/hero-mosque.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -52,7 +52,7 @@ const testimonials = [
   { name: "Aisha R.", country: "🇬🇧 United Kingdom", text: "My children memorised 5 Juz in one year. The teachers are patient and truly inspiring." },
   { name: "Mohammed S.", country: "🇨🇦 Canada", text: "Best online Quran academy I've enrolled with. Crystal clear voice, perfect Tajweed and very organised." },
   { name: "Fatima H.", country: "🇺🇸 United States", text: "Female teacher for my daughter — professional, kind, knowledgeable. Highly recommend." },
-  { name: "Yusuf A.", country: "🇦🇺 Australia", text: "I started Hifz at 35 thinking it was too late. Alhamdulillah I'm on Juz 12 thanks to Al-Iqra." },
+  { name: "Yusuf A.", country: "🇦🇺 Australia", text: "I started Hifz at 35 thinking it was too late. Alhamdulillah I'm on Juz 12 thanks to Al Huda International Islamic Institute." },
   { name: "Sumayya K.", country: "🇸🇦 Saudi Arabia", text: "The Tafseer course changed how I connect with the Quran. May Allah reward this team." },
   { name: "Ibrahim M.", country: "🇲🇾 Malaysia", text: "Affordable, professional and authentic. My whole family enrolled in different programs." },
 ];
@@ -70,7 +70,7 @@ function Home() {
 
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-20 text-center text-primary-foreground">
           <p className="font-arabic text-6xl sm:text-8xl text-gold mb-6 animate-fade-in drop-shadow-[0_4px_20px_rgba(212,168,32,0.3)]">اقرأ</p>
-          <p className="text-xs sm:text-sm uppercase tracking-[0.4em] text-gold/90 mb-4 animate-fade-up">Al-Iqra Global Quran &amp; Islamic Institute</p>
+          <p className="text-xs sm:text-sm uppercase tracking-[0.4em] text-gold/90 mb-4 animate-fade-up">Al Huda International Islamic Institute</p>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-gold mb-6 animate-fade-up leading-tight">Read. Learn. <span className="block sm:inline">Grow in Faith.</span></h1>
           <p className="mx-auto max-w-2xl text-base sm:text-lg text-primary-foreground/90 mb-8 animate-fade-up leading-relaxed">
             World-class online Quran &amp; Islamic education for every age — taught by certified Hafiz and Qari scholars to families in 30+ countries.
@@ -119,10 +119,10 @@ function Home() {
             </div>
           </div>
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-gold font-semibold mb-3">Welcome to Al-Iqra</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-gold font-semibold mb-3">Welcome to Al Huda</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-5 leading-tight">A Spiritual Journey Through the Holy Quran</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Al-Iqra Global Quran &amp; Islamic Institute is an Auckland, New Zealand based online academy delivering authentic, structured Quran &amp; Islamic education to students worldwide. Our certified male and female teachers — including Hafiz al-Quran with mastery in Arabic, Tajweed, Tafseer and Islamic Studies — teach in English, Urdu, Arabic and more, guiding students of every age toward a deep, lifelong relationship with the Book of Allah.
+              Al Huda International Islamic Institute is an Auckland, New Zealand based online academy delivering authentic, structured Quran &amp; Islamic education to students worldwide. Our certified male and female teachers — including Hafiz al-Quran with mastery in Arabic, Tajweed, Tafseer and Islamic Studies — teach in English, Urdu, Arabic and more, guiding students of every age toward a deep, lifelong relationship with the Book of Allah.
             </p>
             <ul className="space-y-2.5 mb-7">
               {["One-on-one live classes with certified scholars", "Teachers available in English, Urdu, Arabic & more languages", "Structured curriculum from Qaida to Hifz & Tafseer", "Dedicated female teachers for sisters and girls", "Monthly progress reports for parents"].map((p) => (
@@ -142,7 +142,7 @@ function Home() {
       <section className="bg-secondary/60">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <SectionDivider />
-          <h2 className="mt-4 text-center text-3xl sm:text-4xl font-bold text-primary">Why Families Choose Al-Iqra</h2>
+          <h2 className="mt-4 text-center text-3xl sm:text-4xl font-bold text-primary">Why Families Choose Al Huda</h2>
           <p className="mt-3 text-center text-muted-foreground max-w-2xl mx-auto">A premium online learning experience trusted by Muslim families across the globe.</p>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((f) => (
@@ -310,7 +310,7 @@ function Home() {
               <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
                 Book Free Trial <ArrowRight className="h-4 w-4" />
               </a>
-              <a href="https://wa.me/923141766950" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-[#25D366] px-7 py-3.5 font-semibold text-white hover:opacity-95 transition-opacity">
+              <a href={CONTACT_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-[#25D366] px-7 py-3.5 font-semibold text-white hover:opacity-95 transition-opacity">
                 <MessageCircle className="h-5 w-5" /> Chat on WhatsApp
               </a>
             </div>

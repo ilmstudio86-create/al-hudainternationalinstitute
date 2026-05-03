@@ -5,9 +5,9 @@ import { GraduationCap } from "lucide-react";
 export const Route = createFileRoute("/teachers")({
   head: () => ({
     meta: [
-      { title: "Our Teachers — Al-Iqra Global Quran Institute" },
+      { title: "Our Teachers — Al Huda International Islamic Institute" },
       { name: "description", content: "Meet our certified male and female Quran teachers — Hafiz, Qaris and Masters in Arabic & Islamic Studies." },
-      { property: "og:title", content: "Meet Our Teachers — Al-Iqra Global" },
+      { property: "og:title", content: "Meet Our Teachers — Al Huda International Islamic Institute" },
       { property: "og:description", content: "Qualified Hafiz, Qari and Islamic scholars dedicated to your Quran journey." },
     ],
   }),
@@ -22,7 +22,7 @@ const teachers = [
     gender: "M",
   },
   {
-    name: "Maulana Rashid",
+    name: "Maulana Rashid Taryaq",
     qual: "Specialist in Basic Islamic Studies",
     spec: "Tarjuma, Tafseer & Basic Islamic Studies in Urdu",
     gender: "M",

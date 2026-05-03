@@ -12,7 +12,7 @@ export function Footer() {
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-gold">
                 <Moon className="h-5 w-5 text-primary" />
               </span>
-              <span className="font-display text-xl font-bold text-gold">AL-IQRA GLOBAL</span>
+              <span className="font-display text-xl font-bold text-gold">AL HUDA INTERNATIONAL</span>
             </Link>
             <p className="mt-4 text-sm text-primary-foreground/75 leading-relaxed">
               Authentic online Quran &amp; Islamic education for students across 30+ countries — taught by qualified Hafiz, Qaris and Islamic scholars.
@@ -53,7 +53,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-primary-foreground/15 pt-6 text-center text-xs text-primary-foreground/60">
-          © {new Date().getFullYear()} Al-Iqra Global Quran &amp; Islamic Institute. All rights reserved.
+          © {new Date().getFullYear()} Al Huda International Islamic Institute. All rights reserved.
         </div>
       </div>
     </footer>

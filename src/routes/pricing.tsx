@@ -7,9 +7,9 @@ import { TRIAL_WA_URL } from "@/lib/trial";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing & Plans — Al-Iqra Global" },
+      { title: "Pricing & Plans — Al Huda International Islamic Institute" },
       { name: "description", content: "Country-wise affordable monthly Quran class plans — 2, 3 or 5 days a week. Free 3-day trial, no credit card required." },
-      { property: "og:title", content: "Pricing — Al-Iqra Global" },
+      { property: "og:title", content: "Pricing — Al Huda International Islamic Institute" },
       { property: "og:description", content: "Transparent country-wise monthly pricing for one-on-one Quran classes." },
     ],
   }),

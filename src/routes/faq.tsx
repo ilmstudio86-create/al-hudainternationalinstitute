@@ -5,10 +5,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "FAQ — Al-Iqra Global Quran Institute" },
-      { name: "description", content: "Frequently asked questions about online Quran classes, fees, teachers, trial classes and more at Al-Iqra Global." },
-      { property: "og:title", content: "FAQ — Al-Iqra Global" },
-      { property: "og:description", content: "Everything you need to know about studying with Al-Iqra Global." },
+      { title: "FAQ — Al Huda International Islamic Institute" },
+      { name: "description", content: "Frequently asked questions about online Quran classes, fees, teachers, trial classes and more at Al Huda International Islamic Institute." },
+      { property: "og:title", content: "FAQ — Al Huda International Islamic Institute" },
+      { property: "og:description", content: "Everything you need to know about studying with Al Huda International Islamic Institute." },
     ],
   }),
   component: FAQ,
@@ -28,7 +28,7 @@ const faqs = [
 function FAQ() {
   return (
     <Layout>
-      <PageHero arabic="الأَسْئِلَةُ الشَّائِعَة" title="Frequently Asked Questions" subtitle="Everything you need to know before joining Al-Iqra Global." />
+      <PageHero arabic="الأَسْئِلَةُ الشَّائِعَة" title="Frequently Asked Questions" subtitle="Everything you need to know before joining Al Huda International Islamic Institute." />
 
       <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6">
         <Accordion type="single" collapsible className="space-y-3">
