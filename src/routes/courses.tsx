@@ -5,9 +5,9 @@ import { BookOpen, Sparkles, Mic2, Library, Languages, ScrollText, Baby, ArrowRi
 export const Route = createFileRoute("/courses")({
   head: () => ({
     meta: [
-      { title: "Courses — Al-Iqra Global Quran Institute" },
+      { title: "Courses — Al Huda International Islamic Institute" },
       { name: "description", content: "Online Quran courses: Nazra, Hifz, Tajweed & Qirat, Tafseer, Arabic, Islamic Studies and a dedicated Kids Quran Program." },
-      { property: "og:title", content: "Online Quran Courses — Al-Iqra Global" },
+      { property: "og:title", content: "Online Quran Courses — Al Huda International Islamic Institute" },
       { property: "og:description", content: "Structured curricula for every age and level. Book a free trial today." },
     ],
   }),

@@ -6,9 +6,9 @@ import sadaqahImg from "@/assets/sadaqah.jpg";
 export const Route = createFileRoute("/sadaqah")({
   head: () => ({
     meta: [
-      { title: "Sadaqah, Qurbani & Umrah Sponsorship — Al-Iqra Global" },
-      { name: "description", content: "Donate Sadaqah, perform Qurbani, or sponsor Umrah for a deserving Muslim through Al-Iqra Global. Trusted, transparent, and rewarded by Allah ﷻ." },
-      { property: "og:title", content: "Sadaqah, Qurbani & Umrah — Al-Iqra Global" },
+      { title: "Sadaqah, Qurbani & Umrah Sponsorship — Al Huda International Islamic Institute" },
+      { name: "description", content: "Donate Sadaqah, perform Qurbani, or sponsor Umrah for a deserving Muslim through Al Huda International Islamic Institute. Trusted, transparent, and rewarded by Allah ﷻ." },
+      { property: "og:title", content: "Sadaqah, Qurbani & Umrah — Al Huda International Islamic Institute" },
       { property: "og:description", content: "Send your Sadaqah, Qurbani or sponsor an Umrah with us — earn the best ajar, In sha Allah." },
       { property: "og:image", content: "/src/assets/sadaqah.jpg" },
     ],
@@ -26,7 +26,7 @@ const services = [
   {
     icon: Gift,
     title: "Qurbani / Udhiyah",
-    desc: "Perform your Qurbani through Al-Iqra Global — we arrange healthy animals as per Sunnah and distribute the meat to deserving families across Pakistan.",
+    desc: "Perform your Qurbani through Al Huda International Islamic Institute — we arrange healthy animals as per Sunnah and distribute the meat to deserving families across Pakistan.",
     bullets: ["Goat, sheep, cow share & full cow", "Slaughter as per Sunnah", "Photo / video confirmation", "Meat reaches needy families"],
   },
   {
@@ -38,7 +38,7 @@ const services = [
   {
     icon: Building2,
     title: "Masjid Construction & Contribution",
-    desc: "Want to build a Masjid or contribute your share to one being built? Through Al-Iqra Global you can participate in this Sadaqah Jariyah — every brick a reward that continues for you, In sha Allah.",
+    desc: "Want to build a Masjid or contribute your share to one being built? Through Al Huda International Islamic Institute you can participate in this Sadaqah Jariyah — every brick a reward that continues for you, In sha Allah.",
     bullets: ["Build a new Masjid in your name", "Contribute a share to ongoing projects", "Wudu khana, prayer mats & Qurans", "Photo & progress updates shared with you"],
   },
   {
@@ -61,7 +61,7 @@ const services = [
 ];
 
 const SADAQAH_WA = `https://wa.me/923141766950?text=${encodeURIComponent(
-  "Assalamu Alaikum! Main Al-Iqra Global ke zariye Sadaqah / Qurbani / Umrah sponsorship ke baare mein maloomat lena chahta/chahti hun."
+  "Assalamu Alaikum! I would like information about Sadaqah, Qurbani, Umrah sponsorship, and charity services through Al Huda International Islamic Institute."
 )}`;
 
 function Sadaqah() {
@@ -94,7 +94,7 @@ function Sadaqah() {
               Give. Help. Earn the best ajar.
             </h2>
             <p className="text-foreground/80 leading-relaxed mb-4">
-              Al-Iqra Global is not just a Quran institute — we are a trusted hand for our Muslim ummah around the world.
+              Al Huda International Islamic Institute is not just a Quran institute — we are a trusted hand for our Muslim ummah around the world.
               If you wish to give Sadaqah for your children, perform Qurbani on Eid-ul-Adha, or sponsor an Umrah for a deserving Muslim
               on behalf of yourself or your loved ones, we will arrange it for you with full transparency and care.
             </p>

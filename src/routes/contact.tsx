@@ -3,13 +3,14 @@ import { Layout, PageHero } from "@/components/site/Layout";
 import { Mail, Phone, MapPin, Send, MessageCircle, Facebook, Instagram, Youtube } from "lucide-react";
 import { useState } from "react";
 import { z } from "zod";
+import { CONTACT_WA_URL } from "@/lib/trial";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Free Trial — Al-Iqra Global" },
-      { name: "description", content: "Book your free trial Quran class. Reach Al-Iqra Global by WhatsApp, email or phone." },
-      { property: "og:title", content: "Contact Al-Iqra Global" },
+      { title: "Contact & Free Trial — Al Huda International Islamic Institute" },
+      { name: "description", content: "Book your free trial Quran class. Reach Al Huda International Islamic Institute by WhatsApp, email or phone." },
+      { property: "og:title", content: "Contact Al Huda International Islamic Institute" },
       { property: "og:description", content: "Book a free trial class today — taught by certified Hafiz & Qari." },
     ],
   }),
@@ -56,7 +57,7 @@ function Contact() {
               <div className="absolute inset-0 pattern-bg" />
               <div className="relative space-y-5">
                 <h3 className="text-xl font-bold text-gold">Contact Info</h3>
-                <a href="https://wa.me/923141766950" className="flex items-start gap-3 hover:text-gold transition-colors">
+                <a href={CONTACT_WA_URL} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 hover:text-gold transition-colors">
                   <MessageCircle className="h-5 w-5 text-gold mt-0.5" />
                   <div><div className="text-xs uppercase tracking-wider text-primary-foreground/70">WhatsApp</div><div className="font-medium">+92 314 1766950</div></div>
                 </a>
@@ -70,7 +71,7 @@ function Contact() {
                 </div>
               </div>
             </div>
-            <a href="https://wa.me/923141766950" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-4 font-semibold text-white shadow-elegant hover:opacity-95 transition-opacity">
+            <a href={CONTACT_WA_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-4 font-semibold text-white shadow-elegant hover:opacity-95 transition-opacity">
               <MessageCircle className="h-5 w-5" /> Chat on WhatsApp
             </a>
           </div>

@@ -1,7 +1,9 @@
+import { CONTACT_WA_URL } from "@/lib/trial";
+
 export function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/923141766950?text=Assalamu%20Alaikum%2C%20I%27m%20interested%20in%20Al-Iqra%20Global%20courses"
+      href={CONTACT_WA_URL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
