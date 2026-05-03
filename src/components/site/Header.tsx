@@ -36,8 +36,8 @@ export function Header() {
               <Moon className="h-5 w-5 text-gold" strokeWidth={2.2} />
             </span>
             <span className="flex flex-col leading-tight">
-              <span className="font-display text-base sm:text-lg font-bold tracking-wide text-primary">AL HUDA INTERNATIONAL</span>
-              <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-gold font-semibold">Islamic Institute</span>
+              <span className="font-display text-base sm:text-lg font-bold tracking-wide text-primary">AL HUDA</span>
+              <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-gold font-semibold">International Islamic Institute</span>
             </span>
           </Link>
 

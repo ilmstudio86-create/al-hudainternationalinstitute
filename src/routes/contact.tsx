@@ -38,7 +38,7 @@ function Contact() {
       setStatus("error");
       return;
     }
-    const text = `Assalamu Alaikum, I'd like to book a free trial.\n\nName: ${parsed.data.name}\nEmail: ${parsed.data.email}\nPhone: ${parsed.data.phone}\nCourse: ${parsed.data.course || "—"}\n\n${parsed.data.message}`;
+    const text = `Assalamu Alaikum, I'd like to book a free trial with Al Huda International Islamic Institute.\n\nName: ${parsed.data.name}\nEmail: ${parsed.data.email}\nPhone: ${parsed.data.phone}\nCourse: ${parsed.data.course || "—"}\n\n${parsed.data.message}`;
     window.open(`https://wa.me/923141766950?text=${encodeURIComponent(text)}`, "_blank");
     setStatus("ok");
     setError(null);

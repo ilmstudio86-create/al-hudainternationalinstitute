@@ -7,7 +7,7 @@ import quranImg from "@/assets/quran.jpg";
 import kidsImg from "@/assets/kids-learning.jpg";
 import sisterImg from "@/assets/sister-teacher.jpg";
 import brotherImg from "@/assets/brother-teacher.jpg";
-import { TRIAL_WA_URL } from "@/lib/trial";
+import { CONTACT_WA_URL, TRIAL_WA_URL } from "@/lib/trial";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -310,7 +310,7 @@ function Home() {
               <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
                 Book Free Trial <ArrowRight className="h-4 w-4" />
               </a>
-              <a href={TRIAL_WA_URL.replace(encodeURIComponent("Assalamu Alaikum! I would like to book a free trial class with Al Huda International Islamic Institute. Please send me the details."), encodeURIComponent("Assalamu Alaikum! I would like to get more information about Al Huda International Islamic Institute. Please guide me."))} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-[#25D366] px-7 py-3.5 font-semibold text-white hover:opacity-95 transition-opacity">
+              <a href={CONTACT_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-[#25D366] px-7 py-3.5 font-semibold text-white hover:opacity-95 transition-opacity">
                 <MessageCircle className="h-5 w-5" /> Chat on WhatsApp
               </a>
             </div>
