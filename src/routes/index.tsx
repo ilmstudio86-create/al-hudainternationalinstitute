@@ -97,7 +97,7 @@ function Home() {
           {[
             { n: "500+", l: "Active Students" },
             { n: "30+", l: "Countries Served" },
-            { n: "25+", l: "Certified Teachers" },
+            { n: "40+", l: "Certified Teachers" },
             { n: "4.9★", l: "Average Rating" },
           ].map((s) => (
             <div key={s.l}>
