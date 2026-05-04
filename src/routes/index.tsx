@@ -322,29 +322,33 @@ function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-        <SectionDivider />
-        <h2 className="mt-4 text-center text-3xl sm:text-4xl font-bold text-primary">Words from Our Students</h2>
-        <p className="mt-3 text-center text-muted-foreground">Real stories from families around the world.</p>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {testimonials.map((t) => (
-            <div key={t.name} className="rounded-2xl bg-card p-7 shadow-sm border border-border/60 hover:shadow-elegant transition-shadow relative">
-              <Quote className="absolute -top-3 left-6 h-8 w-8 text-gold bg-background p-1.5 rounded-full" />
-              <div className="flex gap-1 mb-3 mt-2">
-                {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-gold text-gold" />)}
-              </div>
-              <p className="text-sm text-foreground/90 italic leading-relaxed mb-5">"{t.text}"</p>
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-primary text-gold font-bold text-sm ring-1 ring-gold/30">
-                  {t.name.split(" ").map((s) => s[0]).join("")}
+      <section className="py-20 overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <SectionDivider />
+          <h2 className="mt-4 text-center text-3xl sm:text-4xl font-bold text-primary">Words from Our Students</h2>
+          <p className="mt-3 text-center text-muted-foreground">Real stories from families around the world — sliding past, one heart at a time.</p>
+        </div>
+        <div className="mt-12 marquee-pause mask-fade-x">
+          <div className="flex w-max gap-6 animate-marquee">
+            {[...testimonials, ...testimonials].map((t, i) => (
+              <article key={`${t.name}-${i}`} className="w-[320px] sm:w-[360px] shrink-0 rounded-2xl bg-card p-7 shadow-sm border border-border/60 relative">
+                <Quote className="absolute -top-3 left-6 h-8 w-8 text-gold bg-background p-1.5 rounded-full" />
+                <div className="flex gap-1 mb-3 mt-2">
+                  {Array.from({ length: 5 }).map((_, j) => <Star key={j} className="h-4 w-4 fill-gold text-gold" />)}
                 </div>
-                <div>
-                  <div className="font-semibold text-primary text-sm">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.country}</div>
+                <p className="text-sm text-foreground/90 italic leading-relaxed mb-5 line-clamp-5">"{t.text}"</p>
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-primary text-gold font-bold text-sm ring-1 ring-gold/30">
+                    {t.name.split(" ").map((s) => s[0]).join("")}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-primary text-sm">{t.name}</div>
+                    <div className="text-xs text-muted-foreground">{t.country}</div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
