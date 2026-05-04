@@ -208,15 +208,21 @@ function Home() {
         <SectionDivider />
         <h2 className="mt-4 text-center text-3xl sm:text-4xl font-bold text-primary">Our Programs</h2>
         <p className="mt-3 text-center text-muted-foreground">Structured curricula for every level — from your first letter to complete Hifz.</p>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {programs.map((c) => (
-            <div key={c.title} className="group rounded-2xl border border-border/70 bg-card p-6 hover:border-gold/60 hover:shadow-gold transition-all">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gold/10 mb-4 group-hover:bg-gradient-gold transition-colors">
-                <c.icon className="h-6 w-6 text-gold group-hover:text-primary transition-colors" />
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {programs.map((c, i) => (
+            <div key={c.title} className="group flex flex-col overflow-hidden rounded-2xl border border-border/70 bg-card hover:border-gold/60 hover:shadow-gold transition-all">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img src={programImages[i % programImages.length]} alt={c.title} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
+                <div className="absolute top-3 left-3 flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-gold shadow-gold">
+                  <c.icon className="h-5 w-5 text-primary" />
+                </div>
               </div>
-              <h3 className="font-semibold text-primary text-lg mb-2">{c.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">{c.desc}</p>
-              <span className="inline-block rounded-full bg-secondary px-3 py-1 text-xs font-medium text-primary">{c.level}</span>
+              <div className="flex flex-col flex-1 p-6">
+                <h3 className="font-semibold text-primary text-lg mb-2">{c.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">{c.desc}</p>
+                <span className="inline-block w-fit rounded-full bg-secondary px-3 py-1 text-xs font-medium text-primary">{c.level}</span>
+              </div>
             </div>
           ))}
         </div>
