@@ -317,6 +317,34 @@ function Home() {
         </div>
       </section>
 
+      {/* DONATION */}
+      <section className="mx-auto max-w-7xl px-4 pt-4 pb-16 sm:px-6">
+        <div className="relative overflow-hidden rounded-3xl border-2 border-gold/40 bg-card p-10 sm:p-14 shadow-elegant">
+          <div className="grid gap-8 lg:grid-cols-[auto_1fr] items-center">
+            <div className="flex justify-center">
+              <span className="flex h-24 w-24 items-center justify-center rounded-full bg-gradient-primary shadow-gold ring-4 ring-gold/30">
+                <HandHeart className="h-12 w-12 text-gold" />
+              </span>
+            </div>
+            <div className="text-center lg:text-left">
+              <p className="text-xs uppercase tracking-[0.3em] text-gold font-semibold mb-2">Donate Now</p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4 leading-tight">Support Our Welfare Projects</h2>
+              <p className="text-foreground/80 leading-relaxed mb-6 max-w-3xl">
+                Al-Huda International Islamic Institute runs many welfare projects. We provide financial and other support to poor people and orphans. If you want to be part of this noble cause, please donate now. <span className="font-semibold text-primary">Zakat is also accepted.</span>
+              </p>
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                <Link to="/sadaqah" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
+                  <Heart className="h-5 w-5" /> Donate Now
+                </Link>
+                <a href={CONTACT_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md border-2 border-primary/30 bg-secondary px-7 py-3.5 font-semibold text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
+                  <MessageCircle className="h-5 w-5" /> Discuss on WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-primary p-10 sm:p-16 text-center text-primary-foreground shadow-elegant">
