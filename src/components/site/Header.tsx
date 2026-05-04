@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { Moon, Phone, Mail, Globe2 } from "lucide-react";
+import { Phone, Mail, Globe2 } from "lucide-react";
 import { TRIAL_WA_URL } from "@/lib/trial";
+import logo from "@/assets/logo.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -32,9 +33,7 @@ export function Header() {
       <div className="border-b border-border/60 bg-background/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
           <Link to="/" className="flex items-center gap-2.5 group shrink-0">
-            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-primary shadow-gold ring-1 ring-gold/40">
-              <Moon className="h-5 w-5 text-gold" strokeWidth={2.2} />
-            </span>
+            <img src={logo} alt="Al Huda International Islamic Institute logo" width={48} height={48} className="h-11 w-11 sm:h-12 sm:w-12 object-contain drop-shadow" />
             <span className="flex flex-col leading-tight">
               <span className="font-display text-base sm:text-lg font-bold tracking-wide text-primary">AL HUDA</span>
               <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-gold font-semibold">International Islamic Institute</span>

@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { SectionDivider } from "@/components/site/SectionDivider";
-import { Globe2, GraduationCap, Clock, Users, Star, BookOpen, Sparkles, ShieldCheck, ArrowRight, Quote, PlayCircle, MessageCircle, CheckCircle2, Heart, Baby, Mic2, Library, Languages, ScrollText } from "lucide-react";
+import { Globe2, GraduationCap, Clock, Users, Star, BookOpen, Sparkles, ShieldCheck, ArrowRight, Quote, PlayCircle, MessageCircle, CheckCircle2, Heart, Baby, Mic2, Library, Languages, ScrollText, HandHeart } from "lucide-react";
 import heroImg from "@/assets/hero-mosque.jpg";
 import quranImg from "@/assets/quran.jpg";
 import kidsImg from "@/assets/kids-learning.jpg";
@@ -52,9 +52,29 @@ const testimonials = [
   { name: "Aisha R.", country: "🇬🇧 United Kingdom", text: "My children memorised 5 Juz in one year. The teachers are patient and truly inspiring." },
   { name: "Mohammed S.", country: "🇨🇦 Canada", text: "Best online Quran academy I've enrolled with. Crystal clear voice, perfect Tajweed and very organised." },
   { name: "Fatima H.", country: "🇺🇸 United States", text: "Female teacher for my daughter — professional, kind, knowledgeable. Highly recommend." },
-  { name: "Yusuf A.", country: "🇦🇺 Australia", text: "I started Hifz at 35 thinking it was too late. Alhamdulillah I'm on Juz 12 thanks to Al Huda International Islamic Institute." },
+  { name: "Yusuf A.", country: "🇦🇺 Australia", text: "I started Hifz at 35 thinking it was too late. Alhamdulillah I'm on Juz 12 thanks to Al Huda." },
   { name: "Sumayya K.", country: "🇸🇦 Saudi Arabia", text: "The Tafseer course changed how I connect with the Quran. May Allah reward this team." },
   { name: "Ibrahim M.", country: "🇲🇾 Malaysia", text: "Affordable, professional and authentic. My whole family enrolled in different programs." },
+  { name: "Khadija N.", country: "🇶🇦 Qatar", text: "The female Ustadha is gentle, qualified and my daughters love their classes. Truly a blessing." },
+  { name: "Abdullah T.", country: "🇦🇪 UAE", text: "I improved my Tajweed in just 3 months. The Qari sahab is a master of his craft." },
+  { name: "Hafsa I.", country: "🇮🇪 Ireland", text: "Booked a free trial — within minutes I was sure. The teachers are world-class, mashaAllah." },
+  { name: "Bilal K.", country: "🇳🇿 New Zealand", text: "Living far from any masjid, this academy brought authentic Islamic knowledge to my home." },
+  { name: "Maryam Z.", country: "🇿🇦 South Africa", text: "My 6-year-old finished Qaida in 4 months. The kids program is genuinely engaging." },
+  { name: "Omar F.", country: "🇩🇪 Germany", text: "Flexible timings even for my late-night work shifts. Sheikh is extremely knowledgeable." },
+  { name: "Zainab A.", country: "🇫🇷 France", text: "After years of looking, I finally found teachers who teach Tafseer with depth and clarity." },
+  { name: "Saad R.", country: "🇸🇪 Sweden", text: "Mufti sahab answered all my fiqh questions with proof. May Allah preserve him." },
+  { name: "Ruqayya M.", country: "🇰🇼 Kuwait", text: "Beautiful experience. My Arabic has improved more in 6 months than 2 years of college." },
+  { name: "Tariq H.", country: "🇮🇳 India", text: "Honest, sincere teachers. They truly care about each student's progress, not just fees." },
+  { name: "Nusayba B.", country: "🇧🇭 Bahrain", text: "The female-only sister classes are a safe, beautiful environment for women to learn." },
+  { name: "Imran S.", country: "🇵🇰 Pakistan", text: "Even living in Pakistan, I chose Al Huda for the international standard of teaching." },
+  { name: "Layla J.", country: "🇪🇸 Spain", text: "From zero Arabic to reading Quran in 5 months — alhamdulillah, I cried in my first khatam." },
+  { name: "Hamza Q.", country: "🇹🇷 Turkey", text: "Professional dashboard, on-time classes, kind teachers. Exactly what a busy parent needs." },
+  { name: "Safiya L.", country: "🇳🇱 Netherlands", text: "My son was scared of Arabic letters. His teacher made him love them. SubhanAllah." },
+  { name: "Junaid W.", country: "🇧🇪 Belgium", text: "Sponsored my mother for Tafseer classes — best gift I ever gave her. JazakAllah khair." },
+  { name: "Asma D.", country: "🇳🇴 Norway", text: "Trial was free and there was zero pressure. The teaching itself convinced me to enroll." },
+  { name: "Faisal G.", country: "🇪🇬 Egypt", text: "Even native Arabs benefit — the Tajweed precision and Qirat styles taught here are exceptional." },
+  { name: "Hina V.", country: "🇲🇦 Morocco", text: "My daughter is now memorising Surah Mulk. The patience of her teacher is unmatched." },
+  { name: "Adnan P.", country: "🇯🇴 Jordan", text: "Highly recommended for converts. They explain everything from the absolute basics with respect." },
 ];
 
 const countries = ["🇨🇦 Canada", "🇺🇸 USA", "🇬🇧 UK", "🇮🇪 Ireland", "🇦🇺 Australia", "🇳🇿 New Zealand", "🇸🇦 Saudi Arabia", "🇶🇦 Qatar", "🇦🇪 UAE", "🇲🇾 Malaysia"];
@@ -294,6 +314,34 @@ function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* DONATION */}
+      <section className="mx-auto max-w-7xl px-4 pt-4 pb-16 sm:px-6">
+        <div className="relative overflow-hidden rounded-3xl border-2 border-gold/40 bg-card p-10 sm:p-14 shadow-elegant">
+          <div className="grid gap-8 lg:grid-cols-[auto_1fr] items-center">
+            <div className="flex justify-center">
+              <span className="flex h-24 w-24 items-center justify-center rounded-full bg-gradient-primary shadow-gold ring-4 ring-gold/30">
+                <HandHeart className="h-12 w-12 text-gold" />
+              </span>
+            </div>
+            <div className="text-center lg:text-left">
+              <p className="text-xs uppercase tracking-[0.3em] text-gold font-semibold mb-2">Donate Now</p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4 leading-tight">Support Our Welfare Projects</h2>
+              <p className="text-foreground/80 leading-relaxed mb-6 max-w-3xl">
+                Al-Huda International Islamic Institute runs many welfare projects. We provide financial and other support to poor people and orphans. If you want to be part of this noble cause, please donate now. <span className="font-semibold text-primary">Zakat is also accepted.</span>
+              </p>
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                <Link to="/sadaqah" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
+                  <Heart className="h-5 w-5" /> Donate Now
+                </Link>
+                <a href={CONTACT_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md border-2 border-primary/30 bg-secondary px-7 py-3.5 font-semibold text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
+                  <MessageCircle className="h-5 w-5" /> Discuss on WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
