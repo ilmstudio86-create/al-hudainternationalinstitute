@@ -91,11 +91,25 @@ const testimonials = [
 const countries = ["🇨🇦 Canada", "🇺🇸 USA", "🇬🇧 UK", "🇮🇪 Ireland", "🇦🇺 Australia", "🇳🇿 New Zealand", "🇸🇦 Saudi Arabia", "🇶🇦 Qatar", "🇦🇪 UAE", "🇲🇾 Malaysia"];
 
 function Home() {
+  const [slide, setSlide] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setSlide((s) => (s + 1) % heroSlides.length), 5000);
+    return () => clearInterval(id);
+  }, []);
   return (
     <Layout>
       {/* HERO */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden">
-        <img src={heroImg} alt="Grand mosque at golden sunset" width={1920} height={1280} className="absolute inset-0 h-full w-full object-cover" />
+        {heroSlides.map((s, i) => (
+          <img
+            key={s.src}
+            src={s.src}
+            alt={s.alt}
+            width={1920}
+            height={1280}
+            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="absolute inset-0 pattern-bg" />
 
