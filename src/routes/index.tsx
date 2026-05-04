@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { Layout } from "@/components/site/Layout";
 import { SectionDivider } from "@/components/site/SectionDivider";
 import { Globe2, GraduationCap, Clock, Users, Star, BookOpen, Sparkles, ShieldCheck, ArrowRight, Quote, PlayCircle, MessageCircle, CheckCircle2, Heart, Baby, Mic2, Library, Languages, ScrollText, HandHeart } from "lucide-react";
@@ -8,6 +9,16 @@ import kidsImg from "@/assets/kids-learning.jpg";
 import sisterImg from "@/assets/sister-teacher.jpg";
 import brotherImg from "@/assets/brother-teacher.jpg";
 import { CONTACT_WA_URL, TRIAL_WA_URL } from "@/lib/trial";
+
+const heroSlides = [
+  { src: heroImg, alt: "Grand mosque at golden sunset" },
+  { src: quranImg, alt: "Holy Quran on a wooden rehal" },
+  { src: kidsImg, alt: "Muslim child learning Quran online" },
+  { src: sisterImg, alt: "Female Quran teacher in hijab" },
+  { src: brotherImg, alt: "Male Hafiz teacher reciting Quran" },
+];
+
+const programImages = [quranImg, brotherImg, kidsImg, sisterImg, heroImg, kidsImg, brotherImg, sisterImg];
 
 export const Route = createFileRoute("/")({
   head: () => ({
