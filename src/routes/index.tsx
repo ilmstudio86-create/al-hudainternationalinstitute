@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { Layout } from "@/components/site/Layout";
 import { SectionDivider } from "@/components/site/SectionDivider";
 import { Globe2, GraduationCap, Clock, Users, Star, BookOpen, Sparkles, ShieldCheck, ArrowRight, Quote, PlayCircle, MessageCircle, CheckCircle2, Heart, Baby, Mic2, Library, Languages, ScrollText, HandHeart } from "lucide-react";
@@ -8,6 +9,16 @@ import kidsImg from "@/assets/kids-learning.jpg";
 import sisterImg from "@/assets/sister-teacher.jpg";
 import brotherImg from "@/assets/brother-teacher.jpg";
 import { CONTACT_WA_URL, TRIAL_WA_URL } from "@/lib/trial";
+
+const heroSlides = [
+  { src: heroImg, alt: "Grand mosque at golden sunset" },
+  { src: quranImg, alt: "Holy Quran on a wooden rehal" },
+  { src: kidsImg, alt: "Muslim child learning Quran online" },
+  { src: sisterImg, alt: "Female Quran teacher in hijab" },
+  { src: brotherImg, alt: "Male Hafiz teacher reciting Quran" },
+];
+
+const programImages = [quranImg, brotherImg, kidsImg, sisterImg, heroImg, kidsImg, brotherImg, sisterImg];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -80,11 +91,25 @@ const testimonials = [
 const countries = ["🇨🇦 Canada", "🇺🇸 USA", "🇬🇧 UK", "🇮🇪 Ireland", "🇦🇺 Australia", "🇳🇿 New Zealand", "🇸🇦 Saudi Arabia", "🇶🇦 Qatar", "🇦🇪 UAE", "🇲🇾 Malaysia"];
 
 function Home() {
+  const [slide, setSlide] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setSlide((s) => (s + 1) % heroSlides.length), 5000);
+    return () => clearInterval(id);
+  }, []);
   return (
     <Layout>
       {/* HERO */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden">
-        <img src={heroImg} alt="Grand mosque at golden sunset" width={1920} height={1280} className="absolute inset-0 h-full w-full object-cover" />
+        {heroSlides.map((s, i) => (
+          <img
+            key={s.src}
+            src={s.src}
+            alt={s.alt}
+            width={1920}
+            height={1280}
+            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="absolute inset-0 pattern-bg" />
 
@@ -183,15 +208,21 @@ function Home() {
         <SectionDivider />
         <h2 className="mt-4 text-center text-3xl sm:text-4xl font-bold text-primary">Our Programs</h2>
         <p className="mt-3 text-center text-muted-foreground">Structured curricula for every level — from your first letter to complete Hifz.</p>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {programs.map((c) => (
-            <div key={c.title} className="group rounded-2xl border border-border/70 bg-card p-6 hover:border-gold/60 hover:shadow-gold transition-all">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gold/10 mb-4 group-hover:bg-gradient-gold transition-colors">
-                <c.icon className="h-6 w-6 text-gold group-hover:text-primary transition-colors" />
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {programs.map((c, i) => (
+            <div key={c.title} className="group flex flex-col overflow-hidden rounded-2xl border border-border/70 bg-card hover:border-gold/60 hover:shadow-gold transition-all">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img src={programImages[i % programImages.length]} alt={c.title} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
+                <div className="absolute top-3 left-3 flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-gold shadow-gold">
+                  <c.icon className="h-5 w-5 text-primary" />
+                </div>
               </div>
-              <h3 className="font-semibold text-primary text-lg mb-2">{c.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">{c.desc}</p>
-              <span className="inline-block rounded-full bg-secondary px-3 py-1 text-xs font-medium text-primary">{c.level}</span>
+              <div className="flex flex-col flex-1 p-6">
+                <h3 className="font-semibold text-primary text-lg mb-2">{c.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">{c.desc}</p>
+                <span className="inline-block w-fit rounded-full bg-secondary px-3 py-1 text-xs font-medium text-primary">{c.level}</span>
+              </div>
             </div>
           ))}
         </div>
@@ -291,29 +322,33 @@ function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-        <SectionDivider />
-        <h2 className="mt-4 text-center text-3xl sm:text-4xl font-bold text-primary">Words from Our Students</h2>
-        <p className="mt-3 text-center text-muted-foreground">Real stories from families around the world.</p>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {testimonials.map((t) => (
-            <div key={t.name} className="rounded-2xl bg-card p-7 shadow-sm border border-border/60 hover:shadow-elegant transition-shadow relative">
-              <Quote className="absolute -top-3 left-6 h-8 w-8 text-gold bg-background p-1.5 rounded-full" />
-              <div className="flex gap-1 mb-3 mt-2">
-                {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-gold text-gold" />)}
-              </div>
-              <p className="text-sm text-foreground/90 italic leading-relaxed mb-5">"{t.text}"</p>
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-primary text-gold font-bold text-sm ring-1 ring-gold/30">
-                  {t.name.split(" ").map((s) => s[0]).join("")}
+      <section className="py-20 overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <SectionDivider />
+          <h2 className="mt-4 text-center text-3xl sm:text-4xl font-bold text-primary">Words from Our Students</h2>
+          <p className="mt-3 text-center text-muted-foreground">Real stories from families around the world — sliding past, one heart at a time.</p>
+        </div>
+        <div className="mt-12 marquee-pause mask-fade-x">
+          <div className="flex w-max gap-6 animate-marquee">
+            {[...testimonials, ...testimonials].map((t, i) => (
+              <article key={`${t.name}-${i}`} className="w-[320px] sm:w-[360px] shrink-0 rounded-2xl bg-card p-7 shadow-sm border border-border/60 relative">
+                <Quote className="absolute -top-3 left-6 h-8 w-8 text-gold bg-background p-1.5 rounded-full" />
+                <div className="flex gap-1 mb-3 mt-2">
+                  {Array.from({ length: 5 }).map((_, j) => <Star key={j} className="h-4 w-4 fill-gold text-gold" />)}
                 </div>
-                <div>
-                  <div className="font-semibold text-primary text-sm">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.country}</div>
+                <p className="text-sm text-foreground/90 italic leading-relaxed mb-5 line-clamp-5">"{t.text}"</p>
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-primary text-gold font-bold text-sm ring-1 ring-gold/30">
+                    {t.name.split(" ").map((s) => s[0]).join("")}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-primary text-sm">{t.name}</div>
+                    <div className="text-xs text-muted-foreground">{t.country}</div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
