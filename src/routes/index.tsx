@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { useEffect, useState } from "react";
 import { Layout } from "@/components/site/Layout";
 import { SectionDivider } from "@/components/site/SectionDivider";
-import { Globe2, GraduationCap, Clock, Users, Star, BookOpen, Sparkles, ShieldCheck, ArrowRight, Quote, PlayCircle, MessageCircle, CheckCircle2, Heart, Baby, Mic2, Library, Languages, ScrollText, HandHeart } from "lucide-react";
+import { Globe2, GraduationCap, Clock, Users, Star, BookOpen, Sparkles, ShieldCheck, ArrowRight, Quote, PlayCircle, CheckCircle2, Heart, Baby, Mic2, Library, Languages, ScrollText, HandHeart } from "lucide-react";
 import heroImg from "@/assets/hero-mosque.jpg";
 import quranImg from "@/assets/quran.jpg";
 import kidsImg from "@/assets/kids-learning.jpg";
@@ -411,7 +412,7 @@ function Home() {
                   <Heart className="h-5 w-5" /> Donate Now
                 </Link>
                 <a href={CONTACT_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md border-2 border-primary/30 bg-secondary px-7 py-3.5 font-semibold text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
-                  <MessageCircle className="h-5 w-5" /> Discuss on WhatsApp
+                  <WhatsAppIcon className="h-5 w-5" /> Discuss on WhatsApp
                 </a>
               </div>
             </div>
@@ -433,7 +434,7 @@ function Home() {
                 Book Free Trial <ArrowRight className="h-4 w-4" />
               </a>
               <a href={CONTACT_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-[#25D366] px-7 py-3.5 font-semibold text-white hover:opacity-95 transition-opacity">
-                <MessageCircle className="h-5 w-5" /> Chat on WhatsApp
+                <WhatsAppIcon className="h-5 w-5" /> Chat on WhatsApp
               </a>
             </div>
           </div>
