@@ -8,17 +8,56 @@ import quranImg from "@/assets/quran.jpg";
 import kidsImg from "@/assets/kids-learning.jpg";
 import sisterImg from "@/assets/sister-teacher.jpg";
 import brotherImg from "@/assets/brother-teacher.jpg";
+import kidBoyLaptop from "@/assets/kid-boy-laptop.jpg";
+import kidGirlQuran from "@/assets/kid-girl-quran.jpg";
+import kidBoyQuran from "@/assets/kid-boy-quran.jpg";
+import kidGirlLaptop from "@/assets/kid-girl-laptop.jpg";
+import kidsTogether from "@/assets/kids-quran-together.jpg";
 import { CONTACT_WA_URL, TRIAL_WA_URL } from "@/lib/trial";
 
 const heroSlides = [
-  { src: heroImg, alt: "Grand mosque at golden sunset" },
-  { src: quranImg, alt: "Holy Quran on a wooden rehal" },
-  { src: kidsImg, alt: "Muslim child learning Quran online" },
-  { src: sisterImg, alt: "Female Quran teacher in hijab" },
-  { src: brotherImg, alt: "Male Hafiz teacher reciting Quran" },
+  { src: kidBoyLaptop, alt: "Muslim boy learning Quran on laptop" },
+  { src: kidGirlQuran, alt: "Muslim girl in hijab holding Holy Quran" },
+  { src: kidBoyQuran, alt: "Muslim boy reading the Holy Quran" },
+  { src: kidGirlLaptop, alt: "Muslim girl studying Quran online on laptop" },
+  { src: kidsTogether, alt: "Muslim children reading Quran together" },
 ];
 
-const programImages = [quranImg, brotherImg, kidsImg, sisterImg, heroImg, kidsImg, brotherImg, sisterImg];
+function ProgramImageRotator({ images, title, delay = 0 }: { images: string[]; title: string; delay?: number }) {
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    const start = setTimeout(() => {
+      setIdx((i) => (i + 1) % images.length);
+    }, delay);
+    const id = setInterval(() => setIdx((i) => (i + 1) % images.length), 3500);
+    return () => { clearTimeout(start); clearInterval(id); };
+  }, [images.length, delay]);
+  return (
+    <>
+      {images.map((src, i) => (
+        <img
+          key={src + i}
+          src={src}
+          alt={title}
+          loading="lazy"
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${i === idx ? "opacity-100" : "opacity-0"}`}
+        />
+      ))}
+    </>
+  );
+}
+
+// Each program gets 3 rotating images
+const programImageSets: string[][] = [
+  [kidBoyQuran, quranImg, kidGirlQuran],
+  [kidBoyLaptop, kidsTogether, kidGirlLaptop],
+  [brotherImg, kidBoyQuran, sisterImg],
+  [quranImg, kidGirlQuran, kidBoyLaptop],
+  [sisterImg, kidGirlLaptop, kidBoyLaptop],
+  [kidsImg, kidsTogether, quranImg],
+  [kidBoyLaptop, kidGirlLaptop, kidsTogether],
+  [brotherImg, sisterImg, kidsTogether],
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -212,9 +251,9 @@ function Home() {
           {programs.map((c, i) => (
             <div key={c.title} className="group flex flex-col overflow-hidden rounded-2xl border border-border/70 bg-card hover:border-gold/60 hover:shadow-gold transition-all">
               <div className="relative aspect-[4/3] overflow-hidden">
-                <img src={programImages[i % programImages.length]} alt={c.title} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
-                <div className="absolute top-3 left-3 flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-gold shadow-gold">
+                <ProgramImageRotator images={programImageSets[i % programImageSets.length]} title={c.title} delay={i * 600} />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent pointer-events-none" />
+                <div className="absolute top-3 left-3 flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-gold shadow-gold z-10">
                   <c.icon className="h-5 w-5 text-primary" />
                 </div>
               </div>
