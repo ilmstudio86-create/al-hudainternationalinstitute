@@ -23,7 +23,29 @@ const heroSlides = [
   { src: kidsTogether, alt: "Muslim children reading Quran together" },
 ];
 
-const kidPool = [kidBoyLaptop, kidGirlQuran, kidBoyQuran, kidGirlLaptop, kidsTogether, quranImg, kidsImg];
+function ProgramImageRotator({ images, title, delay = 0 }: { images: string[]; title: string; delay?: number }) {
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    const start = setTimeout(() => {
+      setIdx((i) => (i + 1) % images.length);
+    }, delay);
+    const id = setInterval(() => setIdx((i) => (i + 1) % images.length), 3500);
+    return () => { clearTimeout(start); clearInterval(id); };
+  }, [images.length, delay]);
+  return (
+    <>
+      {images.map((src, i) => (
+        <img
+          key={src + i}
+          src={src}
+          alt={title}
+          loading="lazy"
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${i === idx ? "opacity-100" : "opacity-0"}`}
+        />
+      ))}
+    </>
+  );
+}
 
 // Each program gets 3 rotating images
 const programImageSets: string[][] = [
