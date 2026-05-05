@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TeachersRouteImport } from './routes/teachers'
 import { Route as SadaqahRouteImport } from './routes/sadaqah'
 import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as IslamicRouteImport } from './routes/islamic'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as CoursesRouteImport } from './routes/courses'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -31,6 +32,11 @@ const SadaqahRoute = SadaqahRouteImport.update({
 const PricingRoute = PricingRouteImport.update({
   id: '/pricing',
   path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IslamicRoute = IslamicRouteImport.update({
+  id: '/islamic',
+  path: '/islamic',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FaqRoute = FaqRouteImport.update({
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/faq': typeof FaqRoute
+  '/islamic': typeof IslamicRoute
   '/pricing': typeof PricingRoute
   '/sadaqah': typeof SadaqahRoute
   '/teachers': typeof TeachersRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/faq': typeof FaqRoute
+  '/islamic': typeof IslamicRoute
   '/pricing': typeof PricingRoute
   '/sadaqah': typeof SadaqahRoute
   '/teachers': typeof TeachersRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/faq': typeof FaqRoute
+  '/islamic': typeof IslamicRoute
   '/pricing': typeof PricingRoute
   '/sadaqah': typeof SadaqahRoute
   '/teachers': typeof TeachersRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/courses'
     | '/faq'
+    | '/islamic'
     | '/pricing'
     | '/sadaqah'
     | '/teachers'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/courses'
     | '/faq'
+    | '/islamic'
     | '/pricing'
     | '/sadaqah'
     | '/teachers'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/courses'
     | '/faq'
+    | '/islamic'
     | '/pricing'
     | '/sadaqah'
     | '/teachers'
@@ -129,6 +141,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   CoursesRoute: typeof CoursesRoute
   FaqRoute: typeof FaqRoute
+  IslamicRoute: typeof IslamicRoute
   PricingRoute: typeof PricingRoute
   SadaqahRoute: typeof SadaqahRoute
   TeachersRoute: typeof TeachersRoute
@@ -155,6 +168,13 @@ declare module '@tanstack/react-router' {
       path: '/pricing'
       fullPath: '/pricing'
       preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/islamic': {
+      id: '/islamic'
+      path: '/islamic'
+      fullPath: '/islamic'
+      preLoaderRoute: typeof IslamicRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faq': {
@@ -201,6 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   CoursesRoute: CoursesRoute,
   FaqRoute: FaqRoute,
+  IslamicRoute: IslamicRoute,
   PricingRoute: PricingRoute,
   SadaqahRoute: SadaqahRoute,
   TeachersRoute: TeachersRoute,
@@ -208,12 +229,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}
