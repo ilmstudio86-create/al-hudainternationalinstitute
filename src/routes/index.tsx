@@ -229,9 +229,9 @@ function Home() {
           {programs.map((c, i) => (
             <div key={c.title} className="group flex flex-col overflow-hidden rounded-2xl border border-border/70 bg-card hover:border-gold/60 hover:shadow-gold transition-all">
               <div className="relative aspect-[4/3] overflow-hidden">
-                <img src={programImages[i % programImages.length]} alt={c.title} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
-                <div className="absolute top-3 left-3 flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-gold shadow-gold">
+                <ProgramImageRotator images={programImageSets[i % programImageSets.length]} title={c.title} delay={i * 600} />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent pointer-events-none" />
+                <div className="absolute top-3 left-3 flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-gold shadow-gold z-10">
                   <c.icon className="h-5 w-5 text-primary" />
                 </div>
               </div>
