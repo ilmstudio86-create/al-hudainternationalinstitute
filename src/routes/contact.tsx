@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { Layout, PageHero } from "@/components/site/Layout";
-import { Mail, Phone, MapPin, Send, MessageCircle, Facebook, Instagram, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Facebook, Instagram, Youtube } from "lucide-react";
 import { useState } from "react";
 import { z } from "zod";
 import { CONTACT_WA_URL } from "@/lib/trial";
@@ -58,7 +59,7 @@ function Contact() {
               <div className="relative space-y-5">
                 <h3 className="text-xl font-bold text-gold">Contact Info</h3>
                 <a href={CONTACT_WA_URL} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 hover:text-gold transition-colors">
-                  <MessageCircle className="h-5 w-5 text-gold mt-0.5" />
+                  <WhatsAppIcon className="h-5 w-5 text-gold mt-0.5" />
                   <div><div className="text-xs uppercase tracking-wider text-primary-foreground/70">WhatsApp</div><div className="font-medium">+92 314 1766950</div></div>
                 </a>
                 <div className="flex items-start gap-3"><Phone className="h-5 w-5 text-gold mt-0.5" /><div><div className="text-xs uppercase tracking-wider text-primary-foreground/70">Phone</div><div className="font-medium">+92 314 1766950</div></div></div>
@@ -72,7 +73,7 @@ function Contact() {
               </div>
             </div>
             <a href={CONTACT_WA_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-4 font-semibold text-white shadow-elegant hover:opacity-95 transition-opacity">
-              <MessageCircle className="h-5 w-5" /> Chat on WhatsApp
+              <WhatsAppIcon className="h-5 w-5" /> Chat on WhatsApp
             </a>
           </div>
 

@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { Layout, PageHero } from "@/components/site/Layout";
-import { Heart, Gift, Plane, HandHeart, MessageCircle, CheckCircle2, Building2, Sparkles, Utensils } from "lucide-react";
+import { Heart, Gift, Plane, HandHeart, CheckCircle2, Building2, Sparkles, Utensils } from "lucide-react";
 import sadaqahImg from "@/assets/sadaqah.jpg";
 
 export const Route = createFileRoute("/sadaqah")({
@@ -107,7 +108,7 @@ function Sadaqah() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform"
             >
-              <MessageCircle className="h-5 w-5" /> Discuss on WhatsApp
+              <WhatsAppIcon className="h-5 w-5" /> Discuss on WhatsApp
             </a>
           </div>
         </div>
@@ -170,7 +171,7 @@ function Sadaqah() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform"
             >
-              <MessageCircle className="h-5 w-5" /> Contact Us on WhatsApp
+              <WhatsAppIcon className="h-5 w-5" /> Contact Us on WhatsApp
             </a>
           </div>
         </div>
