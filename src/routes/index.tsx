@@ -8,17 +8,34 @@ import quranImg from "@/assets/quran.jpg";
 import kidsImg from "@/assets/kids-learning.jpg";
 import sisterImg from "@/assets/sister-teacher.jpg";
 import brotherImg from "@/assets/brother-teacher.jpg";
+import kidBoyLaptop from "@/assets/kid-boy-laptop.jpg";
+import kidGirlQuran from "@/assets/kid-girl-quran.jpg";
+import kidBoyQuran from "@/assets/kid-boy-quran.jpg";
+import kidGirlLaptop from "@/assets/kid-girl-laptop.jpg";
+import kidsTogether from "@/assets/kids-quran-together.jpg";
 import { CONTACT_WA_URL, TRIAL_WA_URL } from "@/lib/trial";
 
 const heroSlides = [
-  { src: heroImg, alt: "Grand mosque at golden sunset" },
-  { src: quranImg, alt: "Holy Quran on a wooden rehal" },
-  { src: kidsImg, alt: "Muslim child learning Quran online" },
-  { src: sisterImg, alt: "Female Quran teacher in hijab" },
-  { src: brotherImg, alt: "Male Hafiz teacher reciting Quran" },
+  { src: kidBoyLaptop, alt: "Muslim boy learning Quran on laptop" },
+  { src: kidGirlQuran, alt: "Muslim girl in hijab holding Holy Quran" },
+  { src: kidBoyQuran, alt: "Muslim boy reading the Holy Quran" },
+  { src: kidGirlLaptop, alt: "Muslim girl studying Quran online on laptop" },
+  { src: kidsTogether, alt: "Muslim children reading Quran together" },
 ];
 
-const programImages = [quranImg, brotherImg, kidsImg, sisterImg, heroImg, kidsImg, brotherImg, sisterImg];
+const kidPool = [kidBoyLaptop, kidGirlQuran, kidBoyQuran, kidGirlLaptop, kidsTogether, quranImg, kidsImg];
+
+// Each program gets 3 rotating images
+const programImageSets: string[][] = [
+  [kidBoyQuran, quranImg, kidGirlQuran],
+  [kidBoyLaptop, kidsTogether, kidGirlLaptop],
+  [brotherImg, kidBoyQuran, sisterImg],
+  [quranImg, kidGirlQuran, kidBoyLaptop],
+  [sisterImg, kidGirlLaptop, kidBoyLaptop],
+  [kidsImg, kidsTogether, quranImg],
+  [kidBoyLaptop, kidGirlLaptop, kidsTogether],
+  [brotherImg, sisterImg, kidsTogether],
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
