@@ -36,6 +36,66 @@ const prophets = [
       "Prophet Ismail was the patient son of Ibrahim. When his father informed him of Allah's command to sacrifice him, he replied, 'O my father, do as you are commanded; you will find me, In sha Allah, of the patient.' Allah replaced him with a great ram. Together with his father, he built the Ka'bah in Makkah, and from his descendants came our beloved Prophet Muhammad ﷺ.",
   },
   {
+    name: "Prophet Idris (عليه السلام)",
+    arabic: "إدريس",
+    story:
+      "Prophet Idris was one of the earliest Prophets after Adam (AS). He is described in the Qur'an as truthful and a Prophet of high status — Allah raised him to a lofty place. He is traditionally credited with knowledge of writing, astronomy and the use of the pen, and called his people back to Tawheed and righteousness.",
+  },
+  {
+    name: "Prophet Hud (عليه السلام)",
+    arabic: "هود",
+    story:
+      "Prophet Hud was sent to the powerful tribe of 'Aad in southern Arabia. They were tall, mighty builders who became arrogant and worshipped idols. Hud (AS) called them to worship Allah alone, but they mocked him. Allah destroyed them with a furious, screaming wind for seven nights and eight days, while Hud and the believers were saved.",
+  },
+  {
+    name: "Prophet Salih (عليه السلام)",
+    arabic: "صالح",
+    story:
+      "Prophet Salih was sent to the tribe of Thamud, who carved their homes in mountains. As a sign, Allah brought a magnificent she-camel out of a rock with strict orders not to harm her. They hamstrung her in defiance — and were destroyed by a thunderous blast. Salih (AS) and the believers were saved by Allah's mercy.",
+  },
+  {
+    name: "Prophet Lut (عليه السلام)",
+    arabic: "لُوط",
+    story:
+      "Prophet Lut, the nephew of Ibrahim (AS), was sent to the people of Sodom who openly committed shameless deeds never before known among mankind. He warned them tirelessly. When they persisted, Allah sent angels in the form of guests, saved Lut and his believing family, and overturned the cities upon the wrongdoers, raining stones of baked clay.",
+  },
+  {
+    name: "Prophet Ishaq (عليه السلام)",
+    arabic: "إسحاق",
+    story:
+      "Prophet Ishaq (Isaac) was the son of Ibrahim (AS) and Sarah, given to them in their old age as glad tidings from Allah. He was a righteous Prophet who continued his father's mission of calling people to Tawheed. From his lineage came Prophet Yaqub and many of the Prophets sent to Bani Israel.",
+  },
+  {
+    name: "Prophet Yaqub (عليه السلام)",
+    arabic: "يَعْقُوب",
+    story:
+      "Prophet Yaqub (Jacob), also known as Israel, was the son of Ishaq (AS) and the father of Yusuf (AS) and his brothers. He was patient through great trials — losing Yusuf for many years and weeping until he lost his sight, yet never losing hope in Allah's mercy. Allah eventually reunited him with his beloved son, restoring his sight.",
+  },
+  {
+    name: "Prophet Shuaib (عليه السلام)",
+    arabic: "شُعَيْب",
+    story:
+      "Prophet Shuaib was sent to the people of Madyan who cheated in trade — short-changing in weights and measures. Known as the 'Orator of the Prophets' for his eloquence, he called them to honest dealings and worship of Allah alone. When they refused, they were destroyed by a mighty earthquake and a shout. Prophet Musa later spent ten years working for him.",
+  },
+  {
+    name: "Prophet Ayyub (عليه السلام)",
+    arabic: "أَيُّوب",
+    story:
+      "Prophet Ayyub (Job) was tested with severe illness, the loss of his wealth and the loss of his children. For many long years he endured with patience, never complaining, only saying: 'Indeed, adversity has touched me, and You are the Most Merciful of the merciful.' Allah cured him, restored everything to him and made him a timeless example of sabr.",
+  },
+  {
+    name: "Prophet Dhul-Kifl (عليه السلام)",
+    arabic: "ذُو الكِفْل",
+    story:
+      "Prophet Dhul-Kifl is mentioned in the Qur'an among the patient and righteous. The scholars say his name means 'the one who guaranteed' — he took on a great responsibility of judging justly between people, fasting by day and standing in prayer by night. Allah praised him among the chosen, the excellent.",
+  },
+  {
+    name: "Prophet Harun (عليه السلام)",
+    arabic: "هَارُون",
+    story:
+      "Prophet Harun (Aaron) was the elder brother of Musa (AS), gifted with eloquence and beautiful speech. When Musa was sent to Pharaoh, he asked Allah to make Harun his helper and supporter. Together they confronted Pharaoh and led Bani Israel — Harun guarding the people whenever Musa went to converse with his Lord.",
+  },
+  {
     name: "Prophet Musa (عليه السلام)",
     arabic: "موسىٰ",
     story:
