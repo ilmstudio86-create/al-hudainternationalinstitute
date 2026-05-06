@@ -262,6 +262,220 @@ function IslamicPage() {
           </div>
         </div>
       </section>
+
+      {/* ISLAMIC HISTORY */}
+      <section className="py-16 sm:py-20 bg-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-10">
+            <p className="font-arabic text-3xl text-gold mb-2">التَّارِيخ الإِسْلَامِي</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary flex items-center justify-center gap-3"><Landmark className="h-8 w-8 text-gold" /> Islamic History</h2>
+            <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">The Khulafa-e-Rashideen and the noble Sahaba — the golden generation that carried Islam to the world.</p>
+            <SectionDivider />
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {[
+              { name: "The Era of Khulafa-e-Rashideen", desc: "After the Prophet ﷺ, four Rightly Guided Caliphs led the Ummah for ~30 years — Abu Bakr, Umar, Uthman and Ali (RA). They preserved the Qur'an, expanded the Islamic state with justice, and lived by the Sunnah in every affair." },
+              { name: "The Sahaba (RA) — The Companions", desc: "The blessed generation who saw the Prophet ﷺ, believed in him and supported him. Allah praised them in the Qur'an. From Bilal (RA) the first muezzin to Khadijah (RA) the first believer — every Sahabi is a star to follow." },
+              { name: "Conquest of Makkah", desc: "After 8 years of Hijrah, the Prophet ﷺ entered Makkah peacefully with 10,000 companions. He forgave his bitterest enemies and cleansed the Ka'bah of idols — the greatest victory of mercy in human history." },
+              { name: "The Mothers of the Believers", desc: "The pure wives of the Prophet ﷺ — including Khadijah, Aisha, Hafsa and Umm Salamah (RA) — taught the women of the Ummah, narrated thousands of Hadith and remain timeless examples of faith and dignity." },
+            ].map((h) => (
+              <Card key={h.name} className="p-6 sm:p-7 border-gold/20 hover:shadow-elegant transition-shadow">
+                <h3 className="text-xl font-bold text-primary mb-2">{h.name}</h3>
+                <p className="text-foreground/80 leading-relaxed">{h.desc}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* RAMADAN GUIDE */}
+      <section className="py-16 sm:py-20 bg-secondary/40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-10">
+            <p className="font-arabic text-3xl text-gold mb-2">رَمَضَان</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary flex items-center justify-center gap-3"><Moon className="h-8 w-8 text-gold" /> Ramadan Guide</h2>
+            <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">The blessed month — Roza, Taraweeh, Laylatul Qadr and the doors of mercy thrown wide open.</p>
+            <SectionDivider />
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { name: "Roza (Fasting)", desc: "From Suhoor (pre-dawn) to Iftar (sunset), Muslims abstain from food, drink and sin — building taqwa and gratitude. Every breath of the fasting person is praise of Allah." },
+              { name: "Taraweeh Prayers", desc: "The beloved night prayers of Ramadan, prayed in congregation after Isha. The entire Qur'an is typically recited over the 30 nights — a unique gift of this month." },
+              { name: "Laylatul Qadr", desc: "The Night of Decree — better than 1,000 months. Worship on this single night equals over 83 years of devotion. Sought in the odd nights of the last 10 of Ramadan." },
+              { name: "Sadaqah & Zakat al-Fitr", desc: "Charity in Ramadan is multiplied many times over. Zakat al-Fitr is given before Eid prayer to purify the fast and feed the needy." },
+              { name: "I'tikaf", desc: "Spiritual retreat in the masjid during the last 10 days — a beloved Sunnah of the Prophet ﷺ to seek Laylatul Qadr and draw closer to Allah." },
+              { name: "Eid al-Fitr", desc: "The joyful celebration after Ramadan — Eid prayer, new clothes, family gatherings and gratitude for completing the month of fasting." },
+            ].map((r) => (
+              <Card key={r.name} className="p-6 bg-card border-gold/20 hover:shadow-gold transition-shadow">
+                <h3 className="text-lg font-bold text-primary mb-2">{r.name}</h3>
+                <p className="text-foreground/80 text-sm leading-relaxed">{r.desc}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* HAJJ & UMRAH */}
+      <section className="py-16 sm:py-20 bg-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-10">
+            <p className="font-arabic text-3xl text-gold mb-2">الحَجّ وَالعُمْرَة</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary flex items-center justify-center gap-3"><Compass className="h-8 w-8 text-gold" /> Hajj &amp; Umrah Guide</h2>
+            <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">The fifth pillar and the lifelong dream of every believer — step by step.</p>
+            <SectionDivider />
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { name: "1. Ihram", desc: "Enter the state of Ihram at the Miqat — wear the two white sheets (men), make the intention and recite Talbiyah: 'Labbayk Allahumma Labbayk.'" },
+              { name: "2. Tawaf", desc: "Circle the Ka'bah seven times anti-clockwise, beginning at the Black Stone — the heart of the pilgrimage, in remembrance of Allah." },
+              { name: "3. Sa'ee", desc: "Walk seven times between the hills of Safa and Marwa — re-living the search of Hajar (RA) for water for her son Ismail (AS)." },
+              { name: "4. Day of Arafah", desc: "Stand on the plain of Arafah on 9th Dhul-Hijjah — the greatest day of Hajj. The Prophet ﷺ said: 'Hajj is Arafah.'" },
+              { name: "5. Muzdalifah & Mina", desc: "Spend the night at Muzdalifah, collect pebbles, then proceed to Mina to stone the Jamarat — re-enacting Ibrahim's (AS) rejection of Shaytan." },
+              { name: "6. Qurbani & Tawaf al-Ifadah", desc: "Sacrifice an animal, shave or trim the hair, and perform the final Tawaf — completing the rites and earning, In sha Allah, forgiveness like the day of birth." },
+            ].map((h) => (
+              <Card key={h.name} className="p-6 border-gold/20 hover:shadow-elegant transition-shadow">
+                <h3 className="text-lg font-bold text-primary mb-2">{h.name}</h3>
+                <p className="text-foreground/80 text-sm leading-relaxed">{h.desc}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ISLAMIC CALENDAR */}
+      <section className="py-16 sm:py-20 bg-secondary/40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-10">
+            <p className="font-arabic text-3xl text-gold mb-2">التَّقْوِيم الهِجْرِي</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary flex items-center justify-center gap-3"><Calendar className="h-8 w-8 text-gold" /> Islamic Calendar</h2>
+            <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">The lunar Hijri calendar and its blessed months and dates.</p>
+            <SectionDivider />
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { name: "Muharram & 10th of Ashura", desc: "The first month of the Hijri year. The 10th of Muharram (Ashura) commemorates Allah saving Musa (AS) — fasting it expiates the sins of the previous year." },
+              { name: "Rabi al-Awwal", desc: "The month in which our beloved Prophet Muhammad ﷺ was born and in which he passed away — a month for studying his blessed life (Seerah)." },
+              { name: "Rajab", desc: "One of the four sacred months. The night of Isra & Mi'raj — when Salah was made obligatory — took place during Rajab." },
+              { name: "Sha'ban", desc: "The month before Ramadan, in which the Prophet ﷺ would fast frequently. A time to prepare the heart for Ramadan." },
+              { name: "Ramadan", desc: "The greatest month — the Qur'an was revealed in it, the gates of Jannah are opened, and Laylatul Qadr is hidden in its last ten nights." },
+              { name: "Dhul-Hijjah & Eid al-Adha", desc: "The month of Hajj. The first 10 days are the most beloved to Allah. Eid al-Adha on the 10th honours Ibrahim's (AS) great sacrifice." },
+            ].map((c) => (
+              <Card key={c.name} className="p-6 bg-card border-gold/20 hover:shadow-gold transition-shadow">
+                <h3 className="text-lg font-bold text-primary mb-2">{c.name}</h3>
+                <p className="text-foreground/80 text-sm leading-relaxed">{c.desc}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* QURAN TAFSEER */}
+      <section className="py-16 sm:py-20 bg-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-10">
+            <p className="font-arabic text-3xl text-gold mb-2">تَفْسِير القُرْآن</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary flex items-center justify-center gap-3"><ScrollText className="h-8 w-8 text-gold" /> Quran Tafseer — Popular Surahs</h2>
+            <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">The meaning and message of the most beloved chapters of the Qur'an.</p>
+            <SectionDivider />
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {[
+              { name: "Surah Al-Fatiha (The Opening)", desc: "The 7-verse opening of the Qur'an, recited in every prayer. It is praise of Allah, declaration of His Lordship, and a beautiful supplication for guidance to the straight path." },
+              { name: "Surah Al-Ikhlas (Sincerity)", desc: "Four short verses that affirm the absolute oneness of Allah — He is One, eternal, neither begets nor is born, and nothing is comparable to Him. Equal to one-third of the Qur'an in reward." },
+              { name: "Surah Al-Mulk (The Sovereignty)", desc: "Whoever recites it every night, it intercedes for them on the Day of Judgement and saves them from the punishment of the grave (Hadith)." },
+              { name: "Surah Yaseen (The Heart of the Qur'an)", desc: "Called 'the heart of the Qur'an'. It speaks of resurrection, the truth of the Messengers, and the absolute power of Allah over creation." },
+              { name: "Surah Ar-Rahman (The Most Merciful)", desc: "A breathtaking surah listing the favours of Allah upon mankind and jinn, with the recurring question: 'Then which of the favours of your Lord will you deny?'" },
+              { name: "Surah Al-Kahf (The Cave)", desc: "Reciting it on Friday gives a light between the two Fridays. It contains four powerful stories — the youth of the cave, the two gardens, Musa & Khidr, and Dhul-Qarnayn." },
+            ].map((s) => (
+              <Card key={s.name} className="p-6 sm:p-7 border-gold/20 hover:shadow-elegant transition-shadow">
+                <h3 className="text-xl font-bold text-primary mb-2">{s.name}</h3>
+                <p className="text-foreground/80 leading-relaxed">{s.desc}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* HADITH COLLECTION */}
+      <section className="py-16 sm:py-20 bg-secondary/40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-10">
+            <p className="font-arabic text-3xl text-gold mb-2">الأَحَادِيث</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary flex items-center justify-center gap-3"><Scroll className="h-8 w-8 text-gold" /> Hadith Collection — Famous Ahadith</h2>
+            <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">Timeless words of Prophet Muhammad ﷺ — light for every heart.</p>
+            <SectionDivider />
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2">
+            {[
+              { name: "Intentions", desc: "'Verily actions are by intentions, and every person will have only what they intended.' — (Bukhari & Muslim)" },
+              { name: "Mercy", desc: "'The merciful are shown mercy by Ar-Rahman. Be merciful to those on the earth, and the One above the heavens will be merciful to you.' — (Tirmidhi)" },
+              { name: "Best Among You", desc: "'The best among you are those who learn the Qur'an and teach it.' — (Bukhari)" },
+              { name: "Smile", desc: "'Smiling at your brother is charity.' — (Tirmidhi)" },
+              { name: "Speech", desc: "'Whoever believes in Allah and the Last Day, let him speak good or remain silent.' — (Bukhari & Muslim)" },
+              { name: "Love for Brother", desc: "'None of you truly believes until he loves for his brother what he loves for himself.' — (Bukhari & Muslim)" },
+            ].map((h) => (
+              <Card key={h.name} className="p-6 bg-card border-gold/20 hover:shadow-gold transition-shadow">
+                <h3 className="text-lg font-bold text-primary mb-2">{h.name}</h3>
+                <p className="text-foreground/80 text-sm leading-relaxed">{h.desc}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ISLAMIC FINANCE */}
+      <section className="py-16 sm:py-20 bg-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-10">
+            <p className="font-arabic text-3xl text-gold mb-2">المَال فِي الإِسْلَام</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary flex items-center justify-center gap-3"><Coins className="h-8 w-8 text-gold" /> Islamic Finance — Halal &amp; Haram</h2>
+            <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">Earning, spending and saving the way Allah loves.</p>
+            <SectionDivider />
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { name: "Halal Earnings", desc: "Honest trade, lawful work and ethical business — the Prophet ﷺ said the truthful trader will be with the Prophets, the truthful and the martyrs." },
+              { name: "Riba (Interest) is Haram", desc: "Interest is one of the gravest major sins in Islam — Allah and His Messenger declared war on those who deal in riba. Avoid it in loans, mortgages and credit." },
+              { name: "Zakat", desc: "2.5% of saved wealth held for one lunar year — given to the poor, needy, debtors and other categories defined in the Qur'an." },
+              { name: "Sadaqah", desc: "Voluntary charity — extinguishes sins as water extinguishes fire, and protects from calamity. Even a smile is sadaqah." },
+              { name: "Avoid Gambling & Cheating", desc: "Gambling, lottery and any deceptive transaction are haram. Wealth must come from honest, transparent means." },
+              { name: "Inheritance (Mirath)", desc: "Allah Himself decreed the shares of inheritance in the Qur'an — a complete, just system that protects every heir, especially women and children." },
+            ].map((f) => (
+              <Card key={f.name} className="p-6 border-gold/20 hover:shadow-elegant transition-shadow">
+                <h3 className="text-lg font-bold text-primary mb-2">{f.name}</h3>
+                <p className="text-foreground/80 text-sm leading-relaxed">{f.desc}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* MUSLIM FAMILY LIFE */}
+      <section className="py-16 sm:py-20 bg-secondary/40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-10">
+            <p className="font-arabic text-3xl text-gold mb-2">الأُسْرَة المُسْلِمَة</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary flex items-center justify-center gap-3"><Users className="h-8 w-8 text-gold" /> Muslim Family Life</h2>
+            <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">Nikah, parenting and the beauty of an Islamic home.</p>
+            <SectionDivider />
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { name: "Nikah (Marriage)", desc: "Marriage is half of the deen. The Prophet ﷺ encouraged it and made it simple — a Wali, two witnesses, mahr and the consent of both spouses." },
+              { name: "Rights of the Spouse", desc: "Husbands and wives have rights and duties to one another. The best of you is the one who is best to his family — said the Prophet ﷺ." },
+              { name: "Parenting in Islam", desc: "Teach children love of Allah, the Qur'an and Salah from the earliest age. The greatest gift a parent gives is good character (akhlaq)." },
+              { name: "Honouring Parents", desc: "After Tawheed, kindness to parents is the most beloved deed. 'Paradise lies under the feet of mothers' — (Hadith)." },
+              { name: "Maintaining Family Ties", desc: "The Prophet ﷺ said: 'Whoever wishes that his provision be increased and his life extended — let him keep good ties with his relatives.'" },
+              { name: "An Islamic Home", desc: "A home filled with Qur'an recitation, Salah in congregation, modesty, and remembrance of Allah — that is the home the angels visit." },
+            ].map((f) => (
+              <Card key={f.name} className="p-6 bg-card border-gold/20 hover:shadow-gold transition-shadow">
+                <h3 className="text-lg font-bold text-primary mb-2">{f.name}</h3>
+                <p className="text-foreground/80 text-sm leading-relaxed">{f.desc}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }
