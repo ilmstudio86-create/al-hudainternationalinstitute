@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Layout, PageHero } from "@/components/site/Layout";
 import { SectionDivider } from "@/components/site/SectionDivider";
 import { Card } from "@/components/ui/card";
-import { BookOpen, Star, Moon, HandCoins, Sunrise, Hand, Sparkles, Sun, Compass, Heart } from "lucide-react";
+import { BookOpen, Star, Moon, HandCoins, Sunrise, Hand, Sparkles, Sun, Compass, Heart, Calendar, Scroll, Landmark, Coins, Users, ScrollText } from "lucide-react";
 
 export const Route = createFileRoute("/islamic")({
   head: () => ({
