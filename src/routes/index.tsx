@@ -346,6 +346,23 @@ function Home() {
         </div>
       </section>
 
+      {/* TRUST BAR / STATS */}
+      <section className="bg-primary text-primary-foreground border-y border-gold/20">
+        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {[
+            { n: "500+", l: "Active Students" },
+            { n: "30+", l: "Countries Served" },
+            { n: "40+", l: "Certified Teachers" },
+            { n: "4.9★", l: "Average Rating" },
+          ].map((s) => (
+            <div key={s.l}>
+              <div className="font-display text-4xl sm:text-5xl font-bold text-gold">{s.n}</div>
+              <div className="mt-2 text-xs sm:text-sm uppercase tracking-wider text-primary-foreground/80">{s.l}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* TESTIMONIALS */}
       <section className="py-20 overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
