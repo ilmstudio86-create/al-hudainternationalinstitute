@@ -199,7 +199,7 @@ function Home() {
           <div className="relative">
             <img src={quranImg} alt="Holy Quran on a wooden rehal stand" width={1280} height={960} loading="lazy" className="rounded-2xl shadow-elegant w-full" />
             <div className="absolute -bottom-6 -right-6 hidden md:block bg-gradient-gold text-primary px-6 py-4 rounded-xl shadow-gold">
-              <div className="font-display text-2xl font-bold">Since 2018</div>
+              <div className="font-display text-2xl font-bold">Since 2013</div>
               <div className="text-xs uppercase tracking-wider">Trusted Worldwide</div>
             </div>
           </div>
