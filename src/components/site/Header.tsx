@@ -23,10 +23,10 @@ export function Header() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 flex items-center justify-between h-9">
           <div className="flex items-center gap-5 text-primary-foreground/80">
             <a href="tel:+923141766950" className="flex items-center gap-1.5 hover:text-gold transition-colors"><Phone className="h-3.5 w-3.5 text-gold" /> +92 314 1766950</a>
-            <a href="mailto:info@aliqraglobal.com" className="flex items-center gap-1.5 hover:text-gold transition-colors"><Mail className="h-3.5 w-3.5 text-gold" /> info@aliqraglobal.com</a>
+            <a href="mailto:info@alhudaislamicinstitute.com" className="flex items-center gap-1.5 hover:text-gold transition-colors"><Mail className="h-3.5 w-3.5 text-gold" /> info@alhudaislamicinstitute.com</a>
           </div>
           <div className="flex items-center gap-1.5 text-primary-foreground/80">
-            <Globe2 className="h-3.5 w-3.5 text-gold" /> Auckland, New Zealand · Serving 30+ countries · 24/7 support
+            <Globe2 className="h-3.5 w-3.5 text-gold" /> Riyadh, Saudi Arabia · Serving 30+ countries · 24/7 support
           </div>
         </div>
       </div>

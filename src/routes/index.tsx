@@ -157,8 +157,8 @@ function Home() {
           <p className="font-arabic text-6xl sm:text-8xl text-gold mb-6 animate-fade-in drop-shadow-[0_4px_20px_rgba(212,168,32,0.3)]">اقرأ</p>
           <p className="text-xs sm:text-sm uppercase tracking-[0.4em] text-gold/90 mb-4 animate-fade-up">Al Huda International Islamic Institute</p>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-gold mb-6 animate-fade-up leading-tight">Read. Learn. <span className="block sm:inline">Grow in Faith.</span></h1>
-          <p className="mx-auto max-w-2xl text-base sm:text-lg text-primary-foreground/90 mb-8 animate-fade-up leading-relaxed">
-            World-class online Quran &amp; Islamic education for every age — taught by certified Hafiz and Qari scholars to families in 30+ countries.
+          <p className="mx-auto max-w-3xl text-base sm:text-lg text-primary-foreground/90 mb-8 animate-fade-up leading-relaxed">
+            Discover a transformative journey through the Holy Qur'an and the timeless beauty of Islam. At Al Huda International Islamic Institute, certified Hafiz, Qari and female scholars deliver authentic, one-on-one live classes — Nazra, Hifz, Tajweed, Tafseer, Arabic and Islamic Studies — for every age and every level. From a child's very first letter to a parent's deepest reflection on the Word of Allah, we guide families across 30+ countries with patience, sincerity and the highest standard of teaching, In sha Allah — so that every heart may read, learn and grow in faith.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-up">
             <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
@@ -176,22 +176,7 @@ function Home() {
         </div>
       </section>
 
-      {/* TRUST BAR */}
-      <section className="bg-primary text-primary-foreground border-y border-gold/20">
-        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { n: "500+", l: "Active Students" },
-            { n: "30+", l: "Countries Served" },
-            { n: "40+", l: "Certified Teachers" },
-            { n: "4.9★", l: "Average Rating" },
-          ].map((s) => (
-            <div key={s.l}>
-              <div className="font-display text-4xl sm:text-5xl font-bold text-gold">{s.n}</div>
-              <div className="mt-2 text-xs sm:text-sm uppercase tracking-wider text-primary-foreground/80">{s.l}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* TRUST BAR moved below Teacher Showcase */}
 
       {/* INTRO */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
@@ -199,7 +184,7 @@ function Home() {
           <div className="relative">
             <img src={quranImg} alt="Holy Quran on a wooden rehal stand" width={1280} height={960} loading="lazy" className="rounded-2xl shadow-elegant w-full" />
             <div className="absolute -bottom-6 -right-6 hidden md:block bg-gradient-gold text-primary px-6 py-4 rounded-xl shadow-gold">
-              <div className="font-display text-2xl font-bold">Since 2018</div>
+              <div className="font-display text-2xl font-bold">Since 2013</div>
               <div className="text-xs uppercase tracking-wider">Trusted Worldwide</div>
             </div>
           </div>
@@ -207,7 +192,7 @@ function Home() {
             <p className="text-xs uppercase tracking-[0.3em] text-gold font-semibold mb-3">Welcome to Al Huda</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-5 leading-tight">A Spiritual Journey Through the Holy Quran</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Al Huda International Islamic Institute is an Auckland, New Zealand based online academy delivering authentic, structured Quran &amp; Islamic education to students worldwide. Our certified male and female teachers — including Hafiz al-Quran with mastery in Arabic, Tajweed, Tafseer and Islamic Studies — teach in English, Urdu, Arabic and more, guiding students of every age toward a deep, lifelong relationship with the Book of Allah.
+              Al Huda International Islamic Institute is a Riyadh, Saudi Arabia based online academy delivering authentic, structured Quran &amp; Islamic education to students worldwide since 2013. Our certified male and female teachers — including Hafiz al-Quran with mastery in Arabic, Tajweed, Tafseer and Islamic Studies — teach in English, Urdu, Arabic and more, guiding students of every age toward a deep, lifelong relationship with the Book of Allah.
             </p>
             <ul className="space-y-2.5 mb-7">
               {["One-on-one live classes with certified scholars", "Teachers available in English, Urdu, Arabic & more languages", "Structured curriculum from Qaida to Hifz & Tafseer", "Dedicated female teachers for sisters and girls", "Monthly progress reports for parents"].map((p) => (
@@ -358,6 +343,23 @@ function Home() {
               <span key={c} className="rounded-full border border-gold/40 bg-primary-foreground/5 px-5 py-2.5 text-sm font-medium backdrop-blur-sm hover:bg-gold/15 transition-colors">{c}</span>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* TRUST BAR / STATS */}
+      <section className="bg-primary text-primary-foreground border-y border-gold/20">
+        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {[
+            { n: "500+", l: "Active Students" },
+            { n: "30+", l: "Countries Served" },
+            { n: "40+", l: "Certified Teachers" },
+            { n: "4.9★", l: "Average Rating" },
+          ].map((s) => (
+            <div key={s.l}>
+              <div className="font-display text-4xl sm:text-5xl font-bold text-gold">{s.n}</div>
+              <div className="mt-2 text-xs sm:text-sm uppercase tracking-wider text-primary-foreground/80">{s.l}</div>
+            </div>
+          ))}
         </div>
       </section>
 

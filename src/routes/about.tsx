@@ -18,7 +18,7 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <Layout>
-      <PageHero arabic="عَنَّا" title="About Al Huda International Islamic Institute" subtitle="A trusted name in online Quran and Islamic education since 2018." />
+      <PageHero arabic="عَنَّا" title="About Al Huda International Islamic Institute" subtitle="A trusted name in online Quran and Islamic education — proudly serving the Ummah since 2013." />
 
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 text-center">
         <SectionDivider />
