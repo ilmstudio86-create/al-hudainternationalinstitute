@@ -26,6 +26,7 @@ export function Footer() {
               <li><Link to="/courses" className="hover:text-gold transition-colors">Courses</Link></li>
               <li><Link to="/teachers" className="hover:text-gold transition-colors">Teachers</Link></li>
               <li><Link to="/pricing" className="hover:text-gold transition-colors">Pricing</Link></li>
+              <li><Link to="/blog" className="hover:text-gold transition-colors">Blog</Link></li>
               <li><Link to="/faq" className="hover:text-gold transition-colors">FAQ</Link></li>
               <li><Link to="/contact" className="hover:text-gold transition-colors">Contact</Link></li>
             </ul>
