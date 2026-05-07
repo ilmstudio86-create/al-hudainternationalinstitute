@@ -160,9 +160,10 @@ function Home() {
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-20 text-center text-primary-foreground">
           <p className="font-arabic text-6xl sm:text-8xl text-gold mb-6 animate-fade-in drop-shadow-[0_4px_20px_rgba(212,168,32,0.3)]">اقرأ</p>
           <p className="text-xs sm:text-sm uppercase tracking-[0.4em] text-gold/90 mb-4 animate-fade-up">Al Huda International Islamic Institute</p>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-gold mb-6 animate-fade-up leading-tight">Read. Learn. <span className="block sm:inline">Grow in Faith.</span></h1>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-gold mb-4 animate-fade-up leading-tight">Online Quran Classes for Kids &amp; Adults — Al Huda Islamic Institute</h1>
+          <p className="text-lg sm:text-xl lg:text-2xl text-gold/90 font-semibold mb-6 animate-fade-up">Learn Quran Online with Certified Hafiz &amp; Qari Teachers</p>
           <p className="mx-auto max-w-3xl text-base sm:text-lg text-primary-foreground/90 mb-8 animate-fade-up leading-relaxed">
-            Discover a transformative journey through the Holy Qur'an and the timeless beauty of Islam. At Al Huda International Islamic Institute, certified Hafiz, Qari and female scholars deliver authentic, one-on-one live classes — Nazra, Hifz, Tajweed, Tafseer, Arabic and Islamic Studies — for every age and every level. From a child's very first letter to a parent's deepest reflection on the Word of Allah, we guide families across 30+ countries with patience, sincerity and the highest standard of teaching, In sha Allah — so that every heart may read, learn and grow in faith.
+            Al Huda International Islamic Institute offers the best online Quran classes for kids and adults in USA, UK, Canada, and Australia. Learn Nazra, Hifz, Tajweed, Tafseer, Arabic and Islamic Studies from certified male and female teachers. One-on-one live classes, flexible timings, and free trial class available. Join 30+ countries students today!
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-up">
             <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
