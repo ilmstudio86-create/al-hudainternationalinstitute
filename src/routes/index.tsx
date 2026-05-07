@@ -63,12 +63,16 @@ const programImageSets: string[][] = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Al Huda International Islamic Institute — Online Quran Classes" },
-      { name: "description", content: "Learn Quran online with certified Hafiz & Qari teachers. Nazra, Hifz, Tajweed, Tafseer, Arabic & Islamic Studies for kids and adults across 30+ countries." },
-      { property: "og:title", content: "Al Huda International Islamic Institute — Online Quran Classes" },
-      { property: "og:description", content: "Read. Learn. Grow in Faith. Book your free trial class today." },
-      { property: "og:image", content: "/src/assets/hero-mosque.jpg" },
+      { title: "Online Quran Classes for Kids & Adults — Al Huda Islamic Institute" },
+      { name: "description", content: "Best online Quran classes for kids and adults in USA, UK, Canada & Australia. Learn Nazra, Hifz, Tajweed, Tafseer, Arabic & Islamic Studies from certified Hafiz & Qari teachers. Free trial available." },
+      { name: "keywords", content: "online quran classes, quran classes for kids, learn quran online, hifz online, tajweed classes, quran academy, islamic studies online, female quran teacher, al huda islamic institute" },
+      { property: "og:title", content: "Online Quran Classes for Kids & Adults — Al Huda Islamic Institute" },
+      { property: "og:description", content: "Learn Quran Online with Certified Hafiz & Qari Teachers. One-on-one live classes for students in 30+ countries. Free trial class available." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://alhudaislamicinstitute.com/" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Online Quran Classes for Kids & Adults — Al Huda Islamic Institute" },
+      { name: "twitter:description", content: "Learn Quran Online with Certified Hafiz & Qari Teachers. Free trial class available." },
     ],
   }),
   component: Home,
