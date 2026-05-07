@@ -44,9 +44,31 @@ export const Route = createRootRoute({
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "canonical", href: "https://alhudaislamicinstitute.com/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          name: "Al Huda International Islamic Institute",
+          url: "https://alhudaislamicinstitute.com",
+          email: "info@alhudaislamicinstitute.com",
+          telephone: "+92-314-1766950",
+          foundingDate: "2013",
+          address: { "@type": "PostalAddress", addressLocality: "Riyadh", addressCountry: "SA" },
+          description: "Online Quran classes for kids and adults — Nazra, Hifz, Tajweed, Tafseer, Arabic and Islamic Studies taught by certified Hafiz, Qari and female scholars.",
+          sameAs: [
+            "https://facebook.com/AlIqraGlobalInstitute",
+            "https://instagram.com/aliqra.global",
+            "https://youtube.com/@AlIqraOfficial",
+          ],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
