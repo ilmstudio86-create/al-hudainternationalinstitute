@@ -12,6 +12,7 @@ const nav = [
   { to: "/pricing", label: "Pricing" },
   { to: "/sadaqah", label: "Sadaqah" },
   { to: "/islamic", label: "Islamic" },
+  { to: "/blog", label: "Blog" },
   { to: "/faq", label: "FAQ" },
   { to: "/contact", label: "Contact" },
 ] as const;
