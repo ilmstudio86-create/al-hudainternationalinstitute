@@ -36,6 +36,13 @@ export const Route = createFileRoute("/blog")({
               author: { "@type": "Organization", name: "Al Huda Islamic Institute" },
               image: "https://alhudaislamicinstitute.com/og-image.jpg",
             },
+            {
+              "@type": "BlogPosting",
+              headline: "How to Choose the Best Online Quran Academy for Your Child",
+              datePublished: "2026-07-04",
+              author: { "@type": "Organization", name: "Al Huda Islamic Institute" },
+              image: "https://alhudaislamicinstitute.com/og-image.jpg",
+            },
           ],
         }),
       },
