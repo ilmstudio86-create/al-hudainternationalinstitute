@@ -19,6 +19,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogHowToChooseRouteImport } from './routes/blog.how-to-choose'
 
 const TeachersRoute = TeachersRouteImport.update({
   id: '/teachers',
@@ -70,11 +71,16 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogHowToChooseRoute = BlogHowToChooseRouteImport.update({
+  id: '/how-to-choose',
+  path: '/how-to-choose',
+  getParentRoute: () => BlogRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/faq': typeof FaqRoute
@@ -82,11 +88,12 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/sadaqah': typeof SadaqahRoute
   '/teachers': typeof TeachersRoute
+  '/blog/how-to-choose': typeof BlogHowToChooseRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/faq': typeof FaqRoute
@@ -94,12 +101,13 @@ export interface FileRoutesByTo {
   '/pricing': typeof PricingRoute
   '/sadaqah': typeof SadaqahRoute
   '/teachers': typeof TeachersRoute
+  '/blog/how-to-choose': typeof BlogHowToChooseRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/faq': typeof FaqRoute
@@ -107,6 +115,7 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/sadaqah': typeof SadaqahRoute
   '/teachers': typeof TeachersRoute
+  '/blog/how-to-choose': typeof BlogHowToChooseRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -121,6 +130,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/sadaqah'
     | '/teachers'
+    | '/blog/how-to-choose'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -133,6 +143,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/sadaqah'
     | '/teachers'
+    | '/blog/how-to-choose'
   id:
     | '__root__'
     | '/'
@@ -145,12 +156,13 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/sadaqah'
     | '/teachers'
+    | '/blog/how-to-choose'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  BlogRoute: typeof BlogRoute
+  BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
   CoursesRoute: typeof CoursesRoute
   FaqRoute: typeof FaqRoute
@@ -232,13 +244,30 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/how-to-choose': {
+      id: '/blog/how-to-choose'
+      path: '/how-to-choose'
+      fullPath: '/blog/how-to-choose'
+      preLoaderRoute: typeof BlogHowToChooseRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
+
+interface BlogRouteChildren {
+  BlogHowToChooseRoute: typeof BlogHowToChooseRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogHowToChooseRoute: BlogHowToChooseRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  BlogRoute: BlogRoute,
+  BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
   CoursesRoute: CoursesRoute,
   FaqRoute: FaqRoute,
