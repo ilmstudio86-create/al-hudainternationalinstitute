@@ -50,6 +50,10 @@ export const Route = createRootRoute({
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" },
     ],
     scripts: [
+      { src: "https://www.googletagmanager.com/gtag/js?id=G-5KW34H6113", async: true },
+      {
+        children: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-5KW34H6113');`,
+      },
       {
         type: "application/ld+json",
         children: JSON.stringify({
