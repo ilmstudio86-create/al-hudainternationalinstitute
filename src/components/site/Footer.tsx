@@ -36,7 +36,7 @@ export function Footer() {
             <h4 className="text-gold font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h4>
             <ul className="space-y-3 text-sm text-primary-foreground/80">
               <li className="flex items-start gap-2"><Phone className="h-4 w-4 mt-0.5 text-gold" /> +92 314 1766950</li>
-              <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-0.5 text-gold" /> info@alhudaislamicinstitute.com</li>
+              <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-0.5 text-gold" /> alhudaquranedu@gmail.com</li>
               <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 text-gold" /> Riyadh, Saudi Arabia · Serving 30+ countries</li>
             </ul>
             <div className="mt-4 flex gap-3">
