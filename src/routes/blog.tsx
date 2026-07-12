@@ -124,6 +124,10 @@ function BlogPage() {
       <section className="mx-auto max-w-5xl px-4 sm:px-6 pb-16">
         <h3 className="text-2xl font-bold text-primary mb-6">Latest Articles</h3>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <Link to="/blog/benefits-of-learning-quran-online" className="rounded-xl border border-border p-5 hover:shadow-elegant transition-shadow">
+            <h4 className="font-semibold text-primary mb-1">Why Learn Quran Online? 10 Powerful Benefits for Kids and Adults</h4>
+            <p className="text-sm text-muted-foreground">Discover the top benefits of online Quran learning with certified male & female teachers.</p>
+          </Link>
           <Link to="/blog/how-to-choose" className="rounded-xl border border-border p-5 hover:shadow-elegant transition-shadow">
             <h4 className="font-semibold text-primary mb-1">How to Choose the Best Online Quran Academy for Your Child</h4>
             <p className="text-sm text-muted-foreground">A practical parent's guide to teachers, curriculum, safety & trial classes.</p>

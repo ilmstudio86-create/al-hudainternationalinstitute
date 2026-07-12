@@ -32,7 +32,7 @@ export function Header() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 flex items-center justify-between h-9">
           <div className="flex items-center gap-5 text-primary-foreground/80">
             <a href="tel:+923141766950" className="flex items-center gap-1.5 hover:text-gold transition-colors"><Phone className="h-3.5 w-3.5 text-gold" /> +92 314 1766950</a>
-            <a href="mailto:info@alhudaislamicinstitute.com" className="flex items-center gap-1.5 hover:text-gold transition-colors"><Mail className="h-3.5 w-3.5 text-gold" /> info@alhudaislamicinstitute.com</a>
+            <a href="mailto:alhudaquranedu@gmail.com" className="flex items-center gap-1.5 hover:text-gold transition-colors"><Mail className="h-3.5 w-3.5 text-gold" /> alhudaquranedu@gmail.com</a>
           </div>
           <div className="flex items-center gap-1.5 text-primary-foreground/80">
             <Globe2 className="h-3.5 w-3.5 text-gold" /> Riyadh, Saudi Arabia · Serving 30+ countries · 24/7 support
@@ -108,8 +108,8 @@ export function Header() {
               <a href="tel:+923141766950" className="mt-2 flex items-center justify-center gap-2 rounded-md border border-border px-5 py-3 text-sm font-medium text-primary">
                 <Phone className="h-4 w-4 text-gold" /> +92 314 1766950
               </a>
-              <a href="mailto:info@alhudaislamicinstitute.com" className="flex items-center justify-center gap-2 rounded-md border border-border px-5 py-3 text-xs font-medium text-primary break-all">
-                <Mail className="h-4 w-4 text-gold shrink-0" /> info@alhudaislamicinstitute.com
+              <a href="mailto:alhudaquranedu@gmail.com" className="flex items-center justify-center gap-2 rounded-md border border-border px-5 py-3 text-xs font-medium text-primary break-all">
+                <Mail className="h-4 w-4 text-gold shrink-0" /> alhudaquranedu@gmail.com
               </a>
             </div>
           </nav>

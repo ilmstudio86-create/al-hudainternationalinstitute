@@ -20,6 +20,7 @@ import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogHowToChooseRouteImport } from './routes/blog.how-to-choose'
+import { Route as BlogBenefitsOfLearningQuranOnlineRouteImport } from './routes/blog.benefits-of-learning-quran-online'
 
 const TeachersRoute = TeachersRouteImport.update({
   id: '/teachers',
@@ -76,6 +77,12 @@ const BlogHowToChooseRoute = BlogHowToChooseRouteImport.update({
   path: '/how-to-choose',
   getParentRoute: () => BlogRoute,
 } as any)
+const BlogBenefitsOfLearningQuranOnlineRoute =
+  BlogBenefitsOfLearningQuranOnlineRouteImport.update({
+    id: '/benefits-of-learning-quran-online',
+    path: '/benefits-of-learning-quran-online',
+    getParentRoute: () => BlogRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -88,6 +95,7 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/sadaqah': typeof SadaqahRoute
   '/teachers': typeof TeachersRoute
+  '/blog/benefits-of-learning-quran-online': typeof BlogBenefitsOfLearningQuranOnlineRoute
   '/blog/how-to-choose': typeof BlogHowToChooseRoute
 }
 export interface FileRoutesByTo {
@@ -101,6 +109,7 @@ export interface FileRoutesByTo {
   '/pricing': typeof PricingRoute
   '/sadaqah': typeof SadaqahRoute
   '/teachers': typeof TeachersRoute
+  '/blog/benefits-of-learning-quran-online': typeof BlogBenefitsOfLearningQuranOnlineRoute
   '/blog/how-to-choose': typeof BlogHowToChooseRoute
 }
 export interface FileRoutesById {
@@ -115,6 +124,7 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/sadaqah': typeof SadaqahRoute
   '/teachers': typeof TeachersRoute
+  '/blog/benefits-of-learning-quran-online': typeof BlogBenefitsOfLearningQuranOnlineRoute
   '/blog/how-to-choose': typeof BlogHowToChooseRoute
 }
 export interface FileRouteTypes {
@@ -130,6 +140,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/sadaqah'
     | '/teachers'
+    | '/blog/benefits-of-learning-quran-online'
     | '/blog/how-to-choose'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -143,6 +154,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/sadaqah'
     | '/teachers'
+    | '/blog/benefits-of-learning-quran-online'
     | '/blog/how-to-choose'
   id:
     | '__root__'
@@ -156,6 +168,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/sadaqah'
     | '/teachers'
+    | '/blog/benefits-of-learning-quran-online'
     | '/blog/how-to-choose'
   fileRoutesById: FileRoutesById
 }
@@ -251,14 +264,24 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogHowToChooseRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/blog/benefits-of-learning-quran-online': {
+      id: '/blog/benefits-of-learning-quran-online'
+      path: '/benefits-of-learning-quran-online'
+      fullPath: '/blog/benefits-of-learning-quran-online'
+      preLoaderRoute: typeof BlogBenefitsOfLearningQuranOnlineRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
 
 interface BlogRouteChildren {
+  BlogBenefitsOfLearningQuranOnlineRoute: typeof BlogBenefitsOfLearningQuranOnlineRoute
   BlogHowToChooseRoute: typeof BlogHowToChooseRoute
 }
 
 const BlogRouteChildren: BlogRouteChildren = {
+  BlogBenefitsOfLearningQuranOnlineRoute:
+    BlogBenefitsOfLearningQuranOnlineRoute,
   BlogHowToChooseRoute: BlogHowToChooseRoute,
 }
 
@@ -279,12 +302,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}

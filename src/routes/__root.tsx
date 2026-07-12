@@ -61,7 +61,7 @@ export const Route = createRootRoute({
           "@type": "EducationalOrganization",
           name: "Al Huda International Islamic Institute",
           url: "https://alhudaislamicinstitute.com",
-          email: "info@alhudaislamicinstitute.com",
+          email: "alhudaquranedu@gmail.com",
           telephone: "+92-314-1766950",
           foundingDate: "2013",
           address: { "@type": "PostalAddress", addressLocality: "Riyadh", addressCountry: "SA" },
