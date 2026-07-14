@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { Phone, Mail, Globe2, Menu, X } from "lucide-react";
+import { Phone, Mail, Globe2, Menu, X, Facebook, Instagram, Youtube } from "lucide-react";
+import { SOCIALS } from "@/lib/socials";
+import { TikTokIcon } from "./TikTokIcon";
 import { useState, useEffect } from "react";
 import { TRIAL_WA_URL } from "@/lib/trial";
 import logo from "@/assets/logo.png";
