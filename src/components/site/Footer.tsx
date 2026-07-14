@@ -42,9 +42,10 @@ export function Footer() {
               <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 text-gold" /> Riyadh, Saudi Arabia · Serving 30+ countries</li>
             </ul>
             <div className="mt-4 flex gap-3">
-              <a href="https://facebook.com/AlIqraGlobalInstitute" aria-label="Facebook" className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-gold hover:text-primary transition-colors"><Facebook className="h-4 w-4" /></a>
-              <a href="https://instagram.com/aliqra.global" aria-label="Instagram" className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-gold hover:text-primary transition-colors"><Instagram className="h-4 w-4" /></a>
-              <a href="https://youtube.com/@AlIqraOfficial" aria-label="YouTube" className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-gold hover:text-primary transition-colors"><Youtube className="h-4 w-4" /></a>
+              <a href={SOCIALS.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-gold hover:text-primary transition-colors"><Facebook className="h-4 w-4" /></a>
+              <a href={SOCIALS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-gold hover:text-primary transition-colors"><Instagram className="h-4 w-4" /></a>
+              <a href={SOCIALS.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-gold hover:text-primary transition-colors"><Youtube className="h-4 w-4" /></a>
+              <a href={SOCIALS.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-gold hover:text-primary transition-colors"><TikTokIcon className="h-4 w-4" /></a>
             </div>
           </div>
 
