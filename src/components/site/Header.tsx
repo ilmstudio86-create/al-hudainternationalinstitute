@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { Phone, Mail, Globe2, Menu, X } from "lucide-react";
+import { Phone, Mail, Globe2, Menu, X, Facebook, Instagram, Youtube } from "lucide-react";
+import { SOCIALS } from "@/lib/socials";
+import { TikTokIcon } from "./TikTokIcon";
 import { useState, useEffect } from "react";
 import { TRIAL_WA_URL } from "@/lib/trial";
 import logo from "@/assets/logo.png";
@@ -34,8 +36,13 @@ export function Header() {
             <a href="tel:+923141766950" className="flex items-center gap-1.5 hover:text-gold transition-colors"><Phone className="h-3.5 w-3.5 text-gold" /> +92 314 1766950</a>
             <a href="mailto:alhudaquranedu@gmail.com" className="flex items-center gap-1.5 hover:text-gold transition-colors"><Mail className="h-3.5 w-3.5 text-gold" /> alhudaquranedu@gmail.com</a>
           </div>
-          <div className="flex items-center gap-1.5 text-primary-foreground/80">
-            <Globe2 className="h-3.5 w-3.5 text-gold" /> Riyadh, Saudi Arabia · Serving 30+ countries · 24/7 support
+          <div className="flex items-center gap-3 text-primary-foreground/80">
+            <Globe2 className="h-3.5 w-3.5 text-gold" /> Riyadh, Saudi Arabia · Serving 30+ countries
+            <span className="mx-1 opacity-40">|</span>
+            <a href={SOCIALS.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-gold transition-colors"><Facebook className="h-3.5 w-3.5" /></a>
+            <a href={SOCIALS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-gold transition-colors"><Instagram className="h-3.5 w-3.5" /></a>
+            <a href={SOCIALS.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-gold transition-colors"><Youtube className="h-3.5 w-3.5" /></a>
+            <a href={SOCIALS.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="hover:text-gold transition-colors"><TikTokIcon className="h-3.5 w-3.5" /></a>
           </div>
         </div>
       </div>

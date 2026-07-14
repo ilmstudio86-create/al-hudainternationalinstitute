@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { Layout, PageHero } from "@/components/site/Layout";
 import { Mail, Phone, MapPin, Send, Facebook, Instagram, Youtube } from "lucide-react";
+import { SOCIALS } from "@/lib/socials";
+import { TikTokIcon } from "@/components/site/TikTokIcon";
 import { useState } from "react";
 import { z } from "zod";
 import { CONTACT_WA_URL } from "@/lib/trial";
@@ -66,9 +68,10 @@ function Contact() {
                 <div className="flex items-start gap-3"><Mail className="h-5 w-5 text-gold mt-0.5" /><div><div className="text-xs uppercase tracking-wider text-primary-foreground/70">Email</div><div className="font-medium">alhudaquranedu@gmail.com</div></div></div>
                 <div className="flex items-start gap-3"><MapPin className="h-5 w-5 text-gold mt-0.5" /><div><div className="text-xs uppercase tracking-wider text-primary-foreground/70">Location</div><div className="font-medium">Riyadh, Saudi Arabia · Serving 30+ countries</div></div></div>
                 <div className="pt-4 flex gap-3 border-t border-primary-foreground/20">
-                  <a href="https://facebook.com/AlIqraGlobalInstitute" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-gold hover:text-primary transition-colors"><Facebook className="h-4 w-4" /></a>
-                  <a href="https://instagram.com/aliqra.global" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-gold hover:text-primary transition-colors"><Instagram className="h-4 w-4" /></a>
-                  <a href="https://youtube.com/@AlIqraOfficial" aria-label="YouTube" className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-gold hover:text-primary transition-colors"><Youtube className="h-4 w-4" /></a>
+                  <a href={SOCIALS.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-gold hover:text-primary transition-colors"><Facebook className="h-4 w-4" /></a>
+                  <a href={SOCIALS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-gold hover:text-primary transition-colors"><Instagram className="h-4 w-4" /></a>
+                  <a href={SOCIALS.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-gold hover:text-primary transition-colors"><Youtube className="h-4 w-4" /></a>
+                  <a href={SOCIALS.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-gold hover:text-primary transition-colors"><TikTokIcon className="h-4 w-4" /></a>
                 </div>
               </div>
             </div>
