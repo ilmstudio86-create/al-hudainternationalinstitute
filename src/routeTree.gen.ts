@@ -20,6 +20,7 @@ import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogHowToChooseRouteImport } from './routes/blog.how-to-choose'
+import { Route as BlogBestOnlineQuranAcademyRouteImport } from './routes/blog.best-online-quran-academy'
 import { Route as BlogBenefitsOfLearningQuranOnlineRouteImport } from './routes/blog.benefits-of-learning-quran-online'
 
 const TeachersRoute = TeachersRouteImport.update({
@@ -77,6 +78,12 @@ const BlogHowToChooseRoute = BlogHowToChooseRouteImport.update({
   path: '/how-to-choose',
   getParentRoute: () => BlogRoute,
 } as any)
+const BlogBestOnlineQuranAcademyRoute =
+  BlogBestOnlineQuranAcademyRouteImport.update({
+    id: '/best-online-quran-academy',
+    path: '/best-online-quran-academy',
+    getParentRoute: () => BlogRoute,
+  } as any)
 const BlogBenefitsOfLearningQuranOnlineRoute =
   BlogBenefitsOfLearningQuranOnlineRouteImport.update({
     id: '/benefits-of-learning-quran-online',
@@ -96,6 +103,7 @@ export interface FileRoutesByFullPath {
   '/sadaqah': typeof SadaqahRoute
   '/teachers': typeof TeachersRoute
   '/blog/benefits-of-learning-quran-online': typeof BlogBenefitsOfLearningQuranOnlineRoute
+  '/blog/best-online-quran-academy': typeof BlogBestOnlineQuranAcademyRoute
   '/blog/how-to-choose': typeof BlogHowToChooseRoute
 }
 export interface FileRoutesByTo {
@@ -110,6 +118,7 @@ export interface FileRoutesByTo {
   '/sadaqah': typeof SadaqahRoute
   '/teachers': typeof TeachersRoute
   '/blog/benefits-of-learning-quran-online': typeof BlogBenefitsOfLearningQuranOnlineRoute
+  '/blog/best-online-quran-academy': typeof BlogBestOnlineQuranAcademyRoute
   '/blog/how-to-choose': typeof BlogHowToChooseRoute
 }
 export interface FileRoutesById {
@@ -125,6 +134,7 @@ export interface FileRoutesById {
   '/sadaqah': typeof SadaqahRoute
   '/teachers': typeof TeachersRoute
   '/blog/benefits-of-learning-quran-online': typeof BlogBenefitsOfLearningQuranOnlineRoute
+  '/blog/best-online-quran-academy': typeof BlogBestOnlineQuranAcademyRoute
   '/blog/how-to-choose': typeof BlogHowToChooseRoute
 }
 export interface FileRouteTypes {
@@ -141,6 +151,7 @@ export interface FileRouteTypes {
     | '/sadaqah'
     | '/teachers'
     | '/blog/benefits-of-learning-quran-online'
+    | '/blog/best-online-quran-academy'
     | '/blog/how-to-choose'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -155,6 +166,7 @@ export interface FileRouteTypes {
     | '/sadaqah'
     | '/teachers'
     | '/blog/benefits-of-learning-quran-online'
+    | '/blog/best-online-quran-academy'
     | '/blog/how-to-choose'
   id:
     | '__root__'
@@ -169,6 +181,7 @@ export interface FileRouteTypes {
     | '/sadaqah'
     | '/teachers'
     | '/blog/benefits-of-learning-quran-online'
+    | '/blog/best-online-quran-academy'
     | '/blog/how-to-choose'
   fileRoutesById: FileRoutesById
 }
@@ -264,6 +277,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogHowToChooseRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/blog/best-online-quran-academy': {
+      id: '/blog/best-online-quran-academy'
+      path: '/best-online-quran-academy'
+      fullPath: '/blog/best-online-quran-academy'
+      preLoaderRoute: typeof BlogBestOnlineQuranAcademyRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/blog/benefits-of-learning-quran-online': {
       id: '/blog/benefits-of-learning-quran-online'
       path: '/benefits-of-learning-quran-online'
@@ -276,12 +296,14 @@ declare module '@tanstack/react-router' {
 
 interface BlogRouteChildren {
   BlogBenefitsOfLearningQuranOnlineRoute: typeof BlogBenefitsOfLearningQuranOnlineRoute
+  BlogBestOnlineQuranAcademyRoute: typeof BlogBestOnlineQuranAcademyRoute
   BlogHowToChooseRoute: typeof BlogHowToChooseRoute
 }
 
 const BlogRouteChildren: BlogRouteChildren = {
   BlogBenefitsOfLearningQuranOnlineRoute:
     BlogBenefitsOfLearningQuranOnlineRoute,
+  BlogBestOnlineQuranAcademyRoute: BlogBestOnlineQuranAcademyRoute,
   BlogHowToChooseRoute: BlogHowToChooseRoute,
 }
 
