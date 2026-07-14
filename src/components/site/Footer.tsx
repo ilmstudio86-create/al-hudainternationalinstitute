@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Moon, Facebook, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { SOCIALS } from "@/lib/socials";
+import { TikTokIcon } from "./TikTokIcon";
 
 export function Footer() {
   return (
