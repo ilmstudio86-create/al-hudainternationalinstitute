@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alhudaislamicinstitute.com/sitemap.xml
+Sitemap: https://al-hudainternationalinstitute.lovable.app/sitemap.xml
