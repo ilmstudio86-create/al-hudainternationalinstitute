@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, Outlet, useRouterState } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { ArrowRight, Calendar, User } from "lucide-react";
 import quranImg from "@/assets/quran.jpg";
@@ -73,6 +73,12 @@ const posts: Post[] = [
 ];
 
 function BlogPage() {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+
+  if (pathname !== "/blog") {
+    return <Outlet />;
+  }
+
   return (
     <Layout>
       <section className="relative bg-gradient-hero text-primary-foreground overflow-hidden">
