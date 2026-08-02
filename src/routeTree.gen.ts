@@ -9,8 +9,12 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
 import { Route as TeachersRouteImport } from './routes/teachers'
+import { Route as ServicePolicyRouteImport } from './routes/service-policy'
 import { Route as SadaqahRouteImport } from './routes/sadaqah'
+import { Route as RefundPolicyRouteImport } from './routes/refund-policy'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as IslamicRouteImport } from './routes/islamic'
 import { Route as FaqRouteImport } from './routes/faq'
@@ -23,14 +27,34 @@ import { Route as BlogHowToChooseRouteImport } from './routes/blog.how-to-choose
 import { Route as BlogBestOnlineQuranAcademyRouteImport } from './routes/blog.best-online-quran-academy'
 import { Route as BlogBenefitsOfLearningQuranOnlineRouteImport } from './routes/blog.benefits-of-learning-quran-online'
 
+const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
+  id: '/terms-and-conditions',
+  path: '/terms-and-conditions',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TeachersRoute = TeachersRouteImport.update({
   id: '/teachers',
   path: '/teachers',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicePolicyRoute = ServicePolicyRouteImport.update({
+  id: '/service-policy',
+  path: '/service-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SadaqahRoute = SadaqahRouteImport.update({
   id: '/sadaqah',
   path: '/sadaqah',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RefundPolicyRoute = RefundPolicyRouteImport.update({
+  id: '/refund-policy',
+  path: '/refund-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PricingRoute = PricingRouteImport.update({
@@ -100,8 +124,12 @@ export interface FileRoutesByFullPath {
   '/faq': typeof FaqRoute
   '/islamic': typeof IslamicRoute
   '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/refund-policy': typeof RefundPolicyRoute
   '/sadaqah': typeof SadaqahRoute
+  '/service-policy': typeof ServicePolicyRoute
   '/teachers': typeof TeachersRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/blog/benefits-of-learning-quran-online': typeof BlogBenefitsOfLearningQuranOnlineRoute
   '/blog/best-online-quran-academy': typeof BlogBestOnlineQuranAcademyRoute
   '/blog/how-to-choose': typeof BlogHowToChooseRoute
@@ -115,8 +143,12 @@ export interface FileRoutesByTo {
   '/faq': typeof FaqRoute
   '/islamic': typeof IslamicRoute
   '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/refund-policy': typeof RefundPolicyRoute
   '/sadaqah': typeof SadaqahRoute
+  '/service-policy': typeof ServicePolicyRoute
   '/teachers': typeof TeachersRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/blog/benefits-of-learning-quran-online': typeof BlogBenefitsOfLearningQuranOnlineRoute
   '/blog/best-online-quran-academy': typeof BlogBestOnlineQuranAcademyRoute
   '/blog/how-to-choose': typeof BlogHowToChooseRoute
@@ -131,8 +163,12 @@ export interface FileRoutesById {
   '/faq': typeof FaqRoute
   '/islamic': typeof IslamicRoute
   '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/refund-policy': typeof RefundPolicyRoute
   '/sadaqah': typeof SadaqahRoute
+  '/service-policy': typeof ServicePolicyRoute
   '/teachers': typeof TeachersRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/blog/benefits-of-learning-quran-online': typeof BlogBenefitsOfLearningQuranOnlineRoute
   '/blog/best-online-quran-academy': typeof BlogBestOnlineQuranAcademyRoute
   '/blog/how-to-choose': typeof BlogHowToChooseRoute
@@ -148,8 +184,12 @@ export interface FileRouteTypes {
     | '/faq'
     | '/islamic'
     | '/pricing'
+    | '/privacy-policy'
+    | '/refund-policy'
     | '/sadaqah'
+    | '/service-policy'
     | '/teachers'
+    | '/terms-and-conditions'
     | '/blog/benefits-of-learning-quran-online'
     | '/blog/best-online-quran-academy'
     | '/blog/how-to-choose'
@@ -163,8 +203,12 @@ export interface FileRouteTypes {
     | '/faq'
     | '/islamic'
     | '/pricing'
+    | '/privacy-policy'
+    | '/refund-policy'
     | '/sadaqah'
+    | '/service-policy'
     | '/teachers'
+    | '/terms-and-conditions'
     | '/blog/benefits-of-learning-quran-online'
     | '/blog/best-online-quran-academy'
     | '/blog/how-to-choose'
@@ -178,8 +222,12 @@ export interface FileRouteTypes {
     | '/faq'
     | '/islamic'
     | '/pricing'
+    | '/privacy-policy'
+    | '/refund-policy'
     | '/sadaqah'
+    | '/service-policy'
     | '/teachers'
+    | '/terms-and-conditions'
     | '/blog/benefits-of-learning-quran-online'
     | '/blog/best-online-quran-academy'
     | '/blog/how-to-choose'
@@ -194,12 +242,23 @@ export interface RootRouteChildren {
   FaqRoute: typeof FaqRoute
   IslamicRoute: typeof IslamicRoute
   PricingRoute: typeof PricingRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  RefundPolicyRoute: typeof RefundPolicyRoute
   SadaqahRoute: typeof SadaqahRoute
+  ServicePolicyRoute: typeof ServicePolicyRoute
   TeachersRoute: typeof TeachersRoute
+  TermsAndConditionsRoute: typeof TermsAndConditionsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms-and-conditions': {
+      id: '/terms-and-conditions'
+      path: '/terms-and-conditions'
+      fullPath: '/terms-and-conditions'
+      preLoaderRoute: typeof TermsAndConditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/teachers': {
       id: '/teachers'
       path: '/teachers'
@@ -207,11 +266,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TeachersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/service-policy': {
+      id: '/service-policy'
+      path: '/service-policy'
+      fullPath: '/service-policy'
+      preLoaderRoute: typeof ServicePolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sadaqah': {
       id: '/sadaqah'
       path: '/sadaqah'
       fullPath: '/sadaqah'
       preLoaderRoute: typeof SadaqahRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/refund-policy': {
+      id: '/refund-policy'
+      path: '/refund-policy'
+      fullPath: '/refund-policy'
+      preLoaderRoute: typeof RefundPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pricing': {
@@ -318,8 +398,12 @@ const rootRouteChildren: RootRouteChildren = {
   FaqRoute: FaqRoute,
   IslamicRoute: IslamicRoute,
   PricingRoute: PricingRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  RefundPolicyRoute: RefundPolicyRoute,
   SadaqahRoute: SadaqahRoute,
+  ServicePolicyRoute: ServicePolicyRoute,
   TeachersRoute: TeachersRoute,
+  TermsAndConditionsRoute: TermsAndConditionsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
