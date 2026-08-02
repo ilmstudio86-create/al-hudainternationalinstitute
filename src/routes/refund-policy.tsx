@@ -4,9 +4,9 @@ import { Layout, PageHero } from "@/components/site/Layout";
 export const Route = createFileRoute("/refund-policy")({
   head: () => ({
     meta: [
-      { title: "Refund Policy — Al Huda International Islamic Institute" },
+      { title: "Refund Policy - Al Huda International Islamic Institute" },
       { name: "description", content: "Refund and cancellation policy for online Quran and Islamic classes at Al Huda International Islamic Institute." },
-      { property: "og:title", content: "Refund Policy — Al Huda International Islamic Institute" },
+      { property: "og:title", content: "Refund Policy - Al Huda International Islamic Institute" },
       { property: "og:description", content: "Refund and cancellation policy for online Quran and Islamic classes at Al Huda International Islamic Institute." },
     ],
   }),
@@ -44,7 +44,7 @@ function RefundPolicy() {
           <div className="rounded-xl border border-border/70 bg-card p-6">
             <h2 className="font-display text-xl font-bold text-primary mb-3">4. How to Request a Refund</h2>
             <p className="text-muted-foreground leading-relaxed">
-              To request a refund for an eligible duplicate payment or billing error, please contact us via WhatsApp or email with your payment details and a description of the issue. We aim to respond within 3–5 business days.
+              To request a refund for an eligible duplicate payment or billing error, please contact us via WhatsApp or email with your payment details and a description of the issue. We aim to respond within 3-5 business days.
             </p>
           </div>
         </div>

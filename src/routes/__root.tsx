@@ -73,7 +73,7 @@ export const Route = createRootRoute({
           telephone: "+92-314-1766950",
           foundingDate: "2013",
           address: { "@type": "PostalAddress", addressLocality: "Riyadh", addressCountry: "SA" },
-          description: "Online Quran classes for kids and adults — Nazra, Hifz, Tajweed, Tafseer, Arabic and Islamic Studies taught by certified Hafiz, Qari and female scholars.",
+          description: "Online Quran classes for kids and adults - Nazra, Hifz, Tajweed, Tafseer, Arabic and Islamic Studies taught by certified Hafiz, Qari and female scholars.",
           sameAs: [
             "https://www.facebook.com/AlHudaIslamicInstitute",
             "https://www.instagram.com/al.huda.islamicinstitute",

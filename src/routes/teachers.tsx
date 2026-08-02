@@ -6,9 +6,9 @@ import { TRIAL_WA_URL } from "@/lib/trial";
 export const Route = createFileRoute("/teachers")({
   head: () => ({
     meta: [
-      { title: "Our Teachers — Certified Hafiz, Qari & Scholars | Al Huda International Islamic Institute" },
-      { name: "description", content: "Meet our certified male & female Quran teachers — Mufti, Hafiz, Qaris and Hafizahs, fluent in English, Arabic and Urdu." },
-      { property: "og:title", content: "Meet Our Teachers — Al Huda International Islamic Institute" },
+      { title: "Our Teachers - Certified Hafiz, Qari & Scholars | Al Huda International Islamic Institute" },
+      { name: "description", content: "Meet our certified male & female Quran teachers - Mufti, Hafiz, Qaris and Hafizahs, fluent in English, Arabic and Urdu." },
+      { property: "og:title", content: "Meet Our Teachers - Al Huda International Islamic Institute" },
       { property: "og:description", content: "Qualified Mufti, Hafiz, Qari, Hafizah and Islamic scholars dedicated to your Quran journey." },
     ],
   }),
@@ -24,7 +24,7 @@ type Teacher = {
   gender: "M" | "F";
 };
 
-// Lead scholar — featured alone at the top
+// Lead scholar - featured alone at the top
 const lead: Teacher = {
   name: "Mufti Sheikh Maulana Nisaar Ahmad",
   qual: "Mufti · Master in Islamic & Arabic Studies",
@@ -62,7 +62,7 @@ const seniors: Teacher[] = [
   },
 ];
 
-// 4 additional teachers — mix of male and female
+// 4 additional teachers - mix of male and female
 const additional: Teacher[] = [
   {
     name: "Qari Bilal Hussain",
@@ -151,7 +151,7 @@ function Teachers() {
       <PageHero
         arabic="مُعَلِّمُونَا"
         title="Our Certified Teachers"
-        subtitle="A handpicked faculty led by our chief Mufti — qualified male and female scholars dedicated to your Quran journey."
+        subtitle="A handpicked faculty led by our chief Mufti - qualified male and female scholars dedicated to your Quran journey."
       />
 
       {/* Stats strip */}
@@ -171,7 +171,7 @@ function Teachers() {
         </div>
       </section>
 
-      {/* Lead scholar — alone at top */}
+      {/* Lead scholar - alone at top */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
         <div className="text-center mb-10">
           <p className="text-xs uppercase tracking-[0.3em] text-gold font-semibold mb-2">Chief Scholar</p>
@@ -230,7 +230,7 @@ function Teachers() {
             <BookOpen className="h-12 w-12 text-gold mx-auto mb-4" />
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-gold mb-3">Match With Your Perfect Teacher</h2>
             <p className="text-primary-foreground/85 max-w-2xl mx-auto mb-7">
-              Tell us your goals, gender preference, language and time zone — we'll pair you with the ideal teacher and start your free 3-day trial today.
+              Tell us your goals, gender preference, language and time zone - we'll pair you with the ideal teacher and start your free 3-day trial today.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
               <a

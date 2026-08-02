@@ -5,9 +5,9 @@ import { BookOpen, Sparkles, Mic2, Library, Languages, ScrollText, Baby, ArrowRi
 export const Route = createFileRoute("/courses")({
   head: () => ({
     meta: [
-      { title: "Courses — Al Huda International Islamic Institute" },
+      { title: "Courses - Al Huda International Islamic Institute" },
       { name: "description", content: "Online Quran courses: Nazra, Hifz, Tajweed & Qirat, Tafseer, Arabic, Islamic Studies and a dedicated Kids Quran Program." },
-      { property: "og:title", content: "Online Quran Courses — Al Huda International Islamic Institute" },
+      { property: "og:title", content: "Online Quran Courses - Al Huda International Islamic Institute" },
       { property: "og:description", content: "Structured curricula for every age and level. Book a free trial today." },
     ],
   }),
@@ -15,13 +15,13 @@ export const Route = createFileRoute("/courses")({
 });
 
 const courses = [
-  { icon: BookOpen, title: "Nazra-e-Quran", desc: "Learn to read the Holy Quran fluently with correct pronunciation, starting from Qaida.", duration: "3–6 months", level: "Beginner" },
-  { icon: Sparkles, title: "Hifz ul Quran", desc: "Complete memorization program with daily Sabaq, Sabqi and Manzil under expert Hifz Masters.", duration: "2–4 years", level: "All ages" },
-  { icon: Mic2, title: "Tajweed & Qirat", desc: "Master the rules of recitation, Makharij and beautiful Qirat in classical styles.", duration: "6–12 months", level: "Intermediate" },
-  { icon: Library, title: "Islamic Studies", desc: "Aqeedah, Fiqh, Seerah, Hadith and Akhlaq — a complete grounding in Deen.", duration: "Ongoing", level: "All levels" },
-  { icon: Languages, title: "Arabic Language", desc: "Conversational and Quranic Arabic — taught by Masters in Arabic Language.", duration: "12 months", level: "Beginner–Advanced" },
+  { icon: BookOpen, title: "Nazra-e-Quran", desc: "Learn to read the Holy Quran fluently with correct pronunciation, starting from Qaida.", duration: "3-6 months", level: "Beginner" },
+  { icon: Sparkles, title: "Hifz ul Quran", desc: "Complete memorization program with daily Sabaq, Sabqi and Manzil under expert Hifz Masters.", duration: "2-4 years", level: "All ages" },
+  { icon: Mic2, title: "Tajweed & Qirat", desc: "Master the rules of recitation, Makharij and beautiful Qirat in classical styles.", duration: "6-12 months", level: "Intermediate" },
+  { icon: Library, title: "Islamic Studies", desc: "Aqeedah, Fiqh, Seerah, Hadith and Akhlaq - a complete grounding in Deen.", duration: "Ongoing", level: "All levels" },
+  { icon: Languages, title: "Arabic Language", desc: "Conversational and Quranic Arabic - taught by Masters in Arabic Language.", duration: "12 months", level: "Beginner-Advanced" },
   { icon: ScrollText, title: "Tafseer ul Quran", desc: "Word-by-word meaning, classical Tafseer and contextual understanding of every Surah.", duration: "Ongoing", level: "Intermediate+" },
-  { icon: Baby, title: "Kids Quran Program", desc: "Engaging, age-appropriate Quran &amp; Islamic learning designed for children 4–12.", duration: "Flexible", level: "Kids" },
+  { icon: Baby, title: "Kids Quran Program", desc: "Engaging, age-appropriate Quran &amp; Islamic learning designed for children 4-12.", duration: "Flexible", level: "Kids" },
 ];
 
 function Courses() {

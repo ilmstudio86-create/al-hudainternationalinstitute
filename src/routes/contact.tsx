@@ -11,10 +11,10 @@ import { CONTACT_WA_URL } from "@/lib/trial";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Free Trial — Al Huda International Islamic Institute" },
+      { title: "Contact & Free Trial - Al Huda International Islamic Institute" },
       { name: "description", content: "Book your free trial Quran class. Reach Al Huda International Islamic Institute by WhatsApp, email or phone." },
       { property: "og:title", content: "Contact Al Huda International Islamic Institute" },
-      { property: "og:description", content: "Book a free trial class today — taught by certified Hafiz & Qari." },
+      { property: "og:description", content: "Book a free trial class today - taught by certified Hafiz & Qari." },
     ],
   }),
   component: Contact,
@@ -41,7 +41,7 @@ function Contact() {
       setStatus("error");
       return;
     }
-    const text = `Assalamu Alaikum, I'd like to book a free trial with Al Huda International Islamic Institute.\n\nName: ${parsed.data.name}\nEmail: ${parsed.data.email}\nPhone: ${parsed.data.phone}\nCourse: ${parsed.data.course || "—"}\n\n${parsed.data.message}`;
+    const text = `Assalamu Alaikum, I'd like to book a free trial with Al Huda International Islamic Institute.\n\nName: ${parsed.data.name}\nEmail: ${parsed.data.email}\nPhone: ${parsed.data.phone}\nCourse: ${parsed.data.course || "-"}\n\n${parsed.data.message}`;
     window.open(`https://wa.me/923141766950?text=${encodeURIComponent(text)}`, "_blank");
     setStatus("ok");
     setError(null);
@@ -50,7 +50,7 @@ function Contact() {
 
   return (
     <Layout>
-      <PageHero arabic="تَوَاصَلْ مَعَنَا" title="Get In Touch" subtitle="Book your free trial class — we reply within hours, In sha Allah." />
+      <PageHero arabic="تَوَاصَلْ مَعَنَا" title="Get In Touch" subtitle="Book your free trial class - we reply within hours, In sha Allah." />
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
         <div className="grid gap-10 lg:grid-cols-3">
@@ -106,7 +106,7 @@ function Contact() {
               <textarea name="message" rows={5} placeholder="Tell us about your goals, preferred time, etc." className="w-full rounded-md border border-input bg-background px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/60" />
             </div>
             {status === "error" && error && <p className="mt-3 text-sm text-destructive">{error}</p>}
-            {status === "ok" && <p className="mt-3 text-sm text-primary font-medium">Jazak Allah Khair! Opening WhatsApp to confirm…</p>}
+            {status === "ok" && <p className="mt-3 text-sm text-primary font-medium">Jazak Allah Khair! Opening WhatsApp to confirm...</p>}
             <button type="submit" className="mt-6 inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3 font-semibold text-primary shadow-gold hover:scale-[1.02] transition-transform">
               <Send className="h-4 w-4" /> Send & Book Trial
             </button>

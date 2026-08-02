@@ -7,9 +7,9 @@ import { TRIAL_WA_URL } from "@/lib/trial";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing & Plans — Al Huda International Islamic Institute" },
-      { name: "description", content: "Country-wise affordable monthly Quran class plans — 2, 3 or 5 days a week. Free 3-day trial, no credit card required." },
-      { property: "og:title", content: "Pricing — Al Huda International Islamic Institute" },
+      { title: "Pricing & Plans - Al Huda International Islamic Institute" },
+      { name: "description", content: "Country-wise affordable monthly Quran class plans - 2, 3 or 5 days a week. Free 3-day trial, no credit card required." },
+      { property: "og:title", content: "Pricing - Al Huda International Islamic Institute" },
       { property: "og:description", content: "Transparent country-wise monthly pricing for one-on-one Quran classes." },
     ],
   }),
@@ -69,7 +69,7 @@ function Pricing() {
 
   return (
     <Layout>
-      <PageHero arabic="الأَسْعَارُ" title="Country-Wise Pricing" subtitle="Fees adjusted fairly for every country — Free 3-day trial included." />
+      <PageHero arabic="الأَسْعَارُ" title="Country-Wise Pricing" subtitle="Fees adjusted fairly for every country - Free 3-day trial included." />
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
         {/* Country selector */}
@@ -137,7 +137,7 @@ function Pricing() {
         <div className="mt-10 rounded-2xl border border-gold/40 bg-gold/5 p-6 text-center">
           <p className="font-semibold text-primary mb-1">👨‍👩‍👧‍👦 Family / Sibling Discount</p>
           <p className="text-sm text-foreground/80">
-            Have more than one child? We offer a special concession when multiple siblings join — simply mention it on WhatsApp and we'll arrange a discounted family plan for you, In sha Allah.
+            Have more than one child? We offer a special concession when multiple siblings join - simply mention it on WhatsApp and we'll arrange a discounted family plan for you, In sha Allah.
           </p>
         </div>
 

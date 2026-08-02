@@ -7,11 +7,11 @@ import kidsImg from "@/assets/kids-learning.jpg";
 export const Route = createFileRoute("/blog/how-to-choose")({
   head: () => ({
     meta: [
-      { title: "How to Choose the Best Online Quran Academy for Your Child — Al Huda" },
-      { name: "description", content: "A practical parent's guide to choosing the best online Quran academy for your child — certified teachers, safe classes, Tajweed, Hifz, flexible timings and a free trial with Al Huda International Islamic Institute." },
+      { title: "How to Choose the Best Online Quran Academy for Your Child - Al Huda" },
+      { name: "description", content: "A practical parent's guide to choosing the best online Quran academy for your child - certified teachers, safe classes, Tajweed, Hifz, flexible timings and a free trial with Al Huda International Islamic Institute." },
       { name: "keywords", content: "best online Quran academy, online Quran classes for kids, Quran teacher for children, Noorani Qaida online, Hifz online, Tajweed for kids, Islamic education online, Al Huda International Islamic Institute" },
       { property: "og:title", content: "How to Choose the Best Online Quran Academy for Your Child" },
-      { property: "og:description", content: "A practical parent's guide to choosing the right online Quran academy — teachers, curriculum, safety, and free trial classes." },
+      { property: "og:description", content: "A practical parent's guide to choosing the right online Quran academy - teachers, curriculum, safety, and free trial classes." },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "https://al-hudainternationalinstitute.lovable.app/blog/how-to-choose" },
       { property: "og:image", content: "https://al-hudainternationalinstitute.lovable.app/og-image.jpg" },
@@ -46,16 +46,16 @@ export const Route = createFileRoute("/blog/how-to-choose")({
 
 function BlogArticlePage() {
   const tips: { title: string; body: string }[] = [
-    { title: "1. Check the Qualifications of the Teachers", body: "The most important factor is who will teach your child. Look for an academy with certified Huffaz and Ijazah-holding scholars trained in Tajweed and Tafseer. Ask about their experience with children — teaching kids requires patience, kindness, and a different skill set than teaching adults." },
+    { title: "1. Check the Qualifications of the Teachers", body: "The most important factor is who will teach your child. Look for an academy with certified Huffaz and Ijazah-holding scholars trained in Tajweed and Tafseer. Ask about their experience with children - teaching kids requires patience, kindness, and a different skill set than teaching adults." },
     { title: "2. Look for a Structured Curriculum", body: "A good academy offers a clear, age-appropriate path: Noorani Qaida for beginners, Quran reading with Tajweed, and Hifz for those who wish to memorize. Ask to see a sample lesson plan before enrolling so you know exactly what your child will learn each month." },
-    { title: "3. Prioritize Interactive and Engaging Lessons", body: "Children learn best when lessons are interactive. Look for visual aids, small rewards and certificates, short focused sessions of 20–30 minutes, and regular parent-teacher feedback that keeps your child excited to attend the next class." },
+    { title: "3. Prioritize Interactive and Engaging Lessons", body: "Children learn best when lessons are interactive. Look for visual aids, small rewards and certificates, short focused sessions of 20-30 minutes, and regular parent-teacher feedback that keeps your child excited to attend the next class." },
     { title: "4. Verify Safety and Privacy Measures", body: "Since classes are online, safety is non-negotiable. Choose an academy that background-checks teachers, records sessions for accountability, allows parents to sit in on classes, and uses secure video platforms like Zoom or Google Meet." },
     { title: "5. Take Advantage of a Free Trial Class", body: "Every trusted academy offers a FREE trial. Use it to see how the teacher interacts with your child, whether the pace suits their level, and whether your child feels comfortable. If they're excited to come back, that's the strongest sign of a good fit." },
     { title: "6. Consider Flexibility and Scheduling", body: "Every family has a different routine. Pick an academy that offers flexible timings across time zones, easy rescheduling for missed classes, and one-to-one lessons so your child gets full attention instead of being lost in a group." },
     { title: "7. Read Reviews and Ask for References", body: "Before enrolling, search for honest parent reviews on independent platforms and read testimonials on the academy's website. Don't hesitate to ask the academy to connect you with current students' families for real feedback." },
     { title: "8. Compare Pricing and Value", body: "Cheaper isn't always better, and expensive doesn't guarantee quality. Compare what's included: number of classes per week, class duration, teacher qualifications, and extras like workbooks or monthly progress reports." },
     { title: "9. Ensure Ongoing Progress Tracking", body: "A quality academy shares regular reports on your child's Tajweed, memorization milestones, and areas needing practice. This keeps you informed and involved in your child's spiritual journey." },
-    { title: "10. Trust Your Instincts as a Parent", body: "After the trial class, listen to your gut. The right academy will feel like a natural extension of your home — a place where your child learns to love the Quran, not just recite it." },
+    { title: "10. Trust Your Instincts as a Parent", body: "After the trial class, listen to your gut. The right academy will feel like a natural extension of your home - a place where your child learns to love the Quran, not just recite it." },
   ];
 
   const highlights = [
@@ -102,7 +102,7 @@ function BlogArticlePage() {
 
         <div className="prose prose-lg max-w-none text-foreground/85">
           <p className="text-base sm:text-lg leading-relaxed mb-6">
-            Choosing an <strong>online Quran academy</strong> for your child is one of the most important decisions you'll make as a Muslim parent. With so many platforms available today, it can feel overwhelming to pick one that will truly nurture your child's connection with the Holy Quran while keeping them safe, engaged, and motivated. At <Link to="/" className="text-primary font-semibold underline">Al Huda International Islamic Institute</Link>, we've helped thousands of families around the world — and this guide is built from that experience.
+            Choosing an <strong>online Quran academy</strong> for your child is one of the most important decisions you'll make as a Muslim parent. With so many platforms available today, it can feel overwhelming to pick one that will truly nurture your child's connection with the Holy Quran while keeping them safe, engaged, and motivated. At <Link to="/" className="text-primary font-semibold underline">Al Huda International Islamic Institute</Link>, we've helped thousands of families around the world - and this guide is built from that experience.
           </p>
           <p className="leading-relaxed mb-8">
             Below are the ten most important things to look for before enrolling your child in any <Link to="/courses" className="text-primary font-semibold underline">online Quran class</Link>.
@@ -132,7 +132,7 @@ function BlogArticlePage() {
 
           <h3 className="text-xl sm:text-2xl font-bold text-primary mt-10 mb-4">Book Your FREE Trial Class Today</h3>
           <p className="leading-relaxed mb-4">
-            The best way to judge any academy is to experience it yourself. Book a <strong>FREE trial class</strong> with Al Huda and let your child meet a certified teacher, try a real lesson, and decide with confidence — no payment, no commitment.
+            The best way to judge any academy is to experience it yourself. Book a <strong>FREE trial class</strong> with Al Huda and let your child meet a certified teacher, try a real lesson, and decide with confidence - no payment, no commitment.
           </p>
           <p className="leading-relaxed mb-8">
             Have a question first? <Link to="/contact" className="text-primary font-semibold underline">Contact us</Link> on WhatsApp anytime and our team will guide you personally.
@@ -140,7 +140,7 @@ function BlogArticlePage() {
 
           <div className="rounded-2xl bg-gradient-primary text-primary-foreground p-8 text-center mt-10">
             <h4 className="text-xl sm:text-2xl font-bold text-gold mb-3">Ready to Start Your Child's Quran Journey?</h4>
-            <p className="text-primary-foreground/90 mb-6">Book your free trial class today — no credit card required.</p>
+            <p className="text-primary-foreground/90 mb-6">Book your free trial class today - no credit card required.</p>
             <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
               Start Free Trial <ArrowRight className="h-4 w-4" />
             </a>
