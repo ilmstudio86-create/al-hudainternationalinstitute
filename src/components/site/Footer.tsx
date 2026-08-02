@@ -56,8 +56,14 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-primary-foreground/15 pt-6 text-center text-xs text-primary-foreground/60">
-          © {new Date().getFullYear()} Al Huda International Islamic Institute. All rights reserved.
+        <div className="mt-12 border-t border-primary-foreground/15 pt-6 flex flex-col items-center gap-3 text-center text-xs text-primary-foreground/60">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+            <Link to="/privacy-policy" className="hover:text-gold transition-colors">Privacy Policy</Link>
+            <Link to="/terms-and-conditions" className="hover:text-gold transition-colors">Terms & Conditions</Link>
+            <Link to="/refund-policy" className="hover:text-gold transition-colors">Refund Policy</Link>
+            <Link to="/service-policy" className="hover:text-gold transition-colors">Service Policy</Link>
+          </div>
+          <p>© {new Date().getFullYear()} Al Huda International Islamic Institute. All rights reserved.</p>
         </div>
       </div>
     </footer>
