@@ -7,10 +7,10 @@ import kidsImg from "@/assets/kids-learning.jpg";
 export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
-      { title: "Blog — Al Huda Islamic Institute | Online Quran Learning Articles" },
+      { title: "Blog - Al Huda Islamic Institute | Online Quran Learning Articles" },
       { name: "description", content: "Read expert articles on online Quran learning, Hifz, Tajweed, Islamic education for kids and Muslim family guidance from Al Huda Islamic Institute." },
       { name: "keywords", content: "online quran academy, quran blog, islamic education blog, quran for kids, hifz tips, tajweed lessons" },
-      { property: "og:title", content: "Blog — Al Huda Islamic Institute" },
+      { property: "og:title", content: "Blog - Al Huda Islamic Institute" },
       { property: "og:description", content: "Articles on online Quran learning, Hifz, Tajweed and Islamic education for Muslim families worldwide." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://al-hudainternationalinstitute.lovable.app/blog" },
@@ -49,7 +49,7 @@ const posts: Post[] = [
   {
     slug: "/blog/best-online-quran-academy",
     title: "Best Online Quran Academy for Kids and Adult Muslim Families",
-    excerpt: "Why Al Huda is trusted by Muslim families in 30+ countries — certified teachers, one-to-one classes, and a free trial for kids and adults.",
+    excerpt: "Why Al Huda is trusted by Muslim families in 30+ countries - certified teachers, one-to-one classes, and a free trial for kids and adults.",
     date: "May 7, 2026",
     category: "Online Quran Education",
     image: quranImg,
@@ -65,7 +65,7 @@ const posts: Post[] = [
   {
     slug: "/blog/how-to-choose",
     title: "How to Choose the Best Online Quran Academy for Your Child",
-    excerpt: "A practical parent's guide to picking a safe, trusted Quran academy — teachers, curriculum, safety, pricing, and free trial classes.",
+    excerpt: "A practical parent's guide to picking a safe, trusted Quran academy - teachers, curriculum, safety, pricing, and free trial classes.",
     date: "July 4, 2026",
     category: "Parent's Guide",
     image: kidsImg,

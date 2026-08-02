@@ -4,9 +4,9 @@ import { Layout, PageHero } from "@/components/site/Layout";
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — Al Huda International Islamic Institute" },
+      { title: "Privacy Policy - Al Huda International Islamic Institute" },
       { name: "description", content: "How Al Huda International Islamic Institute collects, uses and protects your personal information." },
-      { property: "og:title", content: "Privacy Policy — Al Huda International Islamic Institute" },
+      { property: "og:title", content: "Privacy Policy - Al Huda International Islamic Institute" },
       { property: "og:description", content: "How Al Huda International Islamic Institute collects, uses and protects your personal information." },
     ],
   }),

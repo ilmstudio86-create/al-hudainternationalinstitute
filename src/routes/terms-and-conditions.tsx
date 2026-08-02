@@ -4,9 +4,9 @@ import { Layout, PageHero } from "@/components/site/Layout";
 export const Route = createFileRoute("/terms-and-conditions")({
   head: () => ({
     meta: [
-      { title: "Terms & Conditions — Al Huda International Islamic Institute" },
+      { title: "Terms & Conditions - Al Huda International Islamic Institute" },
       { name: "description", content: "The terms and conditions for enrolling in online Quran and Islamic classes at Al Huda International Islamic Institute." },
-      { property: "og:title", content: "Terms & Conditions — Al Huda International Islamic Institute" },
+      { property: "og:title", content: "Terms & Conditions - Al Huda International Islamic Institute" },
       { property: "og:description", content: "The terms and conditions for enrolling in online Quran and Islamic classes at Al Huda International Islamic Institute." },
     ],
   }),
@@ -47,7 +47,7 @@ function TermsAndConditions() {
           <div className="absolute inset-0 pattern-bg" />
           <div className="relative">
             <h3 className="font-display text-2xl font-bold text-gold mb-2">Ready to begin?</h3>
-            <p className="text-primary-foreground/85 mb-5">Book your free trial class today — no commitment required.</p>
+            <p className="text-primary-foreground/85 mb-5">Book your free trial class today - no commitment required.</p>
             <Link to="/contact" className="inline-flex items-center rounded-md bg-gradient-gold px-6 py-3 font-semibold text-primary shadow-gold hover:scale-[1.02] transition-transform">Start Free Trial</Link>
           </div>
         </div>

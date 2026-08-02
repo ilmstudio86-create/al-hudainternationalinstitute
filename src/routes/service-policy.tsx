@@ -4,9 +4,9 @@ import { Layout, PageHero } from "@/components/site/Layout";
 export const Route = createFileRoute("/service-policy")({
   head: () => ({
     meta: [
-      { title: "Service Policy — Al Huda International Islamic Institute" },
+      { title: "Service Policy - Al Huda International Islamic Institute" },
       { name: "description", content: "Description of the online educational services provided by Al Huda International Islamic Institute." },
-      { property: "og:title", content: "Service Policy — Al Huda International Islamic Institute" },
+      { property: "og:title", content: "Service Policy - Al Huda International Islamic Institute" },
       { property: "og:description", content: "Description of the online educational services provided by Al Huda International Islamic Institute." },
     ],
   }),

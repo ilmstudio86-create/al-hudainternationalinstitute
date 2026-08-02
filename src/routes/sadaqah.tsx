@@ -7,10 +7,10 @@ import sadaqahImg from "@/assets/sadaqah.jpg";
 export const Route = createFileRoute("/sadaqah")({
   head: () => ({
     meta: [
-      { title: "Sadaqah, Qurbani & Umrah Sponsorship — Al Huda International Islamic Institute" },
+      { title: "Sadaqah, Qurbani & Umrah Sponsorship - Al Huda International Islamic Institute" },
       { name: "description", content: "Donate Sadaqah, perform Qurbani, or sponsor Umrah for a deserving Muslim through Al Huda International Islamic Institute. Trusted, transparent, and rewarded by Allah ﷻ." },
-      { property: "og:title", content: "Sadaqah, Qurbani & Umrah — Al Huda International Islamic Institute" },
-      { property: "og:description", content: "Send your Sadaqah, Qurbani or sponsor an Umrah with us — earn the best ajar, In sha Allah." },
+      { property: "og:title", content: "Sadaqah, Qurbani & Umrah - Al Huda International Islamic Institute" },
+      { property: "og:description", content: "Send your Sadaqah, Qurbani or sponsor an Umrah with us - earn the best ajar, In sha Allah." },
       { property: "og:image", content: "/src/assets/sadaqah.jpg" },
     ],
   }),
@@ -27,25 +27,25 @@ const services = [
   {
     icon: Gift,
     title: "Qurbani / Udhiyah",
-    desc: "Perform your Qurbani through Al Huda International Islamic Institute — we arrange healthy animals as per Sunnah and distribute the meat to deserving families across Pakistan.",
+    desc: "Perform your Qurbani through Al Huda International Islamic Institute - we arrange healthy animals as per Sunnah and distribute the meat to deserving families across Pakistan.",
     bullets: ["Goat, sheep, cow share & full cow", "Slaughter as per Sunnah", "Photo / video confirmation", "Meat reaches needy families"],
   },
   {
     icon: Plane,
     title: "Sponsor an Umrah",
-    desc: "Send a deserving Muslim brother or sister for Umrah on your behalf — or sponsor your parents, relatives, or anyone you wish to honour with this ibadah.",
+    desc: "Send a deserving Muslim brother or sister for Umrah on your behalf - or sponsor your parents, relatives, or anyone you wish to honour with this ibadah.",
     bullets: ["Full Umrah package sponsorship", "Visa, flights & accommodation", "Trusted travel partners", "Updates & duas from the pilgrim"],
   },
   {
     icon: Building2,
     title: "Masjid Construction & Contribution",
-    desc: "Want to build a Masjid or contribute your share to one being built? Through Al Huda International Islamic Institute you can participate in this Sadaqah Jariyah — every brick a reward that continues for you, In sha Allah.",
+    desc: "Want to build a Masjid or contribute your share to one being built? Through Al Huda International Islamic Institute you can participate in this Sadaqah Jariyah - every brick a reward that continues for you, In sha Allah.",
     bullets: ["Build a new Masjid in your name", "Contribute a share to ongoing projects", "Wudu khana, prayer mats & Qurans", "Photo & progress updates shared with you"],
   },
   {
     icon: Utensils,
     title: "Feed the Hungry & Oppressed Muslims",
-    desc: "Give your Sadaqah to feed the poor, orphans, widows and oppressed Muslims around the world — including Gaza, Syria, Yemen, Kashmir, Rohingya and other afflicted regions. Your contribution provides hot meals, ration packs, clean water and basic living essentials for families struggling to survive.",
+    desc: "Give your Sadaqah to feed the poor, orphans, widows and oppressed Muslims around the world - including Gaza, Syria, Yemen, Kashmir, Rohingya and other afflicted regions. Your contribution provides hot meals, ration packs, clean water and basic living essentials for families struggling to survive.",
     bullets: [
       "Hot meals & ration packs for the needy",
       "Emergency food aid for oppressed Muslims",
@@ -71,7 +71,7 @@ function Sadaqah() {
       <PageHero
         arabic="صَدَقَةٌ جَارِيَةٌ"
         title="Sadaqah, Qurbani & Umrah"
-        subtitle="Give for the sake of Allah ﷻ — and earn rewards that never end, In sha Allah."
+        subtitle="Give for the sake of Allah ﷻ - and earn rewards that never end, In sha Allah."
       />
 
       {/* Intro */}
@@ -95,7 +95,7 @@ function Sadaqah() {
               Give. Help. Earn the best ajar.
             </h2>
             <p className="text-foreground/80 leading-relaxed mb-4">
-              Al Huda International Islamic Institute is not just a Quran institute — we are a trusted hand for our Muslim ummah around the world.
+              Al Huda International Islamic Institute is not just a Quran institute - we are a trusted hand for our Muslim ummah around the world.
               If you wish to give Sadaqah for your children, perform Qurbani on Eid-ul-Adha, or sponsor an Umrah for a deserving Muslim
               on behalf of yourself or your loved ones, we will arrange it for you with full transparency and care.
             </p>
@@ -163,7 +163,7 @@ function Sadaqah() {
               مَا نَقَصَتْ صَدَقَةٌ مِنْ مَالٍ
             </p>
             <p className="text-primary-foreground/85 italic mb-8 max-w-2xl mx-auto">
-              "Charity does not decrease wealth." — Prophet Muhammad ﷺ (Sahih Muslim)
+              "Charity does not decrease wealth." - Prophet Muhammad ﷺ (Sahih Muslim)
             </p>
             <a
               href={SADAQAH_WA}

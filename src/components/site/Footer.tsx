@@ -17,7 +17,7 @@ export function Footer() {
               <span className="font-display text-xl font-bold text-gold">AL HUDA INTERNATIONAL</span>
             </Link>
             <p className="mt-4 text-sm text-primary-foreground/75 leading-relaxed">
-              Authentic online Quran &amp; Islamic education for students across 30+ countries — taught by qualified Hafiz, Qaris and Islamic scholars.
+              Authentic online Quran &amp; Islamic education for students across 30+ countries - taught by qualified Hafiz, Qaris and Islamic scholars.
             </p>
           </div>
 
@@ -52,7 +52,7 @@ export function Footer() {
           <div>
             <h4 className="text-gold font-semibold mb-4 text-sm uppercase tracking-wider">Hadith</h4>
             <p className="font-arabic text-2xl text-gold leading-relaxed">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</p>
-            <p className="mt-2 text-sm italic text-primary-foreground/75">"Seeking knowledge is an obligation upon every Muslim." — Sunan Ibn Mājah</p>
+            <p className="mt-2 text-sm italic text-primary-foreground/75">"Seeking knowledge is an obligation upon every Muslim." - Sunan Ibn Mājah</p>
           </div>
         </div>
 

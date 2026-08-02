@@ -63,15 +63,15 @@ const programImageSets: string[][] = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Online Quran Classes for Kids & Adults — Al Huda Islamic Institute" },
+      { title: "Online Quran Classes for Kids & Adults - Al Huda Islamic Institute" },
       { name: "description", content: "Best online Quran classes for kids and adults in USA, UK, Canada & Australia. Learn Nazra, Hifz, Tajweed, Tafseer, Arabic & Islamic Studies from certified Hafiz & Qari teachers. Free trial available." },
       { name: "keywords", content: "online quran classes, quran classes for kids, learn quran online, hifz online, tajweed classes, quran academy, islamic studies online, female quran teacher, al huda islamic institute" },
-      { property: "og:title", content: "Online Quran Classes for Kids & Adults — Al Huda Islamic Institute" },
+      { property: "og:title", content: "Online Quran Classes for Kids & Adults - Al Huda Islamic Institute" },
       { property: "og:description", content: "Learn Quran Online with Certified Hafiz & Qari Teachers. One-on-one live classes for students in 30+ countries. Free trial class available." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://alhudaislamicinstitute.com/" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Online Quran Classes for Kids & Adults — Al Huda Islamic Institute" },
+      { name: "twitter:title", content: "Online Quran Classes for Kids & Adults - Al Huda Islamic Institute" },
       { name: "twitter:description", content: "Learn Quran Online with Certified Hafiz & Qari Teachers. Free trial class available." },
     ],
   }),
@@ -79,7 +79,7 @@ export const Route = createFileRoute("/")({
 });
 
 const features = [
-  { icon: Globe2, title: "100% Online", desc: "Live one-on-one classes from anywhere — phone, tablet or computer." },
+  { icon: Globe2, title: "100% Online", desc: "Live one-on-one classes from anywhere - phone, tablet or computer." },
   { icon: GraduationCap, title: "Certified Scholars", desc: "Qualified Hafiz, Qari & Masters in Arabic and Islamic Studies." },
   { icon: Clock, title: "Flexible Timing", desc: "Class slots that fit your schedule, across every time zone." },
   { icon: ShieldCheck, title: "Safe & Trusted", desc: "Secure platform, verified teachers, parent monitoring access." },
@@ -91,28 +91,28 @@ const programs = [
   { title: "Tajweed & Qirat", desc: "Master Makharij and beautiful recitation in classical styles.", icon: Mic2, level: "Intermediate" },
   { title: "Tafseer ul Quran", desc: "Word-by-word meaning and classical Tafseer of every Surah.", icon: ScrollText, level: "Advanced" },
   { title: "Arabic Language", desc: "Conversational and Quranic Arabic taught by language specialists.", icon: Languages, level: "All levels" },
-  { title: "Islamic Studies", desc: "Aqeedah, Fiqh, Seerah, Hadith and Akhlaq — a complete grounding in Deen.", icon: Library, level: "All levels" },
-  { title: "Kids Quran Program", desc: "Engaging, age-appropriate Quran learning designed for children 4–12.", icon: Baby, level: "Kids" },
-  { title: "Male & Female Teachers", desc: "Highly qualified male and female scholars available — providing the best learning experience for your children in a comfortable, professional environment.", icon: Heart, level: "All students" },
+  { title: "Islamic Studies", desc: "Aqeedah, Fiqh, Seerah, Hadith and Akhlaq - a complete grounding in Deen.", icon: Library, level: "All levels" },
+  { title: "Kids Quran Program", desc: "Engaging, age-appropriate Quran learning designed for children 4-12.", icon: Baby, level: "Kids" },
+  { title: "Male & Female Teachers", desc: "Highly qualified male and female scholars available - providing the best learning experience for your children in a comfortable, professional environment.", icon: Heart, level: "All students" },
 ];
 
 const steps = [
   { n: "01", title: "Book a Free Trial", desc: "Tell us your goals and preferred time. No card needed." },
   { n: "02", title: "Meet Your Teacher", desc: "Take a 30-minute one-on-one trial class with a certified scholar." },
   { n: "03", title: "Choose Your Plan", desc: "Pick a 2, 3 or 5 days/week schedule that fits your routine." },
-  { n: "04", title: "Start Your Journey", desc: "Begin learning, track progress, and grow in faith — In sha Allah." },
+  { n: "04", title: "Start Your Journey", desc: "Begin learning, track progress, and grow in faith - In sha Allah." },
 ];
 
 const testimonials = [
   { name: "Aisha R.", country: "🇬🇧 United Kingdom", text: "My children memorised 5 Juz in one year. The teachers are patient and truly inspiring." },
   { name: "Mohammed S.", country: "🇨🇦 Canada", text: "Best online Quran academy I've enrolled with. Crystal clear voice, perfect Tajweed and very organised." },
-  { name: "Fatima H.", country: "🇺🇸 United States", text: "Female teacher for my daughter — professional, kind, knowledgeable. Highly recommend." },
+  { name: "Fatima H.", country: "🇺🇸 United States", text: "Female teacher for my daughter - professional, kind, knowledgeable. Highly recommend." },
   { name: "Yusuf A.", country: "🇦🇺 Australia", text: "I started Hifz at 35 thinking it was too late. Alhamdulillah I'm on Juz 12 thanks to Al Huda." },
   { name: "Sumayya K.", country: "🇸🇦 Saudi Arabia", text: "The Tafseer course changed how I connect with the Quran. May Allah reward this team." },
   { name: "Ibrahim M.", country: "🇲🇾 Malaysia", text: "Affordable, professional and authentic. My whole family enrolled in different programs." },
   { name: "Khadija N.", country: "🇶🇦 Qatar", text: "The female Ustadha is gentle, qualified and my daughters love their classes. Truly a blessing." },
   { name: "Abdullah T.", country: "🇦🇪 UAE", text: "I improved my Tajweed in just 3 months. The Qari sahab is a master of his craft." },
-  { name: "Hafsa I.", country: "🇮🇪 Ireland", text: "Booked a free trial — within minutes I was sure. The teachers are world-class, mashaAllah." },
+  { name: "Hafsa I.", country: "🇮🇪 Ireland", text: "Booked a free trial - within minutes I was sure. The teachers are world-class, mashaAllah." },
   { name: "Bilal K.", country: "🇳🇿 New Zealand", text: "Living far from any masjid, this academy brought authentic Islamic knowledge to my home." },
   { name: "Maryam Z.", country: "🇿🇦 South Africa", text: "My 6-year-old finished Qaida in 4 months. The kids program is genuinely engaging." },
   { name: "Omar F.", country: "🇩🇪 Germany", text: "Flexible timings even for my late-night work shifts. Sheikh is extremely knowledgeable." },
@@ -122,12 +122,12 @@ const testimonials = [
   { name: "Tariq H.", country: "🇮🇳 India", text: "Honest, sincere teachers. They truly care about each student's progress, not just fees." },
   { name: "Nusayba B.", country: "🇧🇭 Bahrain", text: "The female-only sister classes are a safe, beautiful environment for women to learn." },
   { name: "Imran S.", country: "🇵🇰 Pakistan", text: "Even living in Pakistan, I chose Al Huda for the international standard of teaching." },
-  { name: "Layla J.", country: "🇪🇸 Spain", text: "From zero Arabic to reading Quran in 5 months — alhamdulillah, I cried in my first khatam." },
+  { name: "Layla J.", country: "🇪🇸 Spain", text: "From zero Arabic to reading Quran in 5 months - alhamdulillah, I cried in my first khatam." },
   { name: "Hamza Q.", country: "🇹🇷 Turkey", text: "Professional dashboard, on-time classes, kind teachers. Exactly what a busy parent needs." },
   { name: "Safiya L.", country: "🇳🇱 Netherlands", text: "My son was scared of Arabic letters. His teacher made him love them. SubhanAllah." },
-  { name: "Junaid W.", country: "🇧🇪 Belgium", text: "Sponsored my mother for Tafseer classes — best gift I ever gave her. JazakAllah khair." },
+  { name: "Junaid W.", country: "🇧🇪 Belgium", text: "Sponsored my mother for Tafseer classes - best gift I ever gave her. JazakAllah khair." },
   { name: "Asma D.", country: "🇳🇴 Norway", text: "Trial was free and there was zero pressure. The teaching itself convinced me to enroll." },
-  { name: "Faisal G.", country: "🇪🇬 Egypt", text: "Even native Arabs benefit — the Tajweed precision and Qirat styles taught here are exceptional." },
+  { name: "Faisal G.", country: "🇪🇬 Egypt", text: "Even native Arabs benefit - the Tajweed precision and Qirat styles taught here are exceptional." },
   { name: "Hina V.", country: "🇲🇦 Morocco", text: "My daughter is now memorising Surah Mulk. The patience of her teacher is unmatched." },
   { name: "Adnan P.", country: "🇯🇴 Jordan", text: "Highly recommended for converts. They explain everything from the absolute basics with respect." },
 ];
@@ -160,7 +160,7 @@ function Home() {
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-20 text-center text-primary-foreground">
           <p className="font-arabic text-6xl sm:text-8xl text-gold mb-6 animate-fade-in drop-shadow-[0_4px_20px_rgba(212,168,32,0.3)]">اقرأ</p>
           <p className="text-xs sm:text-sm uppercase tracking-[0.4em] text-gold/90 mb-4 animate-fade-up">Al Huda International Islamic Institute</p>
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-gold mb-4 animate-fade-up leading-tight">Online Quran Classes for Kids &amp; Adults — Al Huda Islamic Institute</h1>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-gold mb-4 animate-fade-up leading-tight">Online Quran Classes for Kids &amp; Adults - Al Huda Islamic Institute</h1>
           <p className="text-lg sm:text-xl lg:text-2xl text-gold/90 font-semibold mb-6 animate-fade-up">Learn Quran Online with Certified Hafiz &amp; Qari Teachers</p>
           <p className="mx-auto max-w-3xl text-base sm:text-lg text-primary-foreground/90 mb-8 animate-fade-up leading-relaxed">
             Al Huda International Islamic Institute offers the best online Quran classes for kids and adults in USA, UK, Canada, and Australia. Learn Nazra, Hifz, Tajweed, Tafseer, Arabic and Islamic Studies from certified male and female teachers. One-on-one live classes, flexible timings, and free trial class available. Join 30+ countries students today!
@@ -197,7 +197,7 @@ function Home() {
             <p className="text-xs uppercase tracking-[0.3em] text-gold font-semibold mb-3">Welcome to Al Huda</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-5 leading-tight">A Spiritual Journey Through the Holy Quran</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Al Huda International Islamic Institute is a Riyadh, Saudi Arabia based online academy delivering authentic, structured Quran &amp; Islamic education to students worldwide since 2013. Our certified male and female teachers — including Hafiz al-Quran with mastery in Arabic, Tajweed, Tafseer and Islamic Studies — teach in English, Urdu, Arabic and more, guiding students of every age toward a deep, lifelong relationship with the Book of Allah.
+              Al Huda International Islamic Institute is a Riyadh, Saudi Arabia based online academy delivering authentic, structured Quran &amp; Islamic education to students worldwide since 2013. Our certified male and female teachers - including Hafiz al-Quran with mastery in Arabic, Tajweed, Tafseer and Islamic Studies - teach in English, Urdu, Arabic and more, guiding students of every age toward a deep, lifelong relationship with the Book of Allah.
             </p>
             <ul className="space-y-2.5 mb-7">
               {["One-on-one live classes with certified scholars", "Teachers available in English, Urdu, Arabic & more languages", "Structured curriculum from Qaida to Hifz & Tafseer", "Dedicated female teachers for sisters and girls", "Monthly progress reports for parents"].map((p) => (
@@ -237,7 +237,7 @@ function Home() {
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
         <SectionDivider />
         <h2 className="mt-4 text-center text-3xl sm:text-4xl font-bold text-primary">Our Programs</h2>
-        <p className="mt-3 text-center text-muted-foreground">Structured curricula for every level — from your first letter to complete Hifz.</p>
+        <p className="mt-3 text-center text-muted-foreground">Structured curricula for every level - from your first letter to complete Hifz.</p>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {programs.map((c, i) => (
             <div key={c.title} className="group flex flex-col overflow-hidden rounded-2xl border border-border/70 bg-card hover:border-gold/60 hover:shadow-gold transition-all">
@@ -268,7 +268,7 @@ function Home() {
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <SectionDivider />
           <h2 className="mt-4 text-center text-3xl sm:text-4xl font-bold text-primary">Meet Our Certified Teachers</h2>
-          <p className="mt-3 text-center text-muted-foreground max-w-2xl mx-auto">Qualified Hafiz, Qaris and female Ustadhas — handpicked for knowledge, patience and care.</p>
+          <p className="mt-3 text-center text-muted-foreground max-w-2xl mx-auto">Qualified Hafiz, Qaris and female Ustadhas - handpicked for knowledge, patience and care.</p>
           <div className="mt-12 grid gap-8 md:grid-cols-2">
             <div className="group relative overflow-hidden rounded-3xl shadow-elegant">
               <img src={brotherImg} alt="Male Hafiz Quran teacher teaching online" width={1280} height={960} loading="lazy" className="aspect-[4/3] w-full object-cover group-hover:scale-105 transition-transform duration-700" />
@@ -317,9 +317,9 @@ function Home() {
           <div className="p-10 sm:p-14 flex flex-col justify-center relative overflow-hidden">
             <div className="absolute inset-0 pattern-bg" />
             <div className="relative">
-              <p className="text-xs uppercase tracking-[0.3em] text-gold mb-3 font-semibold">For Kids 4–12</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-gold mb-3 font-semibold">For Kids 4-12</p>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-gold mb-4 leading-tight">A Joyful Quran Journey For Your Child</h2>
-              <p className="text-primary-foreground/85 leading-relaxed mb-6">Engaging, age-appropriate lessons with patient teachers — your child will love their classes and grow in love for the Quran.</p>
+              <p className="text-primary-foreground/85 leading-relaxed mb-6">Engaging, age-appropriate lessons with patient teachers - your child will love their classes and grow in love for the Quran.</p>
               <ul className="space-y-2 mb-7 text-sm text-primary-foreground/90">
                 {["Fun, interactive Qaida & Nazra", "Daily duas, surahs and Islamic stories", "Reward charts & progress badges", "Parent updates after every class"].map((i) => (
                   <li key={i} className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-gold" /> {i}</li>
@@ -373,7 +373,7 @@ function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <SectionDivider />
           <h2 className="mt-4 text-center text-3xl sm:text-4xl font-bold text-primary">Words from Our Students</h2>
-          <p className="mt-3 text-center text-muted-foreground">Real stories from families around the world — sliding past, one heart at a time.</p>
+          <p className="mt-3 text-center text-muted-foreground">Real stories from families around the world - sliding past, one heart at a time.</p>
         </div>
         <div className="mt-12 marquee-pause mask-fade-x">
           <div className="flex w-max gap-6 animate-marquee">
@@ -435,7 +435,7 @@ function Home() {
             <p className="font-arabic text-3xl sm:text-4xl text-gold mb-4">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</p>
             <Users className="h-12 w-12 text-gold mx-auto mb-4" />
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-gold mb-4">Begin Your Quran Journey Today</h2>
-            <p className="text-primary-foreground/85 max-w-2xl mx-auto mb-8">Book a free trial class with one of our certified teachers — no credit card required, In sha Allah.</p>
+            <p className="text-primary-foreground/85 max-w-2xl mx-auto mb-8">Book a free trial class with one of our certified teachers - no credit card required, In sha Allah.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
                 Book Free Trial <ArrowRight className="h-4 w-4" />

@@ -7,8 +7,8 @@ import quranImg from "@/assets/quran.jpg";
 export const Route = createFileRoute("/blog/benefits-of-learning-quran-online")({
   head: () => ({
     meta: [
-      { title: "Why Learn Quran Online? 10 Powerful Benefits for Kids & Adults — Al Huda" },
-      { name: "description", content: "Discover 10 powerful benefits of learning Quran online with Al Huda International Islamic Institute — one-to-one classes, certified male & female teachers, Tajweed, Hifz, and a free trial." },
+      { title: "Why Learn Quran Online? 10 Powerful Benefits for Kids & Adults - Al Huda" },
+      { name: "description", content: "Discover 10 powerful benefits of learning Quran online with Al Huda International Islamic Institute - one-to-one classes, certified male & female teachers, Tajweed, Hifz, and a free trial." },
       { name: "keywords", content: "Online Quran Academy, Learn Quran Online, Online Quran Classes, Quran Classes for Kids, Quran Classes for Adults, Quran with Tajweed, Online Islamic Institute, Hifz Quran Online, Noorani Qaida Online, Al Huda International Islamic Institute" },
       { property: "og:title", content: "Why Learn Quran Online? 10 Powerful Benefits for Kids & Adults" },
       { property: "og:description", content: "10 powerful benefits of learning Quran online with certified teachers at Al Huda International Islamic Institute." },
@@ -95,7 +95,7 @@ function BlogArticlePage() {
 
         <img
           src={quranImg}
-          alt="Holy Quran on a wooden rehal — learn Quran online with Al Huda International Islamic Institute"
+          alt="Holy Quran on a wooden rehal - learn Quran online with Al Huda International Islamic Institute"
           className="rounded-2xl shadow-elegant w-full mb-8"
           loading="lazy"
         />
@@ -137,7 +137,7 @@ function BlogArticlePage() {
 
           <div className="rounded-2xl bg-gradient-primary text-primary-foreground p-8 text-center mt-10">
             <h4 className="text-xl sm:text-2xl font-bold text-gold mb-3">Ready to Start Learning?</h4>
-            <p className="text-primary-foreground/90 mb-6">Book your free trial class today — no credit card required.</p>
+            <p className="text-primary-foreground/90 mb-6">Book your free trial class today - no credit card required.</p>
             <a href={TRIAL_WA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold hover:scale-[1.03] transition-transform">
               Start Free Trial <ArrowRight className="h-4 w-4" />
             </a>

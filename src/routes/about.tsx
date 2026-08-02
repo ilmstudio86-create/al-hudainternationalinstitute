@@ -6,8 +6,8 @@ import { Target, Eye, Award, Heart, BookOpen, Globe2 } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Al Huda International Islamic Institute" },
-      { name: "description", content: "Learn about Al Huda International Islamic Institute — our mission, vision and team of certified Hafiz, Qari and Islamic scholars serving 30+ countries." },
+      { title: "About - Al Huda International Islamic Institute" },
+      { name: "description", content: "Learn about Al Huda International Islamic Institute - our mission, vision and team of certified Hafiz, Qari and Islamic scholars serving 30+ countries." },
       { property: "og:title", content: "About Al Huda International Islamic Institute" },
       { property: "og:description", content: "Authentic Quran education rooted in tradition, delivered with modern technology." },
     ],
@@ -18,13 +18,13 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <Layout>
-      <PageHero arabic="عَنَّا" title="About Al Huda International Islamic Institute" subtitle="A trusted name in online Quran and Islamic education — proudly serving the Ummah since 2013." />
+      <PageHero arabic="عَنَّا" title="About Al Huda International Islamic Institute" subtitle="A trusted name in online Quran and Islamic education - proudly serving the Ummah since 2013." />
 
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 text-center">
         <SectionDivider />
         <h2 className="mt-4 text-3xl font-bold text-primary">Who We Are</h2>
         <p className="mt-5 text-muted-foreground leading-relaxed">
-          Al Huda International Islamic Institute is an online academy founded with a single mission — to make authentic Quranic and Islamic education accessible to every Muslim, anywhere in the world. Our team of qualified male and female teachers — including Hafiz, Qaris, and Masters in Arabic and Islamic Studies — deliver structured, one-on-one live classes through a secure online platform. Whether your child is starting their first lesson or you wish to deepen your understanding of Tafseer, we walk with you on a journey of faith and knowledge.
+          Al Huda International Islamic Institute is an online academy founded with a single mission - to make authentic Quranic and Islamic education accessible to every Muslim, anywhere in the world. Our team of qualified male and female teachers - including Hafiz, Qaris, and Masters in Arabic and Islamic Studies - deliver structured, one-on-one live classes through a secure online platform. Whether your child is starting their first lesson or you wish to deepen your understanding of Tafseer, we walk with you on a journey of faith and knowledge.
         </p>
       </section>
 
@@ -33,7 +33,7 @@ function About() {
           <div className="rounded-xl bg-card p-8 shadow-sm border border-border/60">
             <Target className="h-10 w-10 text-gold mb-4" />
             <h3 className="text-2xl font-bold text-primary mb-3">Our Mission</h3>
-            <p className="text-muted-foreground leading-relaxed">To enable every Muslim — child or adult — to read, understand and live by the Holy Quran through accessible, authentic and affordable online education delivered by qualified scholars.</p>
+            <p className="text-muted-foreground leading-relaxed">To enable every Muslim - child or adult - to read, understand and live by the Holy Quran through accessible, authentic and affordable online education delivered by qualified scholars.</p>
           </div>
           <div className="rounded-xl bg-card p-8 shadow-sm border border-border/60">
             <Eye className="h-10 w-10 text-gold mb-4" />
@@ -52,7 +52,7 @@ function About() {
             { icon: Heart, title: "One-on-One Care", desc: "Personalized attention with structured progress reports." },
             { icon: BookOpen, title: "Authentic Curriculum", desc: "Following classical methodology with modern delivery." },
             { icon: Globe2, title: "30+ Countries", desc: "Trusted by families in USA, UK, Canada, Australia, GCC and more." },
-            { icon: Target, title: "Flexible Schedule", desc: "Choose your class times — we cover every time zone." },
+            { icon: Target, title: "Flexible Schedule", desc: "Choose your class times - we cover every time zone." },
             { icon: Eye, title: "Male & Female Teachers", desc: "Comfortable, halal learning environment for every student." },
           ].map((f) => (
             <div key={f.title} className="rounded-xl border border-border/70 bg-card p-6 hover:shadow-elegant transition-shadow">

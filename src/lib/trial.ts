@@ -1,6 +1,6 @@
 // Pre-filled WhatsApp message for the "Free Trial" call-to-action.
 // Clicking any trial button takes the visitor straight into WhatsApp
-// with this message ready to send — no extra typing required.
+// with this message ready to send - no extra typing required.
 export const TRIAL_WA_TEXT =
   "Assalamu Alaikum! I would like to book a free trial class with Al Huda International Islamic Institute. Please send me the details.";
 
