@@ -37,7 +37,7 @@ export const Route = createFileRoute("/blog")({
 });
 
 type Post = {
-  slug: "/blog/best-online-quran-academy" | "/blog/benefits-of-learning-quran-online" | "/blog/how-to-choose";
+  slug: "/blog/best-online-quran-academy" | "/blog/benefits-of-learning-quran-online" | "/blog/how-to-choose" | "/blog/raise-children-islamic-values";
   title: string;
   excerpt: string;
   date: string;
