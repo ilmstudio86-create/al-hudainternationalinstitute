@@ -23,6 +23,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogRaiseChildrenIslamicValuesRouteImport } from './routes/blog.raise-children-islamic-values'
 import { Route as BlogHowToChooseRouteImport } from './routes/blog.how-to-choose'
 import { Route as BlogBestOnlineQuranAcademyRouteImport } from './routes/blog.best-online-quran-academy'
 import { Route as BlogBenefitsOfLearningQuranOnlineRouteImport } from './routes/blog.benefits-of-learning-quran-online'
@@ -97,6 +98,12 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogRaiseChildrenIslamicValuesRoute =
+  BlogRaiseChildrenIslamicValuesRouteImport.update({
+    id: '/raise-children-islamic-values',
+    path: '/raise-children-islamic-values',
+    getParentRoute: () => BlogRoute,
+  } as any)
 const BlogHowToChooseRoute = BlogHowToChooseRouteImport.update({
   id: '/how-to-choose',
   path: '/how-to-choose',
@@ -133,6 +140,7 @@ export interface FileRoutesByFullPath {
   '/blog/benefits-of-learning-quran-online': typeof BlogBenefitsOfLearningQuranOnlineRoute
   '/blog/best-online-quran-academy': typeof BlogBestOnlineQuranAcademyRoute
   '/blog/how-to-choose': typeof BlogHowToChooseRoute
+  '/blog/raise-children-islamic-values': typeof BlogRaiseChildrenIslamicValuesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -152,6 +160,7 @@ export interface FileRoutesByTo {
   '/blog/benefits-of-learning-quran-online': typeof BlogBenefitsOfLearningQuranOnlineRoute
   '/blog/best-online-quran-academy': typeof BlogBestOnlineQuranAcademyRoute
   '/blog/how-to-choose': typeof BlogHowToChooseRoute
+  '/blog/raise-children-islamic-values': typeof BlogRaiseChildrenIslamicValuesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -172,6 +181,7 @@ export interface FileRoutesById {
   '/blog/benefits-of-learning-quran-online': typeof BlogBenefitsOfLearningQuranOnlineRoute
   '/blog/best-online-quran-academy': typeof BlogBestOnlineQuranAcademyRoute
   '/blog/how-to-choose': typeof BlogHowToChooseRoute
+  '/blog/raise-children-islamic-values': typeof BlogRaiseChildrenIslamicValuesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -193,6 +203,7 @@ export interface FileRouteTypes {
     | '/blog/benefits-of-learning-quran-online'
     | '/blog/best-online-quran-academy'
     | '/blog/how-to-choose'
+    | '/blog/raise-children-islamic-values'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -212,6 +223,7 @@ export interface FileRouteTypes {
     | '/blog/benefits-of-learning-quran-online'
     | '/blog/best-online-quran-academy'
     | '/blog/how-to-choose'
+    | '/blog/raise-children-islamic-values'
   id:
     | '__root__'
     | '/'
@@ -231,6 +243,7 @@ export interface FileRouteTypes {
     | '/blog/benefits-of-learning-quran-online'
     | '/blog/best-online-quran-academy'
     | '/blog/how-to-choose'
+    | '/blog/raise-children-islamic-values'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -350,6 +363,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/raise-children-islamic-values': {
+      id: '/blog/raise-children-islamic-values'
+      path: '/raise-children-islamic-values'
+      fullPath: '/blog/raise-children-islamic-values'
+      preLoaderRoute: typeof BlogRaiseChildrenIslamicValuesRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/blog/how-to-choose': {
       id: '/blog/how-to-choose'
       path: '/how-to-choose'
@@ -378,6 +398,7 @@ interface BlogRouteChildren {
   BlogBenefitsOfLearningQuranOnlineRoute: typeof BlogBenefitsOfLearningQuranOnlineRoute
   BlogBestOnlineQuranAcademyRoute: typeof BlogBestOnlineQuranAcademyRoute
   BlogHowToChooseRoute: typeof BlogHowToChooseRoute
+  BlogRaiseChildrenIslamicValuesRoute: typeof BlogRaiseChildrenIslamicValuesRoute
 }
 
 const BlogRouteChildren: BlogRouteChildren = {
@@ -385,6 +406,7 @@ const BlogRouteChildren: BlogRouteChildren = {
     BlogBenefitsOfLearningQuranOnlineRoute,
   BlogBestOnlineQuranAcademyRoute: BlogBestOnlineQuranAcademyRoute,
   BlogHowToChooseRoute: BlogHowToChooseRoute,
+  BlogRaiseChildrenIslamicValuesRoute: BlogRaiseChildrenIslamicValuesRoute,
 }
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)

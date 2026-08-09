@@ -37,7 +37,7 @@ export const Route = createFileRoute("/blog")({
 });
 
 type Post = {
-  slug: "/blog/best-online-quran-academy" | "/blog/benefits-of-learning-quran-online" | "/blog/how-to-choose";
+  slug: "/blog/best-online-quran-academy" | "/blog/benefits-of-learning-quran-online" | "/blog/how-to-choose" | "/blog/raise-children-islamic-values";
   title: string;
   excerpt: string;
   date: string;
@@ -68,6 +68,14 @@ const posts: Post[] = [
     excerpt: "A practical parent's guide to picking a safe, trusted Quran academy - teachers, curriculum, safety, pricing, and free trial classes.",
     date: "July 4, 2026",
     category: "Parent's Guide",
+    image: kidsImg,
+  },
+  {
+    slug: "/blog/raise-children-islamic-values",
+    title: "How to Raise Children with Strong Islamic Values",
+    excerpt: "Practical guidance for Muslim parents on building faith, good character, and daily Islamic habits in children through love and example.",
+    date: "August 9, 2026",
+    category: "Islamic Parenting",
     image: kidsImg,
   },
 ];
