@@ -9,83 +9,28 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
-import { Route as TeachersRouteImport } from './routes/teachers'
-import { Route as ServicePolicyRouteImport } from './routes/service-policy'
-import { Route as SadaqahRouteImport } from './routes/sadaqah'
-import { Route as RefundPolicyRouteImport } from './routes/refund-policy'
-import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
-import { Route as PricingRouteImport } from './routes/pricing'
-import { Route as IslamicRouteImport } from './routes/islamic'
-import { Route as FaqRouteImport } from './routes/faq'
-import { Route as CoursesRouteImport } from './routes/courses'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as BlogRouteImport } from './routes/blog'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as BlogRaiseChildrenIslamicValuesRouteImport } from './routes/blog.raise-children-islamic-values'
-import { Route as BlogHowToChooseRouteImport } from './routes/blog.how-to-choose'
-import { Route as BlogBestOnlineQuranAcademyRouteImport } from './routes/blog.best-online-quran-academy'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CoursesRouteImport } from './routes/courses'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as IslamicRouteImport } from './routes/islamic'
+import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as RefundPolicyRouteImport } from './routes/refund-policy'
+import { Route as SadaqahRouteImport } from './routes/sadaqah'
+import { Route as ServicePolicyRouteImport } from './routes/service-policy'
+import { Route as TeachersRouteImport } from './routes/teachers'
+import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
 import { Route as BlogBenefitsOfLearningQuranOnlineRouteImport } from './routes/blog.benefits-of-learning-quran-online'
+import { Route as BlogBestOnlineQuranAcademyRouteImport } from './routes/blog.best-online-quran-academy'
+import { Route as BlogHowToChooseRouteImport } from './routes/blog.how-to-choose'
+import { Route as BlogRaiseChildrenIslamicValuesRouteImport } from './routes/blog.raise-children-islamic-values'
 
-const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
-  id: '/terms-and-conditions',
-  path: '/terms-and-conditions',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TeachersRoute = TeachersRouteImport.update({
-  id: '/teachers',
-  path: '/teachers',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicePolicyRoute = ServicePolicyRouteImport.update({
-  id: '/service-policy',
-  path: '/service-policy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SadaqahRoute = SadaqahRouteImport.update({
-  id: '/sadaqah',
-  path: '/sadaqah',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RefundPolicyRoute = RefundPolicyRouteImport.update({
-  id: '/refund-policy',
-  path: '/refund-policy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
-  id: '/privacy-policy',
-  path: '/privacy-policy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PricingRoute = PricingRouteImport.update({
-  id: '/pricing',
-  path: '/pricing',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IslamicRoute = IslamicRouteImport.update({
-  id: '/islamic',
-  path: '/islamic',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FaqRoute = FaqRouteImport.update({
-  id: '/faq',
-  path: '/faq',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CoursesRoute = CoursesRouteImport.update({
-  id: '/courses',
-  path: '/courses',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -93,15 +38,76 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogRaiseChildrenIslamicValuesRoute =
-  BlogRaiseChildrenIslamicValuesRouteImport.update({
-    id: '/raise-children-islamic-values',
-    path: '/raise-children-islamic-values',
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoursesRoute = CoursesRouteImport.update({
+  id: '/courses',
+  path: '/courses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IslamicRoute = IslamicRouteImport.update({
+  id: '/islamic',
+  path: '/islamic',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RefundPolicyRoute = RefundPolicyRouteImport.update({
+  id: '/refund-policy',
+  path: '/refund-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SadaqahRoute = SadaqahRouteImport.update({
+  id: '/sadaqah',
+  path: '/sadaqah',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicePolicyRoute = ServicePolicyRouteImport.update({
+  id: '/service-policy',
+  path: '/service-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeachersRoute = TeachersRouteImport.update({
+  id: '/teachers',
+  path: '/teachers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
+  id: '/terms-and-conditions',
+  path: '/terms-and-conditions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogBenefitsOfLearningQuranOnlineRoute =
+  BlogBenefitsOfLearningQuranOnlineRouteImport.update({
+    id: '/benefits-of-learning-quran-online',
+    path: '/benefits-of-learning-quran-online',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogBestOnlineQuranAcademyRoute =
+  BlogBestOnlineQuranAcademyRouteImport.update({
+    id: '/best-online-quran-academy',
+    path: '/best-online-quran-academy',
     getParentRoute: () => BlogRoute,
   } as any)
 const BlogHowToChooseRoute = BlogHowToChooseRouteImport.update({
@@ -109,16 +115,10 @@ const BlogHowToChooseRoute = BlogHowToChooseRouteImport.update({
   path: '/how-to-choose',
   getParentRoute: () => BlogRoute,
 } as any)
-const BlogBestOnlineQuranAcademyRoute =
-  BlogBestOnlineQuranAcademyRouteImport.update({
-    id: '/best-online-quran-academy',
-    path: '/best-online-quran-academy',
-    getParentRoute: () => BlogRoute,
-  } as any)
-const BlogBenefitsOfLearningQuranOnlineRoute =
-  BlogBenefitsOfLearningQuranOnlineRouteImport.update({
-    id: '/benefits-of-learning-quran-online',
-    path: '/benefits-of-learning-quran-online',
+const BlogRaiseChildrenIslamicValuesRoute =
+  BlogRaiseChildrenIslamicValuesRouteImport.update({
+    id: '/raise-children-islamic-values',
+    path: '/raise-children-islamic-values',
     getParentRoute: () => BlogRoute,
   } as any)
 
@@ -265,88 +265,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/terms-and-conditions': {
-      id: '/terms-and-conditions'
-      path: '/terms-and-conditions'
-      fullPath: '/terms-and-conditions'
-      preLoaderRoute: typeof TermsAndConditionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/teachers': {
-      id: '/teachers'
-      path: '/teachers'
-      fullPath: '/teachers'
-      preLoaderRoute: typeof TeachersRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/service-policy': {
-      id: '/service-policy'
-      path: '/service-policy'
-      fullPath: '/service-policy'
-      preLoaderRoute: typeof ServicePolicyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sadaqah': {
-      id: '/sadaqah'
-      path: '/sadaqah'
-      fullPath: '/sadaqah'
-      preLoaderRoute: typeof SadaqahRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/refund-policy': {
-      id: '/refund-policy'
-      path: '/refund-policy'
-      fullPath: '/refund-policy'
-      preLoaderRoute: typeof RefundPolicyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy-policy': {
-      id: '/privacy-policy'
-      path: '/privacy-policy'
-      fullPath: '/privacy-policy'
-      preLoaderRoute: typeof PrivacyPolicyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pricing': {
-      id: '/pricing'
-      path: '/pricing'
-      fullPath: '/pricing'
-      preLoaderRoute: typeof PricingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/islamic': {
-      id: '/islamic'
-      path: '/islamic'
-      fullPath: '/islamic'
-      preLoaderRoute: typeof IslamicRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/faq': {
-      id: '/faq'
-      path: '/faq'
-      fullPath: '/faq'
-      preLoaderRoute: typeof FaqRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/courses': {
-      id: '/courses'
-      path: '/courses'
-      fullPath: '/courses'
-      preLoaderRoute: typeof CoursesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -356,25 +279,95 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog/raise-children-islamic-values': {
-      id: '/blog/raise-children-islamic-values'
-      path: '/raise-children-islamic-values'
-      fullPath: '/blog/raise-children-islamic-values'
-      preLoaderRoute: typeof BlogRaiseChildrenIslamicValuesRouteImport
-      parentRoute: typeof BlogRoute
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/blog/how-to-choose': {
-      id: '/blog/how-to-choose'
-      path: '/how-to-choose'
-      fullPath: '/blog/how-to-choose'
-      preLoaderRoute: typeof BlogHowToChooseRouteImport
+    '/courses': {
+      id: '/courses'
+      path: '/courses'
+      fullPath: '/courses'
+      preLoaderRoute: typeof CoursesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/islamic': {
+      id: '/islamic'
+      path: '/islamic'
+      fullPath: '/islamic'
+      preLoaderRoute: typeof IslamicRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/refund-policy': {
+      id: '/refund-policy'
+      path: '/refund-policy'
+      fullPath: '/refund-policy'
+      preLoaderRoute: typeof RefundPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sadaqah': {
+      id: '/sadaqah'
+      path: '/sadaqah'
+      fullPath: '/sadaqah'
+      preLoaderRoute: typeof SadaqahRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/service-policy': {
+      id: '/service-policy'
+      path: '/service-policy'
+      fullPath: '/service-policy'
+      preLoaderRoute: typeof ServicePolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/teachers': {
+      id: '/teachers'
+      path: '/teachers'
+      fullPath: '/teachers'
+      preLoaderRoute: typeof TeachersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-and-conditions': {
+      id: '/terms-and-conditions'
+      path: '/terms-and-conditions'
+      fullPath: '/terms-and-conditions'
+      preLoaderRoute: typeof TermsAndConditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/benefits-of-learning-quran-online': {
+      id: '/blog/benefits-of-learning-quran-online'
+      path: '/benefits-of-learning-quran-online'
+      fullPath: '/blog/benefits-of-learning-quran-online'
+      preLoaderRoute: typeof BlogBenefitsOfLearningQuranOnlineRouteImport
       parentRoute: typeof BlogRoute
     }
     '/blog/best-online-quran-academy': {
@@ -384,11 +377,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogBestOnlineQuranAcademyRouteImport
       parentRoute: typeof BlogRoute
     }
-    '/blog/benefits-of-learning-quran-online': {
-      id: '/blog/benefits-of-learning-quran-online'
-      path: '/benefits-of-learning-quran-online'
-      fullPath: '/blog/benefits-of-learning-quran-online'
-      preLoaderRoute: typeof BlogBenefitsOfLearningQuranOnlineRouteImport
+    '/blog/how-to-choose': {
+      id: '/blog/how-to-choose'
+      path: '/how-to-choose'
+      fullPath: '/blog/how-to-choose'
+      preLoaderRoute: typeof BlogHowToChooseRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/raise-children-islamic-values': {
+      id: '/blog/raise-children-islamic-values'
+      path: '/raise-children-islamic-values'
+      fullPath: '/blog/raise-children-islamic-values'
+      preLoaderRoute: typeof BlogRaiseChildrenIslamicValuesRouteImport
       parentRoute: typeof BlogRoute
     }
   }
@@ -430,12 +430,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}
