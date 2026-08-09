@@ -70,6 +70,14 @@ const posts: Post[] = [
     category: "Parent's Guide",
     image: kidsImg,
   },
+  {
+    slug: "/blog/raise-children-islamic-values",
+    title: "How to Raise Children with Strong Islamic Values",
+    excerpt: "Practical guidance for Muslim parents on building faith, good character, and daily Islamic habits in children through love and example.",
+    date: "August 9, 2026",
+    category: "Islamic Parenting",
+    image: kidsImg,
+  },
 ];
 
 function BlogPage() {
