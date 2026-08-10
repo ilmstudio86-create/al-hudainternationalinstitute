@@ -63,16 +63,16 @@ const programImageSets: string[][] = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Online Quran Classes for Kids & Adults - Al Huda Islamic Institute" },
+      { title: "Online Quran Classes for Kids & Adults  Al Huda Islamic Institute" },
       { name: "description", content: "Best online Quran classes for kids and adults in USA, UK, Canada & Australia. Learn Nazra, Hifz, Tajweed, Tafseer, Arabic & Islamic Studies from certified Hafiz & Qari teachers. Free trial available." },
       { name: "keywords", content: "online quran classes, quran classes for kids, learn quran online, hifz online, tajweed classes, quran academy, islamic studies online, female quran teacher, al huda islamic institute" },
-      { property: "og:title", content: "Online Quran Classes for Kids & Adults - Al Huda Islamic Institute" },
-      { property: "og:description", content: "Learn Quran Online with Certified Hafiz & Qari Teachers. One-on-one live classes for students in 30+ countries. Free trial class available." },
+      { property: "og:title", content: "Online Quran Classes for Kids & Adults  Al Huda Islamic Institute" },
+      { property: "og:description", content: "Best online Quran classes for kids and adults in USA, UK, Canada & Australia. Learn Nazra, Hifz, Tajweed, Tafseer, Arabic & Islamic Studies from certified Hafiz & Qari teachers. Free trial available." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://alhudaislamicinstitute.com/" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Online Quran Classes for Kids & Adults - Al Huda Islamic Institute" },
-      { name: "twitter:description", content: "Learn Quran Online with Certified Hafiz & Qari Teachers. Free trial class available." },
+      { name: "twitter:title", content: "Online Quran Classes for Kids & Adults  Al Huda Islamic Institute" },
+      { name: "twitter:description", content: "Best online Quran classes for kids and adults in USA, UK, Canada & Australia. Learn Nazra, Hifz, Tajweed, Tafseer, Arabic & Islamic Studies from certified Hafiz & Qari teachers. Free trial available." },
     ],
   }),
   component: Home,
