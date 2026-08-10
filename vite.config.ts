@@ -9,7 +9,7 @@ export default defineConfig({
       enabled: false,
     },
     spa: {
-      enabled: true,
+      enabled: false,
     },
   },
 });

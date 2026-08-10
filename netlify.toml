@@ -1,10 +1,13 @@
 [build]
-  command = "npm run build"
-  publish = "dist/client"
+  command = "npm ci --legacy-peer-deps || npm install --legacy-peer-deps"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20.19.0"
   NPM_FLAGS = "--legacy-peer-deps"
+  NPM_CONFIG_LEGACY_PEER_DEPS = "true"
+  NPM_CONFIG_REGISTRY = "https://registry.npmjs.org/"
+  NETLIFY_USE_PNPM = "false"
 
 [[redirects]]
   from = "/*"
