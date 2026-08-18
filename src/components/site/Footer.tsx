@@ -39,7 +39,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-primary-foreground/80">
               <li className="flex items-start gap-2"><Phone className="h-4 w-4 mt-0.5 text-gold" /> +92 314 1766950</li>
               <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-0.5 text-gold" /> alhudaquranedu@gmail.com</li>
-              <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 text-gold" /> Multan, Pakistan · Serving 30+ countries</li>
+              <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 text-gold" /> Pakistan · Serving 30+ countries</li>
             </ul>
             <div className="mt-4 flex gap-3">
               <a href={SOCIALS.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-gold hover:text-primary transition-colors"><Facebook className="h-4 w-4" /></a>

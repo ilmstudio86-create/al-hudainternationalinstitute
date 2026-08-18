@@ -37,7 +37,7 @@ export function Header() {
             <a href="mailto:alhudaquranedu@gmail.com" className="flex items-center gap-1.5 hover:text-gold transition-colors"><Mail className="h-3.5 w-3.5 text-gold" /> alhudaquranedu@gmail.com</a>
           </div>
           <div className="flex items-center gap-3 text-primary-foreground/80">
-            <Globe2 className="h-3.5 w-3.5 text-gold" /> Multan, Pakistan · Serving 30+ countries
+            <Globe2 className="h-3.5 w-3.5 text-gold" /> Pakistan · Serving 30+ countries
             <span className="mx-1 opacity-40">|</span>
             <a href={SOCIALS.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-gold transition-colors"><Facebook className="h-3.5 w-3.5" /></a>
             <a href={SOCIALS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-gold transition-colors"><Instagram className="h-3.5 w-3.5" /></a>
