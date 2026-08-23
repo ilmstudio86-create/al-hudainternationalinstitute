@@ -7,7 +7,7 @@ export const Route = createFileRoute("/teachers")({
   head: () => ({
     meta: [
       { title: "Our Teachers - Certified Hafiz, Qari & Scholars | Al Huda International Islamic Institute" },
-      { name: "description", content: "Meet our certified male & female Quran teachers - Mufti, Hafiz, Qaris and Hafizahs, fluent in English, Arabic and Urdu." },
+      { name: "description", content: "Meet 40+ certified male and female Quran teachers, including Mufti, Hafiz, Qari and Hafizah scholars fluent in English, Arabic and Urdu for one-to-one classes." },
       { property: "og:title", content: "Meet Our Teachers - Al Huda International Islamic Institute" },
       { property: "og:description", content: "Qualified Mufti, Hafiz, Qari, Hafizah and Islamic scholars dedicated to your Quran journey." },
       { property: "og:url", content: "https://alhudaislamicinstitute.com/teachers" },

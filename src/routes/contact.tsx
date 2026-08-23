@@ -12,7 +12,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact & Free Trial - Al Huda International Islamic Institute" },
-      { name: "description", content: "Book your free trial Quran class. Reach Al Huda International Islamic Institute by WhatsApp, email or phone." },
+      { name: "description", content: "Book your free 3-day trial Quran class or contact Al Huda International Islamic Institute by WhatsApp, email or phone. We reply within minutes, any time zone." },
       { property: "og:title", content: "Contact Al Huda International Islamic Institute" },
       { property: "og:description", content: "Book a free trial class today - taught by certified Hafiz & Qari." },
       { property: "og:url", content: "https://alhudaislamicinstitute.com/contact" },

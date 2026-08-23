@@ -8,7 +8,7 @@ export const Route = createFileRoute("/islamic")({
   head: () => ({
     meta: [
       { title: "Islamic Knowledge - Prophets, Sahaba & Pillars of Islam | Al Huda" },
-      { name: "description", content: "Learn about the Prophets of Allah, the noble Sahaba (companions of Prophet Muhammad ﷺ), and the five Pillars of Islam - Salah, Sawm, Zakat, Hajj and Shahadah." },
+      { name: "description", content: "Free Islamic knowledge hub: stories of the Prophets, the Sahaba and Rightly Guided Caliphs, the five Pillars of Islam, Hadith, Sunnah and daily Akhlaq guidance." },
       { property: "og:title", content: "Islamic Knowledge - Prophets, Sahaba & Pillars of Islam" },
       { property: "og:description", content: "Stories of the Prophets, the four Rightly Guided Caliphs, and the core pillars of Islam." },
       { property: "og:url", content: "https://alhudaislamicinstitute.com/islamic" },

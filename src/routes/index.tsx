@@ -64,7 +64,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Online Quran Classes for Kids & Adults  Al Huda Islamic Institute" },
-      { name: "description", content: "Best online Quran classes for kids and adults in USA, UK, Canada & Australia. Learn Nazra, Hifz, Tajweed, Tafseer, Arabic & Islamic Studies from certified Hafiz & Qari teachers. Free trial available." },
+      { name: "description", content: "Online Quran classes for kids and adults worldwide. Learn Nazra, Hifz, Tajweed, Tafseer and Arabic with certified Hafiz and Qari teachers. Free 3-day trial." },
       { name: "keywords", content: "online quran classes, quran classes for kids, learn quran online, hifz online, tajweed classes, quran academy, islamic studies online, female quran teacher, al huda islamic institute" },
       { property: "og:title", content: "Online Quran Classes for Kids & Adults  Al Huda Islamic Institute" },
       { property: "og:description", content: "Best online Quran classes for kids and adults in USA, UK, Canada & Australia. Learn Nazra, Hifz, Tajweed, Tafseer, Arabic & Islamic Studies from certified Hafiz & Qari teachers. Free trial available." },

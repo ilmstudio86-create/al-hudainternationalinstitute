@@ -6,7 +6,7 @@ export const Route = createFileRoute("/courses")({
   head: () => ({
     meta: [
       { title: "Courses - Al Huda International Islamic Institute" },
-      { name: "description", content: "Online Quran courses: Nazra, Hifz, Tajweed & Qirat, Tafseer, Arabic, Islamic Studies and a dedicated Kids Quran Program." },
+      { name: "description", content: "Explore our online Quran courses: Nazra, Hifz, Tajweed and Qirat, Tafseer, Arabic language, Islamic Studies and a dedicated Kids Quran Program for ages 4-12." },
       { property: "og:title", content: "Online Quran Courses - Al Huda International Islamic Institute" },
       { property: "og:description", content: "Structured curricula for every age and level. Book a free trial today." },
       { property: "og:url", content: "https://alhudaislamicinstitute.com/courses" },
