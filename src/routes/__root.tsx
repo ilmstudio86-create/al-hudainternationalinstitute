@@ -39,14 +39,10 @@ export const Route = createRootRoute({
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Online Quran Classes for Kids & Adults  Al Huda Islamic Institute" },
       { name: "twitter:description", content: "Best online Quran classes for kids and adults in USA, UK, Canada & Australia. Learn Nazra, Hifz, Tajweed, Tafseer, Arabic & Islamic Studies from certified Hafiz & Qari teachers. Free trial available." },
-      { property: "og:image", content: "https://alhudaislamicinstitute.com/logo.png" },
-      { property: "og:image:width", content: "1024" },
-      { property: "og:image:height", content: "1024" },
-      { name: "twitter:image", content: "https://alhudaislamicinstitute.com/logo.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "canonical", href: "https://alhudaislamicinstitute.com/" },
+
       { rel: "icon", type: "image/png", href: "/logo.png" },
       { rel: "shortcut icon", type: "image/png", href: "/logo.png" },
       { rel: "apple-touch-icon", href: "/logo.png" },
