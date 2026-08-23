@@ -13,12 +13,12 @@ export const Route = createFileRoute("/blog/benefits-of-learning-quran-online")(
       { property: "og:title", content: "Why Learn Quran Online? 10 Powerful Benefits for Kids & Adults" },
       { property: "og:description", content: "10 powerful benefits of learning Quran online with certified teachers at Al Huda International Islamic Institute." },
       { property: "og:type", content: "article" },
-      { property: "og:url", content: "https://al-hudainternationalinstitute.lovable.app/blog/benefits-of-learning-quran-online" },
-      { property: "og:image", content: "https://al-hudainternationalinstitute.lovable.app/og-image.jpg" },
+      { property: "og:url", content: "https://alhudaislamicinstitute.com/blog/benefits-of-learning-quran-online" },
+      { property: "og:image", content: "https://alhudaislamicinstitute.com/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://al-hudainternationalinstitute.lovable.app/blog/benefits-of-learning-quran-online" },
+      { rel: "canonical", href: "https://alhudaislamicinstitute.com/blog/benefits-of-learning-quran-online" },
     ],
     scripts: [
       {
@@ -32,11 +32,11 @@ export const Route = createFileRoute("/blog/benefits-of-learning-quran-online")(
           publisher: {
             "@type": "Organization",
             name: "Al Huda International Islamic Institute",
-            logo: { "@type": "ImageObject", url: "https://al-hudainternationalinstitute.lovable.app/logo.png" },
+            logo: { "@type": "ImageObject", url: "https://alhudaislamicinstitute.com/logo.png" },
           },
-          image: "https://al-hudainternationalinstitute.lovable.app/og-image.jpg",
-          url: "https://al-hudainternationalinstitute.lovable.app/blog/benefits-of-learning-quran-online",
-          mainEntityOfPage: { "@type": "WebPage", "@id": "https://al-hudainternationalinstitute.lovable.app/blog/benefits-of-learning-quran-online" },
+          image: "https://alhudaislamicinstitute.com/og-image.jpg",
+          url: "https://alhudaislamicinstitute.com/blog/benefits-of-learning-quran-online",
+          mainEntityOfPage: { "@type": "WebPage", "@id": "https://alhudaislamicinstitute.com/blog/benefits-of-learning-quran-online" },
         }),
       },
     ],

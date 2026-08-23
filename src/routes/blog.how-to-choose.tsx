@@ -13,12 +13,12 @@ export const Route = createFileRoute("/blog/how-to-choose")({
       { property: "og:title", content: "How to Choose the Best Online Quran Academy for Your Child" },
       { property: "og:description", content: "A practical parent's guide to choosing the right online Quran academy - teachers, curriculum, safety, and free trial classes." },
       { property: "og:type", content: "article" },
-      { property: "og:url", content: "https://al-hudainternationalinstitute.lovable.app/blog/how-to-choose" },
-      { property: "og:image", content: "https://al-hudainternationalinstitute.lovable.app/og-image.jpg" },
+      { property: "og:url", content: "https://alhudaislamicinstitute.com/blog/how-to-choose" },
+      { property: "og:image", content: "https://alhudaislamicinstitute.com/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://al-hudainternationalinstitute.lovable.app/blog/how-to-choose" },
+      { rel: "canonical", href: "https://alhudaislamicinstitute.com/blog/how-to-choose" },
     ],
     scripts: [
       {
@@ -32,11 +32,11 @@ export const Route = createFileRoute("/blog/how-to-choose")({
           publisher: {
             "@type": "Organization",
             name: "Al Huda International Islamic Institute",
-            logo: { "@type": "ImageObject", url: "https://al-hudainternationalinstitute.lovable.app/logo.png" },
+            logo: { "@type": "ImageObject", url: "https://alhudaislamicinstitute.com/logo.png" },
           },
-          image: "https://al-hudainternationalinstitute.lovable.app/og-image.jpg",
-          url: "https://al-hudainternationalinstitute.lovable.app/blog/how-to-choose",
-          mainEntityOfPage: { "@type": "WebPage", "@id": "https://al-hudainternationalinstitute.lovable.app/blog/how-to-choose" },
+          image: "https://alhudaislamicinstitute.com/og-image.jpg",
+          url: "https://alhudaislamicinstitute.com/blog/how-to-choose",
+          mainEntityOfPage: { "@type": "WebPage", "@id": "https://alhudaislamicinstitute.com/blog/how-to-choose" },
         }),
       },
     ],
