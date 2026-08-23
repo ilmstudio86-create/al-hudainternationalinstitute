@@ -8,7 +8,11 @@ export const Route = createFileRoute("/refund-policy")({
       { name: "description", content: "Refund and cancellation policy for online Quran and Islamic classes at Al Huda International Islamic Institute." },
       { property: "og:title", content: "Refund Policy - Al Huda International Islamic Institute" },
       { property: "og:description", content: "Refund and cancellation policy for online Quran and Islamic classes at Al Huda International Islamic Institute." },
+      { property: "og:url", content: "https://alhudaislamicinstitute.com/refund-policy" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
+    links: [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/refund-policy" }],
   }),
   component: RefundPolicy,
 });

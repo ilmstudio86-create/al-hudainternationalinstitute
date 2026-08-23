@@ -8,7 +8,11 @@ export const Route = createFileRoute("/service-policy")({
       { name: "description", content: "Description of the online educational services provided by Al Huda International Islamic Institute." },
       { property: "og:title", content: "Service Policy - Al Huda International Islamic Institute" },
       { property: "og:description", content: "Description of the online educational services provided by Al Huda International Islamic Institute." },
+      { property: "og:url", content: "https://alhudaislamicinstitute.com/service-policy" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
+    links: [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/service-policy" }],
   }),
   component: ServicePolicy,
 });

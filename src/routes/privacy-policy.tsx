@@ -8,7 +8,11 @@ export const Route = createFileRoute("/privacy-policy")({
       { name: "description", content: "How Al Huda International Islamic Institute collects, uses and protects your personal information." },
       { property: "og:title", content: "Privacy Policy - Al Huda International Islamic Institute" },
       { property: "og:description", content: "How Al Huda International Islamic Institute collects, uses and protects your personal information." },
+      { property: "og:url", content: "https://alhudaislamicinstitute.com/privacy-policy" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
+    links: [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/privacy-policy" }],
   }),
   component: PrivacyPolicy,
 });
