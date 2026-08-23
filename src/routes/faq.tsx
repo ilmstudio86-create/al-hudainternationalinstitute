@@ -6,7 +6,7 @@ export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
       { title: "FAQ - Al Huda International Islamic Institute" },
-      { name: "description", content: "Frequently asked questions about online Quran classes, fees, teachers, trial classes and more at Al Huda International Islamic Institute." },
+      { name: "description", content: "Answers about our online Quran classes: free trial, fees and payment methods, female teachers, class timings, software needed and supported countries worldwide." },
       { property: "og:title", content: "FAQ - Al Huda International Islamic Institute" },
       { property: "og:description", content: "Everything you need to know about studying with Al Huda International Islamic Institute." },
       { property: "og:url", content: "https://alhudaislamicinstitute.com/faq" },

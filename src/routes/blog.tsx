@@ -8,7 +8,7 @@ export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
       { title: "Blog - Al Huda Islamic Institute | Online Quran Learning Articles" },
-      { name: "description", content: "Read expert articles on online Quran learning, Hifz, Tajweed, Islamic education for kids and Muslim family guidance from Al Huda Islamic Institute." },
+      { name: "description", content: "Articles and practical guides on online Quran learning, Hifz and Tajweed tips, Islamic education for kids and raising a Muslim family with strong Deen values." },
       { name: "keywords", content: "online quran academy, quran blog, islamic education blog, quran for kids, hifz tips, tajweed lessons" },
       { property: "og:title", content: "Blog - Al Huda Islamic Institute" },
       { property: "og:description", content: "Articles on online Quran learning, Hifz, Tajweed and Islamic education for Muslim families worldwide." },

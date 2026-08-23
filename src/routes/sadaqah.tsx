@@ -8,7 +8,7 @@ export const Route = createFileRoute("/sadaqah")({
   head: () => ({
     meta: [
       { title: "Sadaqah, Qurbani & Umrah Sponsorship - Al Huda International Islamic Institute" },
-      { name: "description", content: "Donate Sadaqah, perform Qurbani, or sponsor Umrah for a deserving Muslim through Al Huda International Islamic Institute. Trusted, transparent, and rewarded by Allah ﷻ." },
+      { name: "description", content: "Give Sadaqah and Sadaqah Jariyah, arrange Qurbani, sponsor an Umrah, feed hungry Muslim families or support masjid projects through Al Huda, safely and clearly." },
       { property: "og:title", content: "Sadaqah, Qurbani & Umrah - Al Huda International Islamic Institute" },
       { property: "og:description", content: "Send your Sadaqah, Qurbani or sponsor an Umrah with us - earn the best ajar, In sha Allah." },
       { property: "og:image", content: "/src/assets/sadaqah.jpg" },
