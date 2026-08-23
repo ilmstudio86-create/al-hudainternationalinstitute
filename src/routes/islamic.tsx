@@ -11,7 +11,11 @@ export const Route = createFileRoute("/islamic")({
       { name: "description", content: "Learn about the Prophets of Allah, the noble Sahaba (companions of Prophet Muhammad ﷺ), and the five Pillars of Islam - Salah, Sawm, Zakat, Hajj and Shahadah." },
       { property: "og:title", content: "Islamic Knowledge - Prophets, Sahaba & Pillars of Islam" },
       { property: "og:description", content: "Stories of the Prophets, the four Rightly Guided Caliphs, and the core pillars of Islam." },
+      { property: "og:url", content: "https://alhudaislamicinstitute.com/islamic" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
+    links: [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/islamic" }],
   }),
   component: IslamicPage,
 });

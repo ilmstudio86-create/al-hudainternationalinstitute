@@ -13,12 +13,12 @@ export const Route = createFileRoute("/blog")({
       { property: "og:title", content: "Blog - Al Huda Islamic Institute" },
       { property: "og:description", content: "Articles on online Quran learning, Hifz, Tajweed and Islamic education for Muslim families worldwide." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://al-hudainternationalinstitute.lovable.app/blog" },
-      { property: "og:image", content: "https://al-hudainternationalinstitute.lovable.app/og-image.jpg" },
+      { property: "og:url", content: "https://alhudaislamicinstitute.com/blog" },
+      { property: "og:image", content: "https://alhudaislamicinstitute.com/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://al-hudainternationalinstitute.lovable.app/blog" },
+      { rel: "canonical", href: "https://alhudaislamicinstitute.com/blog" },
     ],
     scripts: [
       {
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/blog")({
           "@context": "https://schema.org",
           "@type": "Blog",
           name: "Al Huda Islamic Institute Blog",
-          url: "https://al-hudainternationalinstitute.lovable.app/blog",
+          url: "https://alhudaislamicinstitute.com/blog",
           publisher: { "@type": "Organization", name: "Al Huda International Islamic Institute" },
         }),
       },

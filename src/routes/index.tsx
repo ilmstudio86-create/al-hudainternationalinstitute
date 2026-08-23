@@ -73,7 +73,10 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Online Quran Classes for Kids & Adults  Al Huda Islamic Institute" },
       { name: "twitter:description", content: "Best online Quran classes for kids and adults in USA, UK, Canada & Australia. Learn Nazra, Hifz, Tajweed, Tafseer, Arabic & Islamic Studies from certified Hafiz & Qari teachers. Free trial available." },
+      { property: "og:image", content: "https://alhudaislamicinstitute.com/logo.png" },
+      { name: "twitter:image", content: "https://alhudaislamicinstitute.com/logo.png" },
     ],
+    links: [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/" }],
   }),
   component: Home,
 });
@@ -377,7 +380,7 @@ function Home() {
         </div>
         <div className="mt-12 marquee-pause mask-fade-x">
           <div className="flex w-max gap-6 animate-marquee">
-            {[...testimonials, ...testimonials].map((t, i) => (
+            {testimonials.map((t, i) => (
               <article key={`${t.name}-${i}`} className="w-[320px] sm:w-[360px] shrink-0 rounded-2xl bg-card p-7 shadow-sm border border-border/60 relative">
                 <Quote className="absolute -top-3 left-6 h-8 w-8 text-gold bg-background p-1.5 rounded-full" />
                 <div className="flex gap-1 mb-3 mt-2">

@@ -9,7 +9,11 @@ export const Route = createFileRoute("/courses")({
       { name: "description", content: "Online Quran courses: Nazra, Hifz, Tajweed & Qirat, Tafseer, Arabic, Islamic Studies and a dedicated Kids Quran Program." },
       { property: "og:title", content: "Online Quran Courses - Al Huda International Islamic Institute" },
       { property: "og:description", content: "Structured curricula for every age and level. Book a free trial today." },
+      { property: "og:url", content: "https://alhudaislamicinstitute.com/courses" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
+    links: [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/courses" }],
   }),
   component: Courses,
 });

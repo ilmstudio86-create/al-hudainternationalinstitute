@@ -8,7 +8,11 @@ export const Route = createFileRoute("/terms-and-conditions")({
       { name: "description", content: "The terms and conditions for enrolling in online Quran and Islamic classes at Al Huda International Islamic Institute." },
       { property: "og:title", content: "Terms & Conditions - Al Huda International Islamic Institute" },
       { property: "og:description", content: "The terms and conditions for enrolling in online Quran and Islamic classes at Al Huda International Islamic Institute." },
+      { property: "og:url", content: "https://alhudaislamicinstitute.com/terms-and-conditions" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
+    links: [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/terms-and-conditions" }],
   }),
   component: TermsAndConditions,
 });

@@ -13,12 +13,12 @@ export const Route = createFileRoute("/blog/raise-children-islamic-values")({
       { property: "og:title", content: "How to Raise Children with Strong Islamic Values | Al Huda" },
       { property: "og:description", content: "Discover practical ways to raise children with strong Islamic values through faith, good character, family habits, and positive Islamic education." },
       { property: "og:type", content: "article" },
-      { property: "og:url", content: "https://al-hudainternationalinstitute.lovable.app/blog/raise-children-islamic-values" },
-      { property: "og:image", content: "https://al-hudainternationalinstitute.lovable.app/og-image.jpg" },
+      { property: "og:url", content: "https://alhudaislamicinstitute.com/blog/raise-children-islamic-values" },
+      { property: "og:image", content: "https://alhudaislamicinstitute.com/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://al-hudainternationalinstitute.lovable.app/blog/raise-children-islamic-values" },
+      { rel: "canonical", href: "https://alhudaislamicinstitute.com/blog/raise-children-islamic-values" },
     ],
     scripts: [
       {
@@ -32,11 +32,11 @@ export const Route = createFileRoute("/blog/raise-children-islamic-values")({
           publisher: {
             "@type": "Organization",
             name: "Al Huda International Islamic Institute",
-            logo: { "@type": "ImageObject", url: "https://al-hudainternationalinstitute.lovable.app/logo.png" },
+            logo: { "@type": "ImageObject", url: "https://alhudaislamicinstitute.com/logo.png" },
           },
-          image: "https://al-hudainternationalinstitute.lovable.app/og-image.jpg",
-          url: "https://al-hudainternationalinstitute.lovable.app/blog/raise-children-islamic-values",
-          mainEntityOfPage: { "@type": "WebPage", "@id": "https://al-hudainternationalinstitute.lovable.app/blog/raise-children-islamic-values" },
+          image: "https://alhudaislamicinstitute.com/og-image.jpg",
+          url: "https://alhudaislamicinstitute.com/blog/raise-children-islamic-values",
+          mainEntityOfPage: { "@type": "WebPage", "@id": "https://alhudaislamicinstitute.com/blog/raise-children-islamic-values" },
         }),
       },
     ],

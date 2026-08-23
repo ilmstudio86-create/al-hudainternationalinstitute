@@ -10,7 +10,11 @@ export const Route = createFileRoute("/teachers")({
       { name: "description", content: "Meet our certified male & female Quran teachers - Mufti, Hafiz, Qaris and Hafizahs, fluent in English, Arabic and Urdu." },
       { property: "og:title", content: "Meet Our Teachers - Al Huda International Islamic Institute" },
       { property: "og:description", content: "Qualified Mufti, Hafiz, Qari, Hafizah and Islamic scholars dedicated to your Quran journey." },
+      { property: "og:url", content: "https://alhudaislamicinstitute.com/teachers" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
+    links: [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/teachers" }],
   }),
   component: Teachers,
 });

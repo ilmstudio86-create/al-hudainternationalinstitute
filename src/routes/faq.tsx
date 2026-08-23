@@ -9,7 +9,11 @@ export const Route = createFileRoute("/faq")({
       { name: "description", content: "Frequently asked questions about online Quran classes, fees, teachers, trial classes and more at Al Huda International Islamic Institute." },
       { property: "og:title", content: "FAQ - Al Huda International Islamic Institute" },
       { property: "og:description", content: "Everything you need to know about studying with Al Huda International Islamic Institute." },
+      { property: "og:url", content: "https://alhudaislamicinstitute.com/faq" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
+    links: [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/faq" }],
   }),
   component: FAQ,
 });

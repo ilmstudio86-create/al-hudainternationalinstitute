@@ -11,7 +11,11 @@ export const Route = createFileRoute("/pricing")({
       { name: "description", content: "Country-wise affordable monthly Quran class plans - 2, 3 or 5 days a week. Free 3-day trial, no credit card required." },
       { property: "og:title", content: "Pricing - Al Huda International Islamic Institute" },
       { property: "og:description", content: "Transparent country-wise monthly pricing for one-on-one Quran classes." },
+      { property: "og:url", content: "https://alhudaislamicinstitute.com/pricing" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
+    links: [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/pricing" }],
   }),
   component: Pricing,
 });

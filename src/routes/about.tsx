@@ -10,7 +10,11 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "Learn about Al Huda International Islamic Institute - our mission, vision and team of certified Hafiz, Qari and Islamic scholars serving 30+ countries." },
       { property: "og:title", content: "About Al Huda International Islamic Institute" },
       { property: "og:description", content: "Authentic Quran education rooted in tradition, delivered with modern technology." },
+      { property: "og:url", content: "https://alhudaislamicinstitute.com/about" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
+    links: [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/about" }],
   }),
   component: About,
 });
