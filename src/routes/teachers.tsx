@@ -2,19 +2,27 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout, PageHero } from "@/components/site/Layout";
 import { GraduationCap, Award, Languages, BookOpen, Star, Users, ShieldCheck, ArrowRight } from "lucide-react";
 import { TRIAL_WA_URL } from "@/lib/trial";
+import { Breadcrumbs, SeoSection, SeoH2, SeoH3, SeoP, SeoList, breadcrumbSchema } from "@/components/site/SeoContent";
 
 export const Route = createFileRoute("/teachers")({
   head: () => ({
     meta: [
-      { title: "Our Teachers - Certified Hafiz, Qari & Scholars | Al Huda International Islamic Institute" },
+      { title: "Qualified Online Quran Teachers - Male & Female | Al Huda" },
       { name: "description", content: "Meet 40+ certified male and female Quran teachers, including Mufti, Hafiz, Qari and Hafizah scholars fluent in English, Arabic and Urdu for one-to-one classes." },
-      { property: "og:title", content: "Meet Our Teachers - Al Huda International Islamic Institute" },
+      { property: "og:title", content: "Qualified Online Quran Teachers - Male & Female | Al Huda" },
       { property: "og:description", content: "Qualified Mufti, Hafiz, Qari, Hafizah and Islamic scholars dedicated to your Quran journey." },
       { property: "og:url", content: "https://alhudaislamicinstitute.com/teachers" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/teachers" }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify(breadcrumbSchema([
+        { name: "Home", url: "https://alhudaislamicinstitute.com/" },
+        { name: "Teachers", url: "https://alhudaislamicinstitute.com/teachers" },
+      ])),
+    }],
   }),
   component: Teachers,
 });
@@ -154,7 +162,7 @@ function Teachers() {
     <Layout>
       <PageHero
         arabic="مُعَلِّمُونَا"
-        title="Our Certified Teachers"
+        title="Qualified Online Quran Teachers"
         subtitle="A handpicked faculty led by our chief Mufti - qualified male and female scholars dedicated to your Quran journey."
       />
 

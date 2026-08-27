@@ -1,19 +1,27 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout, PageHero } from "@/components/site/Layout";
 import { BookOpen, Sparkles, Mic2, Library, Languages, ScrollText, Baby, ArrowRight } from "lucide-react";
+import { Breadcrumbs, SeoSection, SeoH2, SeoH3, SeoP, SeoList, breadcrumbSchema } from "@/components/site/SeoContent";
 
 export const Route = createFileRoute("/courses")({
   head: () => ({
     meta: [
-      { title: "Courses - Al Huda International Islamic Institute" },
+      { title: "Online Quran Courses for Kids & Adults | Al Huda Institute" },
       { name: "description", content: "Explore our online Quran courses: Nazra, Hifz, Tajweed and Qirat, Tafseer, Arabic language, Islamic Studies and a dedicated Kids Quran Program for ages 4-12." },
-      { property: "og:title", content: "Online Quran Courses - Al Huda International Islamic Institute" },
+      { property: "og:title", content: "Online Quran Courses for Kids & Adults | Al Huda Institute" },
       { property: "og:description", content: "Structured curricula for every age and level. Book a free trial today." },
       { property: "og:url", content: "https://alhudaislamicinstitute.com/courses" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/courses" }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify(breadcrumbSchema([
+        { name: "Home", url: "https://alhudaislamicinstitute.com/" },
+        { name: "Courses", url: "https://alhudaislamicinstitute.com/courses" },
+      ])),
+    }],
   }),
   component: Courses,
 });

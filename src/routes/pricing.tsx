@@ -3,19 +3,27 @@ import { Layout, PageHero } from "@/components/site/Layout";
 import { Check, Star, Globe2 } from "lucide-react";
 import { useState } from "react";
 import { TRIAL_WA_URL } from "@/lib/trial";
+import { Breadcrumbs, SeoSection, SeoH2, SeoH3, SeoP, SeoList, breadcrumbSchema } from "@/components/site/SeoContent";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing & Plans - Al Huda International Islamic Institute" },
+      { title: "Online Quran Classes Fees & Pricing Plans | Al Huda Institute" },
       { name: "description", content: "Affordable monthly plans for one-to-one online Quran classes, 2, 3 or 5 days a week, with sibling discounts and a free 3-day trial. No credit card required." },
-      { property: "og:title", content: "Pricing - Al Huda International Islamic Institute" },
+      { property: "og:title", content: "Online Quran Classes Fees & Pricing Plans | Al Huda Institute" },
       { property: "og:description", content: "Transparent country-wise monthly pricing for one-on-one Quran classes." },
       { property: "og:url", content: "https://alhudaislamicinstitute.com/pricing" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/pricing" }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify(breadcrumbSchema([
+        { name: "Home", url: "https://alhudaislamicinstitute.com/" },
+        { name: "Pricing", url: "https://alhudaislamicinstitute.com/pricing" },
+      ])),
+    }],
   }),
   component: Pricing,
 });
