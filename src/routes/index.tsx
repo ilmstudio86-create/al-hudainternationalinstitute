@@ -15,6 +15,7 @@ import kidBoyQuran from "@/assets/kid-boy-quran.jpg";
 import kidGirlLaptop from "@/assets/kid-girl-laptop.jpg";
 import kidsTogether from "@/assets/kids-quran-together.jpg";
 import { CONTACT_WA_URL, TRIAL_WA_URL } from "@/lib/trial";
+import { SeoSection, SeoH2, SeoH3, SeoP, SeoList } from "@/components/site/SeoContent";
 
 const heroSlides = [
   { src: kidBoyLaptop, alt: "Muslim boy learning Quran on laptop" },
@@ -429,6 +430,45 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <SeoSection>
+        <div>
+          <SeoH2>Online Quran Classes for Kids and Adults Worldwide</SeoH2>
+          <SeoP>
+            Al Huda International Islamic Institute teaches the Holy Quran online to families in the USA, UK, Canada,
+            Australia, New Zealand, Europe and the Gulf. Every class is live and one-to-one, so each student receives
+            the full attention of a certified Hafiz, Qari or female scholar at a time that suits their routine.
+          </SeoP>
+          <SeoH3>Why Learn Quran Online With Al Huda?</SeoH3>
+          <SeoList
+            items={[
+              "Live one-to-one lessons, never crowded group calls",
+              "Certified male and female teachers",
+              "Flexible timings in every time zone",
+              "Structured Qaida, Nazra, Hifz and Tajweed curriculum",
+              "Progress reports and parent access",
+              "Free 3-day trial with no card required",
+            ]}
+          />
+          <SeoH3>Quran Programs for Different Learning Goals</SeoH3>
+          <SeoP>
+            Whether your goal is reading the Quran correctly, memorising it, understanding its meaning through Tafseer,
+            or learning Arabic and Islamic Studies, there is a structured path for you. Explore all
+            <Link to="/courses" className="text-gold font-semibold hover:underline"> online Quran courses</Link> and pick the level
+            that fits.
+          </SeoP>
+        </div>
+
+        <div>
+          <SeoH2>Start Learning the Quran Today</SeoH2>
+          <SeoP>
+            Meet our <Link to="/teachers" className="text-gold font-semibold hover:underline">qualified Quran teachers</Link>, review the
+            <Link to="/pricing" className="text-gold font-semibold hover:underline"> monthly class fees</Link>, read
+            <Link to="/faq" className="text-gold font-semibold hover:underline"> common questions</Link> from parents, or
+            <Link to="/contact" className="text-gold font-semibold hover:underline"> book your free trial class</Link> today, In sha Allah.
+          </SeoP>
+        </div>
+      </SeoSection>
 
       {/* CTA */}
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
