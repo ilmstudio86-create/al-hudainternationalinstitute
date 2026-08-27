@@ -1,12 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout, PageHero } from "@/components/site/Layout";
 import { SectionDivider } from "@/components/site/SectionDivider";
+import { Breadcrumbs, SeoSection, SeoH2, SeoH3, SeoP, SeoList, breadcrumbSchema } from "@/components/site/SeoContent";
 import { Target, Eye, Award, Heart, BookOpen, Globe2 } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About - Al Huda International Islamic Institute" },
+      { title: "About Al Huda International Islamic Institute | Online Quran Academy Since 2013" },
       { name: "description", content: "Al Huda International Islamic Institute has taught Quran online since 2013, with certified Hafiz, Qari and female scholars serving families in 30+ countries." },
       { property: "og:title", content: "About Al Huda International Islamic Institute" },
       { property: "og:description", content: "Authentic Quran education rooted in tradition, delivered with modern technology." },
@@ -15,6 +16,15 @@ export const Route = createFileRoute("/about")({
       { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/about" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(breadcrumbSchema([
+          { name: "Home", url: "https://alhudaislamicinstitute.com/" },
+          { name: "About", url: "https://alhudaislamicinstitute.com/about" },
+        ])),
+      },
+    ],
   }),
   component: About,
 });
@@ -22,6 +32,7 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <Layout>
+      <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "About" }]} />
       <PageHero arabic="عَنَّا" title="About Al Huda International Islamic Institute" subtitle="A trusted name in online Quran and Islamic education - proudly serving the Ummah since 2013." />
 
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 text-center">
