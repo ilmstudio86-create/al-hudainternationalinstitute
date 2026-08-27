@@ -81,7 +81,9 @@ function Pricing() {
 
   return (
     <Layout>
-      <PageHero arabic="الأَسْعَارُ" title="Country-Wise Pricing" subtitle="Fees adjusted fairly for every country - Free 3-day trial included." />
+      <PageHero arabic="الأَسْعَارُ" title="Online Quran Classes Fees & Pricing" subtitle="Fees adjusted fairly for every country - Free 3-day trial included." />
+
+      <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Pricing" }]} />
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
         {/* Country selector */}
@@ -157,6 +159,43 @@ function Pricing() {
           Pricing varies by country to remain fair and accessible. Need a custom plan? <Link to="/contact" className="text-gold font-semibold hover:underline">Contact us</Link>.
         </p>
       </section>
+
+      <SeoSection>
+        <div>
+          <SeoH2>Online Quran Classes Fees Explained</SeoH2>
+          <SeoP>
+            Our fees are simple monthly plans based on how many days a week you study. Two days a week and weekend plans
+            suit busy families, three days a week is the most popular balance, and five days a week gives the fastest
+            progress for Nazra, Tajweed and Hifz students.
+          </SeoP>
+          <SeoH3>What Is Included in Every Plan</SeoH3>
+          <SeoList
+            items={[
+              "Live one-to-one classes with a certified Quran teacher",
+              "Choice of male or female teacher",
+              "Flexible timings across every time zone",
+              "Regular progress reports for parents",
+              "Free 3-day trial before you pay anything",
+              "Sibling and family discounts",
+            ]}
+          />
+          <SeoH3>Flexible Schedules and Sibling Discounts</SeoH3>
+          <SeoP>
+            Classes can be rescheduled when needed, and families enrolling more than one child receive a reduced monthly
+            fee. Prices are shown in your local currency so there are no surprises.
+          </SeoP>
+        </div>
+
+        <div>
+          <SeoH2>Choose a Plan That Matches Your Course</SeoH2>
+          <SeoP>
+            Browse the full list of <Link to="/courses" className="text-gold font-semibold hover:underline">online Quran courses</Link>,
+            read about our <Link to="/teachers" className="text-gold font-semibold hover:underline">certified teachers</Link>, or check the
+            <Link to="/faq" className="text-gold font-semibold hover:underline"> frequently asked questions</Link> about payments and timings.
+          </SeoP>
+        </div>
+      </SeoSection>
+
     </Layout>
   );
 }

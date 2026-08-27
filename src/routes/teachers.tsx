@@ -166,6 +166,8 @@ function Teachers() {
         subtitle="A handpicked faculty led by our chief Mufti - qualified male and female scholars dedicated to your Quran journey."
       />
 
+      <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Teachers" }]} />
+
       {/* Stats strip */}
       <section className="border-b border-border/60 bg-secondary/40">
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -263,6 +265,42 @@ function Teachers() {
           </div>
         </div>
       </section>
+
+      <SeoSection>
+        <div>
+          <SeoH2>Qualified Male and Female Quran Teachers</SeoH2>
+          <SeoP>
+            Every teacher at Al Huda International Islamic Institute is certified in Quran recitation and Islamic
+            sciences, with years of experience teaching students online. Families can request a male or female teacher,
+            and children always study in a calm, respectful environment with parents free to observe.
+          </SeoP>
+          <SeoH3>Female Quran Teachers for Sisters and Girls</SeoH3>
+          <SeoP>
+            Our Hafizah and Ustadah teachers specialise in Qaida, Nazra, Tajweed and Islamic manners, offering sisters
+            and young girls a comfortable one-to-one learning space.
+          </SeoP>
+          <SeoH3>Online Quran Teachers for Kids</SeoH3>
+          <SeoP>
+            Teachers assigned to children use short, engaging lessons, gentle correction and consistent revision so
+            young learners stay motivated from their very first class.
+          </SeoP>
+          <SeoH3>Teachers for Adults and Advanced Students</SeoH3>
+          <SeoP>
+            Adult learners study Tajweed refinement, Tafseer, translation and Arabic with scholars who teach fluently in
+            English, Arabic and Urdu.
+          </SeoP>
+        </div>
+
+        <div>
+          <SeoH2>Meet Your Teacher in a Free Trial Class</SeoH2>
+          <SeoP>
+            See the <Link to="/courses" className="text-gold font-semibold hover:underline">courses they teach</Link>, review
+            <Link to="/pricing" className="text-gold font-semibold hover:underline"> monthly fees</Link>, or
+            <Link to="/contact" className="text-gold font-semibold hover:underline"> contact us</Link> to be matched with the right teacher.
+          </SeoP>
+        </div>
+      </SeoSection>
+
     </Layout>
   );
 }

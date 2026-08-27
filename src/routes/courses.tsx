@@ -39,7 +39,7 @@ const courses = [
 function Courses() {
   return (
     <Layout>
-      <PageHero arabic="دُورَاتُنَا" title="Our Courses" subtitle="Comprehensive Quran and Islamic education tailored for every learner." />
+      <PageHero arabic="دُورَاتُنَا" title="Online Quran Courses for Kids & Adults" subtitle="Comprehensive Quran and Islamic education tailored for every learner." />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -61,6 +61,54 @@ function Courses() {
           ))}
         </div>
       </section>
+
+      <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Courses" }]} />
+
+      <SeoSection>
+        <div>
+          <SeoH2>Online Quran Courses for Different Learning Levels</SeoH2>
+          <SeoP>
+            Every learner starts from a different place. Our online Quran courses are arranged in clear stages, from
+            recognising Arabic letters in Qaida to fluent Nazra recitation, full Hifz, advanced Tajweed and Tafseer.
+            Each student is placed at the right level after a short assessment in the free trial class.
+          </SeoP>
+          <SeoH3>Quran Reading Courses (Qaida and Nazra)</SeoH3>
+          <SeoP>
+            Beginners of any age learn Arabic letters, harakat, joining rules and fluent reading of the Holy Quran with
+            correct pronunciation, supported by daily practice and revision.
+          </SeoP>
+          <SeoH3>Hifz and Tajweed Courses</SeoH3>
+          <SeoP>
+            Memorisation students follow a structured Sabaq, Sabqi and Manzil routine with a dedicated Hafiz teacher,
+            while Tajweed and Qirat students focus on Makharij, rules of recitation and beautiful classical styles.
+          </SeoP>
+          <SeoH3>Tafseer, Arabic and Islamic Studies</SeoH3>
+          <SeoP>
+            Older students and adults can study word-by-word meaning, classical Tafseer, conversational and Quranic
+            Arabic, plus Aqeedah, Fiqh, Seerah, Hadith and Akhlaq.
+          </SeoP>
+        </div>
+
+        <div>
+          <SeoH2>Which Online Quran Course Is Right for You?</SeoH2>
+          <SeoList
+            items={[
+              "Complete beginner or young child: start with Qaida and Nazra-e-Quran",
+              "Can read but wants accuracy: choose Tajweed and Qirat",
+              "Aiming to memorise the Quran: enrol in the Hifz ul Quran program",
+              "Wants to understand meaning: take Tafseer or Arabic Language",
+              "Children aged 4 to 12: the Kids Quran Program is designed for them",
+              "Adults returning to study: flexible evening and weekend slots",
+            ]}
+          />
+          <SeoP>
+            Not sure where to begin? See our <Link to="/pricing" className="text-gold font-semibold hover:underline">class fees and plans</Link>,
+            meet the <Link to="/teachers" className="text-gold font-semibold hover:underline">qualified Quran teachers</Link> who will guide you,
+            or <Link to="/contact" className="text-gold font-semibold hover:underline">contact us</Link> to book a free trial class.
+          </SeoP>
+        </div>
+      </SeoSection>
+
     </Layout>
   );
 }
