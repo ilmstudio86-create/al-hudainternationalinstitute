@@ -87,6 +87,29 @@ function About() {
           <Link to="/teachers" className="inline-flex items-center rounded-md bg-gradient-gold px-7 py-3.5 font-semibold text-primary shadow-gold">Meet Our Teachers</Link>
         </div>
       </section>
+
+      <SeoSection>
+        <div>
+          <SeoH2>Our Approach to Online Quran Education</SeoH2>
+          <SeoP>
+            Every student at Al Huda studies one-on-one with a dedicated teacher through live video classes. Lessons follow a
+            structured syllabus that starts with the Noorani Qaida, moves through Nazra recitation with Tajweed, and continues
+            to Hifz, Tafseer and Arabic language studies. Parents receive regular progress reports so they always know how
+            their child is advancing.
+          </SeoP>
+        </div>
+        <div>
+          <SeoH3>Quran Education for Muslim Families Worldwide</SeoH3>
+          <SeoP>
+            From the USA, UK, Canada and Australia to the Gulf and beyond, our flexible scheduling covers every time zone.
+            Explore our <Link to="/courses" className="text-gold hover:underline font-medium">online Quran courses</Link>,
+            meet our <Link to="/teachers" className="text-gold hover:underline font-medium">certified male and female teachers</Link>,
+            review our <Link to="/pricing" className="text-gold hover:underline font-medium">affordable monthly plans</Link>, or
+            read practical guides on our <Link to="/blog" className="text-gold hover:underline font-medium">Islamic education blog</Link>.
+          </SeoP>
+          <SeoList items={["Free 3-day trial classes", "Hafiz, Qari & Ijazah certified faculty", "Dedicated female teachers for sisters", "Classes in English, Urdu & Arabic"]} />
+        </div>
+      </SeoSection>
     </Layout>
   );
 }
