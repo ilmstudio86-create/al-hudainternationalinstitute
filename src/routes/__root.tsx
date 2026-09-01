@@ -43,9 +43,9 @@ export const Route = createRootRoute({
     links: [
       { rel: "stylesheet", href: appCss },
 
-      { rel: "icon", type: "image/png", href: "/logo.png" },
-      { rel: "shortcut icon", type: "image/png", href: "/logo.png" },
-      { rel: "apple-touch-icon", href: "/logo.png" },
+      { rel: "icon", type: "image/png", href: "/logo-v2.png" },
+      { rel: "shortcut icon", type: "image/png", href: "/logo-v2.png" },
+      { rel: "apple-touch-icon", href: "/logo-v2.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" },
@@ -63,12 +63,12 @@ export const Route = createRootRoute({
           name: "Al Huda International Islamic Institute",
           alternateName: "Al Huda Islamic Institute",
           url: "https://alhudaislamicinstitute.com",
-          logo: "https://alhudaislamicinstitute.com/logo.png",
-          image: "https://alhudaislamicinstitute.com/logo.png",
+          logo: "https://alhudaislamicinstitute.com/logo-v2.png",
+          image: "https://alhudaislamicinstitute.com/logo-v2.png",
           email: "alhudaquranedu@gmail.com",
           telephone: "+92-314-1766950",
           foundingDate: "2013",
-          address: { "@type": "PostalAddress", addressLocality: "Riyadh", addressCountry: "SA" },
+          address: { "@type": "PostalAddress", addressLocality: "Multan", addressCountry: "PK" },
           description: "Online Quran classes for kids and adults - Nazra, Hifz, Tajweed, Tafseer, Arabic and Islamic Studies taught by certified Hafiz, Qari and female scholars.",
           sameAs: [
             "https://www.facebook.com/AlHudaIslamicInstitute",

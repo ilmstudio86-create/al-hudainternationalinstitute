@@ -32,7 +32,7 @@ export const Route = createFileRoute("/blog/how-to-choose")({
           publisher: {
             "@type": "Organization",
             name: "Al Huda International Islamic Institute",
-            logo: { "@type": "ImageObject", url: "https://alhudaislamicinstitute.com/logo.png" },
+            logo: { "@type": "ImageObject", url: "https://alhudaislamicinstitute.com/logo-v2.png" },
           },
           image: "https://alhudaislamicinstitute.com/og-image.jpg",
           url: "https://alhudaislamicinstitute.com/blog/how-to-choose",
