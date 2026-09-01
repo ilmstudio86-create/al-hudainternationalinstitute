@@ -32,7 +32,7 @@ export const Route = createFileRoute("/blog/benefits-of-learning-quran-online")(
           publisher: {
             "@type": "Organization",
             name: "Al Huda International Islamic Institute",
-            logo: { "@type": "ImageObject", url: "https://alhudaislamicinstitute.com/logo.png" },
+            logo: { "@type": "ImageObject", url: "https://alhudaislamicinstitute.com/logo-v2.png" },
           },
           image: "https://alhudaislamicinstitute.com/og-image.jpg",
           url: "https://alhudaislamicinstitute.com/blog/benefits-of-learning-quran-online",
