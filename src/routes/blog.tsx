@@ -5,6 +5,7 @@ import academyImg from "@/assets/kids-quran-together.jpg";
 import onlineLearningImg from "@/assets/kid-boy-laptop.jpg";
 import parentsGuideImg from "@/assets/kids-learning.jpg";
 import islamicValuesImg from "@/assets/kid-girl-quran.jpg";
+import hifzCourseImg from "@/assets/hifz-course-guide.jpg";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -39,7 +40,7 @@ export const Route = createFileRoute("/blog")({
 });
 
 type Post = {
-  slug: "/blog/best-online-quran-academy" | "/blog/benefits-of-learning-quran-online" | "/blog/how-to-choose" | "/blog/raise-children-islamic-values";
+  slug: "/blog/best-online-quran-academy" | "/blog/benefits-of-learning-quran-online" | "/blog/how-to-choose" | "/blog/raise-children-islamic-values" | "/blog/hifz-course-guide";
   title: string;
   excerpt: string;
   date: string;
@@ -48,6 +49,14 @@ type Post = {
 };
 
 const posts = [
+  {
+    slug: "/blog/hifz-course-guide",
+    title: "Online Hifz Course Guide: How to Memorize the Quran Successfully",
+    excerpt: "A practical guide to Quran memorization with qualified teachers, realistic daily goals, proper Tajweed, and a strong revision routine.",
+    date: "September 12, 2026",
+    category: "Hifz Course Guide",
+    image: hifzCourseImg,
+  },
   {
     slug: "/blog/best-online-quran-academy",
     title: "Best Online Quran Academy for Kids and Adult Muslim Families",
@@ -114,7 +123,7 @@ function BlogPage() {
           {posts.map((p) => (
             <Link key={p.slug} to={p.slug} className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm hover:shadow-elegant transition-shadow">
               <div className="aspect-[16/10] overflow-hidden bg-muted">
-                <img src={p.image} alt={p.title} loading="lazy" className="h-full w-full object-cover group-hover:scale-[1.03] transition-transform duration-500" />
+                <img src={p.image} alt={p.title} loading="lazy" width={1200} height={800} className="h-full w-full object-cover group-hover:scale-[1.03] transition-transform duration-500" />
               </div>
               <div className="flex flex-1 flex-col p-5 sm:p-6">
                 <div className="mb-3 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
