@@ -1,8 +1,10 @@
 import { createFileRoute, Link, Outlet, useRouterState } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { ArrowRight, Calendar, User } from "lucide-react";
-import quranImg from "@/assets/quran.jpg";
-import kidsImg from "@/assets/kids-learning.jpg";
+import academyImg from "@/assets/kids-quran-together.jpg";
+import onlineLearningImg from "@/assets/kid-boy-laptop.jpg";
+import parentsGuideImg from "@/assets/kids-learning.jpg";
+import islamicValuesImg from "@/assets/kid-girl-quran.jpg";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -45,14 +47,14 @@ type Post = {
   image: string;
 };
 
-const posts: Post[] = [
+const posts = [
   {
     slug: "/blog/best-online-quran-academy",
     title: "Best Online Quran Academy for Kids and Adult Muslim Families",
     excerpt: "Why Al Huda is trusted by Muslim families in 30+ countries - certified teachers, one-to-one classes, and a free trial for kids and adults.",
     date: "May 7, 2026",
     category: "Online Quran Education",
-    image: quranImg,
+    image: academyImg,
   },
   {
     slug: "/blog/benefits-of-learning-quran-online",
@@ -60,7 +62,7 @@ const posts: Post[] = [
     excerpt: "Discover the top 10 benefits of learning the Holy Quran online with certified male & female teachers at Al Huda International Islamic Institute.",
     date: "July 12, 2026",
     category: "Online Quran Learning",
-    image: quranImg,
+    image: onlineLearningImg,
   },
   {
     slug: "/blog/how-to-choose",
@@ -68,7 +70,7 @@ const posts: Post[] = [
     excerpt: "A practical parent's guide to picking a safe, trusted Quran academy - teachers, curriculum, safety, pricing, and free trial classes.",
     date: "July 4, 2026",
     category: "Parent's Guide",
-    image: kidsImg,
+    image: parentsGuideImg,
   },
   {
     slug: "/blog/raise-children-islamic-values",
@@ -76,9 +78,15 @@ const posts: Post[] = [
     excerpt: "Practical guidance for Muslim parents on building faith, good character, and daily Islamic habits in children through love and example.",
     date: "August 9, 2026",
     category: "Islamic Parenting",
-    image: kidsImg,
+    image: islamicValuesImg,
   },
-];
+] satisfies Post[];
+
+const featuredImages = posts.map((post) => post.image);
+
+if (new Set(featuredImages).size !== featuredImages.length) {
+  throw new Error("Every blog post must have a unique featured image.");
+}
 
 function BlogPage() {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
