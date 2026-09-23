@@ -6,6 +6,7 @@ import onlineLearningImg from "@/assets/kid-boy-laptop.jpg";
 import parentsGuideImg from "@/assets/kids-learning.jpg";
 import islamicValuesImg from "@/assets/kid-girl-quran.jpg";
 import hifzCourseImg from "@/assets/hifz-course-guide.jpg";
+import usaClassesImg from "@/assets/online-quran-classes-usa.jpg";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -40,7 +41,7 @@ export const Route = createFileRoute("/blog")({
 });
 
 type Post = {
-  slug: "/blog/best-online-quran-academy" | "/blog/benefits-of-learning-quran-online" | "/blog/how-to-choose" | "/blog/raise-children-islamic-values" | "/blog/hifz-course-guide";
+  slug: "/blog/best-online-quran-academy" | "/blog/benefits-of-learning-quran-online" | "/blog/how-to-choose" | "/blog/raise-children-islamic-values" | "/blog/hifz-course-guide" | "/blog/online-quran-classes-usa";
   title: string;
   excerpt: string;
   date: string;
@@ -49,6 +50,14 @@ type Post = {
 };
 
 const posts = [
+  {
+    slug: "/blog/online-quran-classes-usa",
+    title: "Online Quran Classes for Kids in the USA",
+    excerpt: "Live one-to-one Quran classes with qualified male and female teachers, flexible US time zones, and a free trial for families across America.",
+    date: "September 23, 2026",
+    category: "Quran Classes in USA",
+    image: usaClassesImg,
+  },
   {
     slug: "/blog/hifz-course-guide",
     title: "Online Hifz Course Guide: How to Memorize the Quran Successfully",
