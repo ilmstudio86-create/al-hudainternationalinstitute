@@ -3,6 +3,7 @@ import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { useEffect, useState } from "react";
 import { Layout } from "@/components/site/Layout";
 import { SectionDivider } from "@/components/site/SectionDivider";
+import { ShortsVideo } from "@/components/site/ShortsVideo";
 import { Globe2, GraduationCap, Clock, Users, Star, BookOpen, Sparkles, ShieldCheck, ArrowRight, Quote, PlayCircle, CheckCircle2, Heart, Baby, Mic2, Library, Languages, ScrollText, HandHeart } from "lucide-react";
 import heroImg from "@/assets/hero-mosque.jpg";
 import quranImg from "@/assets/quran.jpg";
@@ -190,13 +191,7 @@ function Home() {
       {/* INTRO */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
         <div className="grid gap-12 md:grid-cols-2 items-center">
-          <div className="relative">
-            <img src={quranImg} alt="Holy Quran on a wooden rehal stand" width={1280} height={960} loading="lazy" className="rounded-2xl shadow-elegant w-full" />
-            <div className="absolute -bottom-6 -right-6 hidden md:block bg-gradient-gold text-primary px-6 py-4 rounded-xl shadow-gold">
-              <div className="font-display text-2xl font-bold">Since 2013</div>
-              <div className="text-xs uppercase tracking-wider">Trusted Worldwide</div>
-            </div>
-          </div>
+          <ShortsVideo />
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-gold font-semibold mb-3">Welcome to Al Huda</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-5 leading-tight">A Spiritual Journey Through the Holy Quran</h2>
