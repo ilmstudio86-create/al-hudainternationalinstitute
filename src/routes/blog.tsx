@@ -7,6 +7,7 @@ import parentsGuideImg from "@/assets/kids-learning.jpg";
 import islamicValuesImg from "@/assets/kid-girl-quran.jpg";
 import hifzCourseImg from "@/assets/hifz-course-guide.jpg";
 import usaClassesImg from "@/assets/online-quran-classes-usa.jpg";
+import ukClassesImg from "@/assets/online-quran-classes-uk.jpg";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -41,7 +42,7 @@ export const Route = createFileRoute("/blog")({
 });
 
 type Post = {
-  slug: "/blog/best-online-quran-academy" | "/blog/benefits-of-learning-quran-online" | "/blog/how-to-choose" | "/blog/raise-children-islamic-values" | "/blog/hifz-course-guide" | "/blog/online-quran-classes-usa";
+  slug: "/blog/best-online-quran-academy" | "/blog/benefits-of-learning-quran-online" | "/blog/how-to-choose" | "/blog/raise-children-islamic-values" | "/blog/hifz-course-guide" | "/blog/online-quran-classes-usa" | "/blog/online-quran-classes-uk";
   title: string;
   excerpt: string;
   date: string;
@@ -50,6 +51,14 @@ type Post = {
 };
 
 const posts = [
+  {
+    slug: "/blog/online-quran-classes-uk",
+    title: "Online Quran Classes for Kids in the UK",
+    excerpt: "Live one-to-one Quran classes for British Muslim children, with male and female teachers, flexible school-day schedules, and a free trial.",
+    date: "October 15, 2026",
+    category: "Quran Classes in UK",
+    image: ukClassesImg,
+  },
   {
     slug: "/blog/online-quran-classes-usa",
     title: "Online Quran Classes for Kids in the USA",
