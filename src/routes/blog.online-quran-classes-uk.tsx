@@ -7,7 +7,7 @@ import { TRIAL_WA_URL } from "@/lib/trial";
 
 const pageUrl = "https://al-hudainternationalinstitute.lovable.app/blog/online-quran-classes-uk";
 const title = "Online Quran Classes for Kids in the UK | Al Huda International Islamic Institute";
-const description = "Live one-to-one online Quran classes for kids across the UK. Qualified male and female teachers, flexible timings, and a free trial class. Book with Al Huda today.";
+const description = "Live one-to-one online Quran classes for kids across the UK. Qualified male and female teachers, flexible timings, and a free trial class. Book with Al Huda.";
 
 const faqs = [
   {
