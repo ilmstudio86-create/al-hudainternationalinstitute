@@ -8,6 +8,7 @@ import islamicValuesImg from "@/assets/kid-girl-quran.jpg";
 import hifzCourseImg from "@/assets/hifz-course-guide.jpg";
 import usaClassesImg from "@/assets/online-quran-classes-usa.jpg";
 import ukClassesImg from "@/assets/online-quran-classes-uk.jpg";
+import australiaClassesImg from "@/assets/online-quran-classes-australia.jpg";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -42,7 +43,7 @@ export const Route = createFileRoute("/blog")({
 });
 
 type Post = {
-  slug: "/blog/best-online-quran-academy" | "/blog/benefits-of-learning-quran-online" | "/blog/how-to-choose" | "/blog/raise-children-islamic-values" | "/blog/hifz-course-guide" | "/blog/online-quran-classes-usa" | "/blog/online-quran-classes-uk";
+  slug: "/blog/best-online-quran-academy" | "/blog/benefits-of-learning-quran-online" | "/blog/how-to-choose" | "/blog/raise-children-islamic-values" | "/blog/hifz-course-guide" | "/blog/online-quran-classes-usa" | "/blog/online-quran-classes-uk" | "/blog/online-quran-classes-australia";
   title: string;
   excerpt: string;
   date: string;
@@ -51,6 +52,14 @@ type Post = {
 };
 
 const posts = [
+  {
+    slug: "/blog/online-quran-classes-australia",
+    title: "Online Quran Classes for Kids in Australia",
+    excerpt: "Live one-to-one Quran classes for Australian Muslim children, with male and female teachers, AEST to AWST scheduling, and a free trial.",
+    date: "October 24, 2026",
+    category: "Quran Classes in Australia",
+    image: australiaClassesImg,
+  },
   {
     slug: "/blog/online-quran-classes-uk",
     title: "Online Quran Classes for Kids in the UK",

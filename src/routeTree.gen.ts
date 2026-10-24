@@ -27,6 +27,7 @@ import { Route as BlogBenefitsOfLearningQuranOnlineRouteImport } from './routes/
 import { Route as BlogBestOnlineQuranAcademyRouteImport } from './routes/blog.best-online-quran-academy'
 import { Route as BlogHifzCourseGuideRouteImport } from './routes/blog.hifz-course-guide'
 import { Route as BlogHowToChooseRouteImport } from './routes/blog.how-to-choose'
+import { Route as BlogOnlineQuranClassesAustraliaRouteImport } from './routes/blog.online-quran-classes-australia'
 import { Route as BlogOnlineQuranClassesUkRouteImport } from './routes/blog.online-quran-classes-uk'
 import { Route as BlogOnlineQuranClassesUsaRouteImport } from './routes/blog.online-quran-classes-usa'
 import { Route as BlogRaiseChildrenIslamicValuesRouteImport } from './routes/blog.raise-children-islamic-values'
@@ -123,6 +124,12 @@ const BlogHowToChooseRoute = BlogHowToChooseRouteImport.update({
   path: '/how-to-choose',
   getParentRoute: () => BlogRoute,
 } as any)
+const BlogOnlineQuranClassesAustraliaRoute =
+  BlogOnlineQuranClassesAustraliaRouteImport.update({
+    id: '/online-quran-classes-australia',
+    path: '/online-quran-classes-australia',
+    getParentRoute: () => BlogRoute,
+  } as any)
 const BlogOnlineQuranClassesUkRoute =
   BlogOnlineQuranClassesUkRouteImport.update({
     id: '/online-quran-classes-uk',
@@ -161,6 +168,7 @@ export interface FileRoutesByFullPath {
   '/blog/best-online-quran-academy': typeof BlogBestOnlineQuranAcademyRoute
   '/blog/hifz-course-guide': typeof BlogHifzCourseGuideRoute
   '/blog/how-to-choose': typeof BlogHowToChooseRoute
+  '/blog/online-quran-classes-australia': typeof BlogOnlineQuranClassesAustraliaRoute
   '/blog/online-quran-classes-uk': typeof BlogOnlineQuranClassesUkRoute
   '/blog/online-quran-classes-usa': typeof BlogOnlineQuranClassesUsaRoute
   '/blog/raise-children-islamic-values': typeof BlogRaiseChildrenIslamicValuesRoute
@@ -184,6 +192,7 @@ export interface FileRoutesByTo {
   '/blog/best-online-quran-academy': typeof BlogBestOnlineQuranAcademyRoute
   '/blog/hifz-course-guide': typeof BlogHifzCourseGuideRoute
   '/blog/how-to-choose': typeof BlogHowToChooseRoute
+  '/blog/online-quran-classes-australia': typeof BlogOnlineQuranClassesAustraliaRoute
   '/blog/online-quran-classes-uk': typeof BlogOnlineQuranClassesUkRoute
   '/blog/online-quran-classes-usa': typeof BlogOnlineQuranClassesUsaRoute
   '/blog/raise-children-islamic-values': typeof BlogRaiseChildrenIslamicValuesRoute
@@ -208,6 +217,7 @@ export interface FileRoutesById {
   '/blog/best-online-quran-academy': typeof BlogBestOnlineQuranAcademyRoute
   '/blog/hifz-course-guide': typeof BlogHifzCourseGuideRoute
   '/blog/how-to-choose': typeof BlogHowToChooseRoute
+  '/blog/online-quran-classes-australia': typeof BlogOnlineQuranClassesAustraliaRoute
   '/blog/online-quran-classes-uk': typeof BlogOnlineQuranClassesUkRoute
   '/blog/online-quran-classes-usa': typeof BlogOnlineQuranClassesUsaRoute
   '/blog/raise-children-islamic-values': typeof BlogRaiseChildrenIslamicValuesRoute
@@ -233,6 +243,7 @@ export interface FileRouteTypes {
     | '/blog/best-online-quran-academy'
     | '/blog/hifz-course-guide'
     | '/blog/how-to-choose'
+    | '/blog/online-quran-classes-australia'
     | '/blog/online-quran-classes-uk'
     | '/blog/online-quran-classes-usa'
     | '/blog/raise-children-islamic-values'
@@ -256,6 +267,7 @@ export interface FileRouteTypes {
     | '/blog/best-online-quran-academy'
     | '/blog/hifz-course-guide'
     | '/blog/how-to-choose'
+    | '/blog/online-quran-classes-australia'
     | '/blog/online-quran-classes-uk'
     | '/blog/online-quran-classes-usa'
     | '/blog/raise-children-islamic-values'
@@ -279,6 +291,7 @@ export interface FileRouteTypes {
     | '/blog/best-online-quran-academy'
     | '/blog/hifz-course-guide'
     | '/blog/how-to-choose'
+    | '/blog/online-quran-classes-australia'
     | '/blog/online-quran-classes-uk'
     | '/blog/online-quran-classes-usa'
     | '/blog/raise-children-islamic-values'
@@ -429,6 +442,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogHowToChooseRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/blog/online-quran-classes-australia': {
+      id: '/blog/online-quran-classes-australia'
+      path: '/online-quran-classes-australia'
+      fullPath: '/blog/online-quran-classes-australia'
+      preLoaderRoute: typeof BlogOnlineQuranClassesAustraliaRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/blog/online-quran-classes-uk': {
       id: '/blog/online-quran-classes-uk'
       path: '/online-quran-classes-uk'
@@ -458,6 +478,7 @@ interface BlogRouteChildren {
   BlogBestOnlineQuranAcademyRoute: typeof BlogBestOnlineQuranAcademyRoute
   BlogHifzCourseGuideRoute: typeof BlogHifzCourseGuideRoute
   BlogHowToChooseRoute: typeof BlogHowToChooseRoute
+  BlogOnlineQuranClassesAustraliaRoute: typeof BlogOnlineQuranClassesAustraliaRoute
   BlogOnlineQuranClassesUkRoute: typeof BlogOnlineQuranClassesUkRoute
   BlogOnlineQuranClassesUsaRoute: typeof BlogOnlineQuranClassesUsaRoute
   BlogRaiseChildrenIslamicValuesRoute: typeof BlogRaiseChildrenIslamicValuesRoute
@@ -469,6 +490,7 @@ const BlogRouteChildren: BlogRouteChildren = {
   BlogBestOnlineQuranAcademyRoute: BlogBestOnlineQuranAcademyRoute,
   BlogHifzCourseGuideRoute: BlogHifzCourseGuideRoute,
   BlogHowToChooseRoute: BlogHowToChooseRoute,
+  BlogOnlineQuranClassesAustraliaRoute: BlogOnlineQuranClassesAustraliaRoute,
   BlogOnlineQuranClassesUkRoute: BlogOnlineQuranClassesUkRoute,
   BlogOnlineQuranClassesUsaRoute: BlogOnlineQuranClassesUsaRoute,
   BlogRaiseChildrenIslamicValuesRoute: BlogRaiseChildrenIslamicValuesRoute,
