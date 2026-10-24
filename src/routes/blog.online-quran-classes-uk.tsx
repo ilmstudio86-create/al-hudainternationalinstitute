@@ -191,7 +191,7 @@ function OnlineQuranClassesUkPage() {
             </a></Button>
           </div>
           <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
-            Looking for classes in another country? Explore our <Link to="/blog/online-quran-classes-usa" className="font-semibold text-primary underline">online Quran classes for kids in the USA</Link>, or <Link to="/contact" className="font-semibold text-primary underline">contact us about classes in Australia</Link>.
+            Looking for classes in another country? Explore our <Link to="/blog/online-quran-classes-usa" className="font-semibold text-primary underline">online Quran classes for kids in the USA</Link>, or <Link to="/blog/online-quran-classes-australia" className="font-semibold text-primary underline">online Quran classes for kids in Australia</Link>.
           </p>
         </div>
       </article>
