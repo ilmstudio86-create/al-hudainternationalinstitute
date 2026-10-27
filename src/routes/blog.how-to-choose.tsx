@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { ArrowRight, BookOpen, Calendar, User, CheckCircle } from "lucide-react";
 import { TRIAL_WA_URL } from "@/lib/trial";
-import kidsImg from "@/assets/kids-learning.jpg";
+import kidsImg from "@/assets/kids-learning.webp";
 
 export const Route = createFileRoute("/blog/how-to-choose")({
   head: () => ({

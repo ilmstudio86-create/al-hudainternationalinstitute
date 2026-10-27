@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, Calendar, CheckCircle, User } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
-import hifzImg from "@/assets/hifz-course-guide.jpg";
+import hifzImg from "@/assets/hifz-course-guide.webp";
 import { TRIAL_WA_URL } from "@/lib/trial";
 
 const pageUrl = "https://alhudaislamicinstitute.com/blog/hifz-course-guide";

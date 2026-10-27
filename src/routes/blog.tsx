@@ -1,14 +1,14 @@
 import { createFileRoute, Link, Outlet, useRouterState } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { ArrowRight, Calendar, User } from "lucide-react";
-import academyImg from "@/assets/kids-quran-together.jpg";
-import onlineLearningImg from "@/assets/kid-boy-laptop.jpg";
-import parentsGuideImg from "@/assets/kids-learning.jpg";
-import islamicValuesImg from "@/assets/kid-girl-quran.jpg";
-import hifzCourseImg from "@/assets/hifz-course-guide.jpg";
-import usaClassesImg from "@/assets/online-quran-classes-usa.jpg";
-import ukClassesImg from "@/assets/online-quran-classes-uk.jpg";
-import australiaClassesImg from "@/assets/online-quran-classes-australia.jpg";
+import academyImg from "@/assets/kids-quran-together.webp";
+import onlineLearningImg from "@/assets/kid-boy-laptop.webp";
+import parentsGuideImg from "@/assets/kids-learning.webp";
+import islamicValuesImg from "@/assets/kid-girl-quran.webp";
+import hifzCourseImg from "@/assets/hifz-course-guide.webp";
+import usaClassesImg from "@/assets/online-quran-classes-usa.webp";
+import ukClassesImg from "@/assets/online-quran-classes-uk.webp";
+import australiaClassesImg from "@/assets/online-quran-classes-australia.webp";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({

@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { Layout, PageHero } from "@/components/site/Layout";
 import { Heart, Gift, Plane, HandHeart, CheckCircle2, Building2, Sparkles, Utensils } from "lucide-react";
-import sadaqahImg from "@/assets/sadaqah.jpg";
+import sadaqahImg from "@/assets/sadaqah.webp";
 
 export const Route = createFileRoute("/sadaqah")({
   head: () => ({

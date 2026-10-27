@@ -46,9 +46,7 @@ export const Route = createRootRoute({
       { rel: "icon", type: "image/png", href: "/logo-v2.png" },
       { rel: "shortcut icon", type: "image/png", href: "/logo-v2.png" },
       { rel: "apple-touch-icon", href: "/logo-v2.png" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" },
+      { rel: "preconnect", href: "https://i.ytimg.com" },
     ],
     scripts: [
       { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9656880021275971", async: true, crossOrigin: "anonymous" },

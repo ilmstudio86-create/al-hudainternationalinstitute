@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, Calendar, CheckCircle, Clock, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/site/Layout";
-import ukClassesImg from "@/assets/online-quran-classes-uk.jpg";
+import ukClassesImg from "@/assets/online-quran-classes-uk.webp";
 import { TRIAL_WA_URL } from "@/lib/trial";
 
 const pageUrl = "https://al-hudainternationalinstitute.lovable.app/blog/online-quran-classes-uk";

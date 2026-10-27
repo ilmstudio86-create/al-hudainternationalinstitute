@@ -5,25 +5,29 @@ import { Layout } from "@/components/site/Layout";
 import { SectionDivider } from "@/components/site/SectionDivider";
 import { ShortsVideo } from "@/components/site/ShortsVideo";
 import { Globe2, GraduationCap, Clock, Users, Star, BookOpen, Sparkles, ShieldCheck, ArrowRight, Quote, PlayCircle, CheckCircle2, Heart, Baby, Mic2, Library, Languages, ScrollText, HandHeart } from "lucide-react";
-import heroImg from "@/assets/hero-mosque.jpg";
-import quranImg from "@/assets/quran.jpg";
-import kidsImg from "@/assets/kids-learning.jpg";
-import sisterImg from "@/assets/sister-teacher.jpg";
-import brotherImg from "@/assets/brother-teacher.jpg";
-import kidBoyLaptop from "@/assets/kid-boy-laptop.jpg";
-import kidGirlQuran from "@/assets/kid-girl-quran.jpg";
-import kidBoyQuran from "@/assets/kid-boy-quran.jpg";
-import kidGirlLaptop from "@/assets/kid-girl-laptop.jpg";
-import kidsTogether from "@/assets/kids-quran-together.jpg";
+import kidBoyLaptop from "@/assets/kid-boy-laptop.webp";
+import kidBoyLaptopAvif from "@/assets/kid-boy-laptop.avif";
+import kidGirlQuranAvif from "@/assets/kid-girl-quran.avif";
+import kidBoyQuranAvif from "@/assets/kid-boy-quran.avif";
+import kidGirlLaptopAvif from "@/assets/kid-girl-laptop.avif";
+import kidsTogetherAvif from "@/assets/kids-quran-together.avif";
+import quranImg from "@/assets/quran.webp";
+import kidsImg from "@/assets/kids-learning.webp";
+import sisterImg from "@/assets/sister-teacher.webp";
+import brotherImg from "@/assets/brother-teacher.webp";
+import kidGirlQuran from "@/assets/kid-girl-quran.webp";
+import kidBoyQuran from "@/assets/kid-boy-quran.webp";
+import kidGirlLaptop from "@/assets/kid-girl-laptop.webp";
+import kidsTogether from "@/assets/kids-quran-together.webp";
 import { CONTACT_WA_URL, TRIAL_WA_URL } from "@/lib/trial";
 import { SeoSection, SeoH2, SeoH3, SeoP, SeoList } from "@/components/site/SeoContent";
 
 const heroSlides = [
-  { src: kidBoyLaptop, alt: "Muslim boy learning Quran on laptop" },
-  { src: kidGirlQuran, alt: "Muslim girl in hijab holding Holy Quran" },
-  { src: kidBoyQuran, alt: "Muslim boy reading the Holy Quran" },
-  { src: kidGirlLaptop, alt: "Muslim girl studying Quran online on laptop" },
-  { src: kidsTogether, alt: "Muslim children reading Quran together" },
+  { src: kidBoyLaptop, avif: kidBoyLaptopAvif, alt: "Muslim boy learning Quran on laptop" },
+  { src: kidGirlQuran, avif: kidGirlQuranAvif, alt: "Muslim girl in hijab holding Holy Quran" },
+  { src: kidBoyQuran, avif: kidBoyQuranAvif, alt: "Muslim boy reading the Holy Quran" },
+  { src: kidGirlLaptop, avif: kidGirlLaptopAvif, alt: "Muslim girl studying Quran online on laptop" },
+  { src: kidsTogether, avif: kidsTogetherAvif, alt: "Muslim children reading Quran together" },
 ];
 
 function ProgramImageRotator({ images, title, delay = 0 }: { images: string[]; title: string; delay?: number }) {
@@ -37,15 +41,20 @@ function ProgramImageRotator({ images, title, delay = 0 }: { images: string[]; t
   }, [images.length, delay]);
   return (
     <>
-      {images.map((src, i) => (
-        <img
-          key={src + i}
-          src={src}
-          alt={title}
-          loading="lazy"
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${i === idx ? "opacity-100" : "opacity-0"}`}
-        />
-      ))}
+      {images.map((src, i) => {
+        // Only mount the current and next slide so unused images are never fetched
+        if (i !== idx && i !== (idx + 1) % images.length) return null;
+        return (
+          <img
+            key={src + i}
+            src={src}
+            alt={title}
+            loading="lazy"
+            decoding="async"
+            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${i === idx ? "opacity-100" : "opacity-0"}`}
+          />
+        );
+      })}
     </>
   );
 }
@@ -149,16 +158,26 @@ function Home() {
     <Layout>
       {/* HERO */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden">
-        {heroSlides.map((s, i) => (
-          <img
-            key={s.src}
-            src={s.src}
-            alt={s.alt}
-            width={1920}
-            height={1280}
-            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}
-          />
-        ))}
+        {heroSlides.map((s, i) => {
+          // Mount only the visible slide and the next one so unused slides are never fetched
+          if (!(i === 0 || i === slide || i === (slide + 1) % heroSlides.length)) return null;
+          return (
+            <picture
+              key={s.alt}
+              className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}
+            >
+              <source srcSet={s.avif} type="image/avif" />
+              <img
+                src={s.src}
+                alt={s.alt}
+                loading={i === 0 ? "eager" : "lazy"}
+                fetchPriority={i === 0 ? "high" : "low"}
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </picture>
+          );
+        })}
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="absolute inset-0 pattern-bg" />
 

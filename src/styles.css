@@ -1,6 +1,9 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import "@fontsource/amiri/400.css";
+@import "@fontsource/amiri/700.css";
+@import "@fontsource-variable/inter";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -128,7 +131,7 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: "Inter", system-ui, sans-serif;
+    font-family: "Inter Variable", "Inter", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
   }
@@ -161,7 +164,7 @@
     color: transparent;
   }
   .pattern-bg {
-    background-image: url('/src/assets/pattern.jpg');
+    background-image: url('/src/assets/pattern.webp');
     background-size: 280px;
     opacity: 0.06;
   }
