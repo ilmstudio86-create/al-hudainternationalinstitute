@@ -158,16 +158,26 @@ function Home() {
     <Layout>
       {/* HERO */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden">
-        {heroSlides.map((s, i) => (
-          <img
-            key={s.src}
-            src={s.src}
-            alt={s.alt}
-            width={1920}
-            height={1280}
-            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}
-          />
-        ))}
+        {heroSlides.map((s, i) => {
+          // Mount only the visible slide and the next one so unused slides are never fetched
+          if (!(i === 0 || i === slide || i === (slide + 1) % heroSlides.length)) return null;
+          return (
+            <picture
+              key={s.alt}
+              className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}
+            >
+              <source srcSet={s.avif} type="image/avif" />
+              <img
+                src={s.src}
+                alt={s.alt}
+                loading={i === 0 ? "eager" : "lazy"}
+                fetchPriority={i === 0 ? "high" : "low"}
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </picture>
+          );
+        })}
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="absolute inset-0 pattern-bg" />
 
