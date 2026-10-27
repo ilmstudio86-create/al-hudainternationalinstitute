@@ -41,15 +41,20 @@ function ProgramImageRotator({ images, title, delay = 0 }: { images: string[]; t
   }, [images.length, delay]);
   return (
     <>
-      {images.map((src, i) => (
-        <img
-          key={src + i}
-          src={src}
-          alt={title}
-          loading="lazy"
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${i === idx ? "opacity-100" : "opacity-0"}`}
-        />
-      ))}
+      {images.map((src, i) => {
+        // Only mount the current and next slide so unused images are never fetched
+        if (i !== idx && i !== (idx + 1) % images.length) return null;
+        return (
+          <img
+            key={src + i}
+            src={src}
+            alt={title}
+            loading="lazy"
+            decoding="async"
+            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${i === idx ? "opacity-100" : "opacity-0"}`}
+          />
+        );
+      })}
     </>
   );
 }
