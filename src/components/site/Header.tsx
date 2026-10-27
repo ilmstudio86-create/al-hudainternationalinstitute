@@ -4,7 +4,7 @@ import { SOCIALS } from "@/lib/socials";
 import { TikTokIcon } from "./TikTokIcon";
 import { useState, useEffect } from "react";
 import { TRIAL_WA_URL } from "@/lib/trial";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 
 const nav = [
   { to: "/", label: "Home" },

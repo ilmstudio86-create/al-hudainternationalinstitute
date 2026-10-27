@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { ArrowRight, BookOpen, Calendar, User, CheckCircle } from "lucide-react";
 import { TRIAL_WA_URL } from "@/lib/trial";
-import quranImg from "@/assets/quran.jpg";
+import quranImg from "@/assets/quran.webp";
 
 export const Route = createFileRoute("/blog/best-online-quran-academy")({
   head: () => ({

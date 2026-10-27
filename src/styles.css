@@ -161,7 +161,7 @@
     color: transparent;
   }
   .pattern-bg {
-    background-image: url('/src/assets/pattern.jpg');
+    background-image: url('/src/assets/pattern.webp');
     background-size: 280px;
     opacity: 0.06;
   }

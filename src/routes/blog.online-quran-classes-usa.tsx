@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, Calendar, CheckCircle, Clock, User } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
-import usaClassesImg from "@/assets/online-quran-classes-usa.jpg";
+import usaClassesImg from "@/assets/online-quran-classes-usa.webp";
 import { TRIAL_WA_URL } from "@/lib/trial";
 
 const pageUrl = "https://alhudaislamicinstitute.com/blog/online-quran-classes-usa";
