@@ -23,11 +23,11 @@ import { CONTACT_WA_URL, TRIAL_WA_URL } from "@/lib/trial";
 import { SeoSection, SeoH2, SeoH3, SeoP, SeoList } from "@/components/site/SeoContent";
 
 const heroSlides = [
-  { src: kidBoyLaptop, alt: "Muslim boy learning Quran on laptop" },
-  { src: kidGirlQuran, alt: "Muslim girl in hijab holding Holy Quran" },
-  { src: kidBoyQuran, alt: "Muslim boy reading the Holy Quran" },
-  { src: kidGirlLaptop, alt: "Muslim girl studying Quran online on laptop" },
-  { src: kidsTogether, alt: "Muslim children reading Quran together" },
+  { src: kidBoyLaptop, avif: kidBoyLaptopAvif, alt: "Muslim boy learning Quran on laptop" },
+  { src: kidGirlQuran, avif: kidGirlQuranAvif, alt: "Muslim girl in hijab holding Holy Quran" },
+  { src: kidBoyQuran, avif: kidBoyQuranAvif, alt: "Muslim boy reading the Holy Quran" },
+  { src: kidGirlLaptop, avif: kidGirlLaptopAvif, alt: "Muslim girl studying Quran online on laptop" },
+  { src: kidsTogether, avif: kidsTogetherAvif, alt: "Muslim children reading Quran together" },
 ];
 
 function ProgramImageRotator({ images, title, delay = 0 }: { images: string[]; title: string; delay?: number }) {
