@@ -87,7 +87,10 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: "https://alhudaislamicinstitute.com/logo-v2.png" },
       { name: "twitter:image", content: "https://alhudaislamicinstitute.com/logo-v2.png" },
     ],
-    links: [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/" }],
+    links: [
+      { rel: "canonical", href: "https://alhudaislamicinstitute.com/" },
+      { rel: "preload", as: "image", href: kidBoyLaptopAvif, type: "image/avif", fetchPriority: "high" },
+    ],
   }),
   component: Home,
 });
