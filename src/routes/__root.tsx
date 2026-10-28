@@ -49,10 +49,10 @@ export const Route = createRootRoute({
       { rel: "preconnect", href: "https://i.ytimg.com" },
     ],
     scripts: [
-      { src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9656880021275971", async: true, crossOrigin: "anonymous" },
-      { src: "https://www.googletagmanager.com/gtag/js?id=G-5KW34H6113", async: true },
       {
-        children: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-5KW34H6113');`,
+        // Third-party analytics/ads load after the page is fully rendered so they
+        // never compete with the hero image and core content for bandwidth.
+        children: `(function(){var d=document;window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-5KW34H6113');var go=function(){var add=function(src,attrs){var s=d.createElement('script');s.src=src;s.async=true;for(var k in attrs){s.setAttribute(k,attrs[k]);}d.head.appendChild(s);};add('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9656880021275971',{crossorigin:'anonymous'});add('https://www.googletagmanager.com/gtag/js?id=G-5KW34H6113',{});};if(d.readyState==='complete'){go();}else{window.addEventListener('load',go);}})();`,
       },
       {
         type: "application/ld+json",
