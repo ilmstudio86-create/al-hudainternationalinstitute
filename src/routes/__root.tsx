@@ -1,6 +1,10 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import amiriArabicWoff2 from "@fontsource/amiri/files/amiri-arabic-400-normal.woff2?url";
+import amiriLatin700Woff2 from "@fontsource/amiri/files/amiri-latin-700-normal.woff2?url";
+import interLatinWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
+
 
 function NotFoundComponent() {
   return (
@@ -46,14 +50,24 @@ export const Route = createRootRoute({
       { rel: "icon", type: "image/png", href: "/logo-v2.png" },
       { rel: "shortcut icon", type: "image/png", href: "/logo-v2.png" },
       { rel: "apple-touch-icon", href: "/logo-v2.png" },
+      // Above-the-fold text needs these three faces; preload them so headings
+      // and body copy paint in the real fonts instead of a swapped fallback.
+      { rel: "preload", as: "font", type: "font/woff2", href: interLatinWoff2, crossOrigin: "anonymous" },
+      { rel: "preload", as: "font", type: "font/woff2", href: amiriLatin700Woff2, crossOrigin: "anonymous" },
+      { rel: "preload", as: "font", type: "font/woff2", href: amiriArabicWoff2, crossOrigin: "anonymous" },
       { rel: "preconnect", href: "https://i.ytimg.com" },
+      { rel: "preconnect", href: "https://www.youtube.com" },
     ],
+
     scripts: [
       {
-        // Third-party analytics/ads load after the page is fully rendered so they
-        // never compete with the hero image and core content for bandwidth.
-        children: `(function(){var d=document;window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-5KW34H6113');var go=function(){var add=function(src,attrs){var s=d.createElement('script');s.src=src;s.async=true;for(var k in attrs){s.setAttribute(k,attrs[k]);}d.head.appendChild(s);};add('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9656880021275971',{crossorigin:'anonymous'});add('https://www.googletagmanager.com/gtag/js?id=G-5KW34H6113',{});};if(d.readyState==='complete'){go();}else{window.addEventListener('load',go);}})();`,
+        // Analytics and ads are completely non-essential on first paint. They are
+        // only injected on the visitor's first interaction (scroll, tap, key) so
+        // they never compete with the hero image, fonts or hydration for bandwidth
+        // or main-thread time.
+        children: `(function(){var d=document;window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-5KW34H6113');var evs=['scroll','pointerdown','keydown','touchstart','wheel'];var loaded=false;var go=function(){if(loaded)return;loaded=true;for(var i=0;i<evs.length;i++){window.removeEventListener(evs[i],go);}var add=function(src,attrs){var s=d.createElement('script');s.src=src;s.async=true;for(var k in attrs){s.setAttribute(k,attrs[k]);}d.head.appendChild(s);};add('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9656880021275971',{crossorigin:'anonymous'});add('https://www.googletagmanager.com/gtag/js?id=G-5KW34H6113',{});};for(var j=0;j<evs.length;j++){window.addEventListener(evs[j],go,{passive:true});}})();`,
       },
+
       {
         type: "application/ld+json",
         children: JSON.stringify({
