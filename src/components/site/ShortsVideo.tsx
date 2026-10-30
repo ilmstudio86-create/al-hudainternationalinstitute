@@ -1,16 +1,13 @@
 import { useState } from "react";
 import { Play } from "lucide-react";
+import poster from "@/assets/shorts-poster.webp";
 
 const VIDEO_ID = "waYSKhP_QPM";
-const POSTERS = [
-  `https://i.ytimg.com/vi/${VIDEO_ID}/oar2.jpg`,
-  `https://i.ytimg.com/vi/${VIDEO_ID}/maxresdefault.jpg`,
-  `https://i.ytimg.com/vi/${VIDEO_ID}/hqdefault.jpg`,
-];
+
 
 export function ShortsVideo() {
   const [playing, setPlaying] = useState(false);
-  const [posterIndex, setPosterIndex] = useState(0);
+
 
   if (playing) {
     return (
@@ -38,14 +35,14 @@ export function ShortsVideo() {
         className="group relative block aspect-[9/16] w-full cursor-pointer"
       >
         <img
-          src={POSTERS[posterIndex]}
-          onError={() => setPosterIndex((i) => Math.min(i + 1, POSTERS.length - 1))}
+          src={poster}
           alt="Preview of a short video about Al Huda International Islamic Institute"
-          width={720}
-          height={1280}
+          width={640}
+          height={1138}
           loading="lazy"
           className="h-full w-full object-cover"
         />
+
         <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-primary/30" />
         <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <span className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-gold text-primary shadow-gold ring-4 ring-gold/30 transition-transform duration-300 group-hover:scale-110">
