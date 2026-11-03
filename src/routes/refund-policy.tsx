@@ -39,10 +39,18 @@ function RefundPolicy() {
           </div>
 
           <div className="rounded-xl border border-border/70 bg-card p-6">
-            <h2 className="font-display text-xl font-bold text-primary mb-3">3. Cancellation of Classes</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              If you wish to discontinue classes, please inform us in advance so we can stop scheduling future lessons and avoid any further charges. Any classes already delivered or scheduled prior to notice remain non-refundable.
-            </p>
+            <h2 className="font-display text-xl font-bold text-primary mb-3">3. Class Cancellation Policy</h2>
+            <div className="space-y-3 text-muted-foreground leading-relaxed">
+              <p>Students are required to provide at least three months' advance notice if they wish to discontinue their classes.</p>
+              <p>If a student wishes to discontinue classes without providing the required three-month notice, they must pay the fees for the full three-month notice period.</p>
+              <p>Students may either:</p>
+              <ul className="list-disc space-y-2 pl-6">
+                <li>Continue attending classes during the three-month notice period and pay the applicable fees.</li>
+                <li>Pay the full three-month notice period fees and discontinue classes immediately.</li>
+              </ul>
+              <p>This policy applies to all students, regardless of the reason for discontinuation.</p>
+              <p>We appreciate your understanding and cooperation.</p>
+            </div>
           </div>
 
           <div className="rounded-xl border border-border/70 bg-card p-6">
