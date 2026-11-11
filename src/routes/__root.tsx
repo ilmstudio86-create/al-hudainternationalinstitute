@@ -98,11 +98,6 @@ export const Route = createRootRoute({
           "@type": "WebSite",
           name: "Al Huda International Islamic Institute",
           url: "https://alhudaislamicinstitute.com",
-          potentialAction: {
-            "@type": "SearchAction",
-            target: "https://alhudaislamicinstitute.com/?q={search_term_string}",
-            "query-input": "required name=search_term_string",
-          },
         }),
       },
     ],

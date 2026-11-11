@@ -5,7 +5,7 @@ import { Layout } from "@/components/site/Layout";
 import australiaClassesImg from "@/assets/online-quran-classes-australia.webp";
 import { TRIAL_WA_URL } from "@/lib/trial";
 
-const pageUrl = "https://al-hudainternationalinstitute.lovable.app/blog/online-quran-classes-australia";
+const pageUrl = "https://alhudaislamicinstitute.com/blog/online-quran-classes-australia";
 const title = "Online Quran Classes for Kids in Australia | Al Huda International Islamic Institute";
 const description = "Live one-to-one online Quran classes for kids across Australia. Qualified male and female teachers, flexible timings, and a free trial class. Book with Al Huda.";
 
@@ -57,7 +57,7 @@ export const Route = createFileRoute("/blog/online-quran-classes-australia")({
               publisher: {
                 "@type": "Organization",
                 name: "Al Huda International Islamic Institute",
-                logo: { "@type": "ImageObject", url: "https://al-hudainternationalinstitute.lovable.app/logo-v2.png" },
+                logo: { "@type": "ImageObject", url: "https://alhudaislamicinstitute.com/logo-v2.png" },
               },
               url: pageUrl,
               mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },

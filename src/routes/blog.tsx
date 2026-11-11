@@ -11,7 +11,7 @@ import ukClassesImg from "@/assets/online-quran-classes-uk.webp";
 import australiaClassesImg from "@/assets/online-quran-classes-australia.webp";
 
 export const Route = createFileRoute("/blog")({
-  head: () => ({
+  head: ({ matches }) => ({
     meta: [
       { title: "Blog - Al Huda Islamic Institute | Online Quran Learning Articles" },
       { name: "description", content: "Articles and practical guides on online Quran learning, Hifz and Tajweed tips, Islamic education for kids and raising a Muslim family with strong Deen values." },
@@ -23,9 +23,10 @@ export const Route = createFileRoute("/blog")({
       { property: "og:image", content: "https://alhudaislamicinstitute.com/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [
-      { rel: "canonical", href: "https://alhudaislamicinstitute.com/blog" },
-    ],
+    links:
+      matches[matches.length - 1]?.routeId === "/blog"
+        ? [{ rel: "canonical", href: "https://alhudaislamicinstitute.com/blog" }]
+        : [],
     scripts: [
       {
         type: "application/ld+json",
